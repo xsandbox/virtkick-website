@@ -1,0 +1,11 @@
+nav:
+- title: Home
+  url: /
+- title: Get started
+  url: /get-started
+- title: News
+  url: /news
+- title: Issues
+  url: https://github.com/virtkick/virtkick-webapp/issues
+- title: Sponsors
+  url: /sponsors
