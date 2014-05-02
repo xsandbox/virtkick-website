@@ -1,0 +1,14 @@
+= navbar static: :top do
+  = navbar_header brand: 'VirtKick', brand_link: '/'
+  = navbar_collapse do
+    = navbar_group class: 'foo', id: 'menu' do
+      = navbar_item 'Home', '/'
+      = navbar_item 'News', '/news.html'
+      = navbar_item 'Community', '/community.html'
+      = navbar_item 'Get started', '/get-started.html'
+      = navbar_item 'https://demo.virtkick.io/' do # https://github.com/bootstrap-ruby/bootstrap-navbar/issues/6
+        Live demo
+        %span.glyphicon.glyphicon-play
+      = navbar_item 'https://github.com/virtkick/virtkick-webapp' do
+        GitHub
+        %img.glyphicon-github{src: '/img/github-dark.png'}

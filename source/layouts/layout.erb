@@ -9,23 +9,17 @@
     <title><%= current_page.data.title || 'VirtKick' %></title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/virtkick.css">
-    <script src="js/vendor/modernizr-2.6.1.min.js"></script>
+    <link rel="stylesheet" href="/css/normalize.css">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/virtkick.css">
+    <script src="/js/vendor/modernizr-2.6.1.min.js"></script>
   </head>
   <body>
-    <ul class="nav">
-      <% data.nav.nav.each do |nav| %>
-        <li class="<%= nav_active nav.url %>"><%# content_tag doesn't work %>
-          <%= link_to nav.title, nav.url %>
-        </li>
-      <% end %>
-    </ul>
+    <%= partial 'layouts/nav' %>
 
     <%= yield %>
 
-    <a href="https://github.com/virtkick" id="fork-me-on-github">
+    <a href="https://github.com/virtkick/virtkick-website" id="fork-me-on-github">
       <img alt="Fork me on GitHub" src="/img/fork-me-on-github.png"
           data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_green_007200.png" />
     </a>
@@ -41,8 +35,8 @@
       <a href="https://www.virtkick.io/">VirtKick</a> &copy; 2014 StratusHost Damian Nowak
     </footer>
 
-    <script src="js/vendor/jquery-2.1.0.min.js"></script>
-    <script src="js/plugins.js"></script>
-    <script src="js/main.js"></script>
+    <script src="/js/vendor/jquery-2.1.0.min.js"></script>
+    <script src="/js/plugins.js"></script>
+    <script src="/js/main.js"></script>
   </body>
 </html>
