@@ -12,46 +12,95 @@
   height: 16px;
 }
 
-#fork-me-on-github {
+#old-browser {
   position: fixed;
-  top: 0;
-  right: 0;
-  border: 0;
-  z-index: 10000;
-
-  @media screen and (max-width: 600px) { // TODO: set the size on which the navbar becomes full size
-    display: none;
-  }
-}
-
-// community.html
-.header {
-  background: linear-gradient(37deg, #99325d, #5e479a);
-  color: #ffffff;
+  top: 50px;
   text-align: center;
-  padding-top: 10px;
-  padding-bottom: 10px;
-}
+  z-index: 1001;
 
-.sponsors {
-  text-align: center;
-}
-
-.banner {
-  display: inline-block;
-  border: solid 1px #c3beb9;
-
-  &.banner-super-sponsor {
+  div {
+    display: inline-block;
     width: 400px;
-    height: 300px;
-    margin-left: 30px;
-    margin-right: 30px;
-    margin-bottom: 20px;
+    padding: 20px;
+    background-color: #ff8c1a;
+    margin: 0 auto;
+  }
+}
+
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}
+
+.clear {
+  clear: both;
+}
+
+#page-index {
+  $logo-height: 130px;
+  $caption-height: 15px;
+  $margin: 15px;
+
+  .gold-sponsor-box {
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: $margin;
+    color: #000000;
+
+    a {
+      display: block;
+      height: $logo-height;
+      width: $logo-height * 4/3;
+      padding-top: 40px;
+      margin: 0;
+      border: solid 1px #ffffff;
+      color: #ffffff;
+    }
+
+    p {
+      height: $caption-height;
+      max-height: $caption-height;
+      margin: 0;
+      font-size: 14px;
+      color: #ffffff;
+    }
   }
 
-  &.banner-sponsor {
-    width: 100px;
-    height: 100px;
-    margin: 5px;
+  .header {
+    background: linear-gradient(37deg, #99325d, #5e479a);
+    color: #ffffff;
+    text-align: center;
+    padding-top: $margin;
+    padding-bottom: $margin;
+    height: $logo-height + $margin * 2 + $caption-height;
+  }
+
+}
+
+#page-community {
+  .sponsors {
+    text-align: center;
+  }
+
+  .banner {
+    display: inline-block;
+    border: solid 1px #c3beb9;
+
+    &.banner-super-sponsor {
+      width: 400px;
+      height: 300px;
+      margin-left: 30px;
+      margin-right: 30px;
+      margin-bottom: 20px;
+    }
+
+    &.banner-sponsor {
+      width: 100px;
+      height: 100px;
+      margin: 5px;
+    }
   }
 }

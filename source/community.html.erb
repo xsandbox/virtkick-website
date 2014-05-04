@@ -1,57 +1,58 @@
-<h1>Community</h1>
+<div id="page-community">
+  <h1>Community</h1>
 
-<ul>
-  <li>
-    IRC: #virtkick on Freenode
-  </li>
-  <li>
-    Bugs: <a href="https://github.com/virtkick/virtkick-webapp/issues">GitHub</a>
-  </li>
-</ul>
+  <ul>
+    <li>
+      IRC: #virtkick on Freenode
+    </li>
+    <li>
+      Bugs: <a href="https://github.com/virtkick/virtkick-webapp/issues">GitHub</a>
+    </li>
+  </ul>
 
-<h1>Contributors</h1>
+  <h1>Contributors</h1>
 
-<article>
-  <%= gravatar_for 'nowaker@pacmanvps.com' %>
-  <header>Damian Nowak <a href="https://github.com/Nowaker">@Nowaker</a></header>
-  <p>
-    Nowaker is the creator and the mastermind of VirtKick.
-    He is responsible for all coding - both the webapp and the internals.
-  </p>
-</article>
+  <article>
+    <%= gravatar_for 'nowaker@pacmanvps.com' %>
+    <header>Damian Nowak <a href="https://github.com/Nowaker">@Nowaker</a></header>
+    <p>
+      Nowaker is the creator and the mastermind of VirtKick.
+      He is responsible for all coding - both the webapp and the internals.
+    </p>
+  </article>
 
-<article>
-  <%= gravatar_for 'kwiat@panic.pl' %>
-  <header>Mateusz Kwiatkowski @kwiat</header>
-  <p>
-    Kwiat is a virtualization and storage expert.
-    While he doesn't code, he helps me resolve tough problems with the technology.
-  </p>
-</article>
+  <article>
+    <%= gravatar_for 'kwiat@panic.pl' %>
+    <header>Mateusz Kwiatkowski @kwiat</header>
+    <p>
+      Kwiat is a virtualization and storage expert.
+      While he doesn't code, he helps me resolve tough problems with the technology.
+    </p>
+  </article>
 
-<article>
-  <%= gravatar_for 'm13@balloonstudio.pl' %>
-  <header>Wojtek Jodel <a href="https://github.com/malps13">@m13</a></header>
-  <p>
-    Wojtek is a the UI designer. He makes sure the UI is usable, simple and beautiful.
-  </p>
-</article>
+  <article>
+    <%= gravatar_for 'm13@balloonstudio.pl' %>
+    <header>Wojtek Jodel <a href="https://github.com/malps13">@m13</a></header>
+    <p>
+      Wojtek is a the UI designer. He makes sure the UI is usable, simple and beautiful.
+    </p>
+  </article>
 
-<h1>Sponsors</h1>
+  <h1>Sponsors</h1>
 
-<div class="sponsors">
-  <div class="sponsor">
-    <% (1..2).each do %>
-      <div class="banner banner-super-sponsor"></div>
-    <% end %>
+  <div class="sponsors">
+    <div class="sponsor">
+      <% (1..2).each do %>
+        <div class="banner banner-super-sponsor"></div>
+      <% end %>
+    </div>
+
+    <div class="sponsor">
+      <% (1..24).each do %>
+        <div class="banner banner-sponsor"></div>
+      <% end %>
+    </div>
   </div>
 
-  <div class="sponsor">
-    <% (1..24).each do %>
-      <div class="banner banner-sponsor"></div>
-    <% end %>
-  </div>
+  <h1>Donors</h1>
 </div>
-
-<h1>Donors</h1>
-

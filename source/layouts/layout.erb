@@ -15,28 +15,30 @@
     <script src="/js/vendor/modernizr-2.6.1.min.js"></script>
   </head>
   <body>
-    <%= partial 'layouts/nav' %>
+    <div id="page">
+      <%= partial 'layouts/nav' %>
 
-    <%= yield %>
+      <%= yield %>
 
-    <a href="https://github.com/virtkick/virtkick-website" id="fork-me-on-github">
-      <img alt="Fork me on GitHub" src="/img/fork-me-on-github.png"
-          data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_green_007200.png" />
-    </a>
+      <footer>
+        <a href="https://www.virtkick.io/">VirtKick</a> &copy; 2014 StratusHost Damian Nowak
+      </footer>
 
-    <!--[if lt IE 7]>
-    <p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser
-      today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better
-      experience this site.
-    </p>
+      <script src="/js/plugins.js"></script>
+      <script src="/js/main.js"></script>
+      <script src="/js/vendor/jquery-2.1.0.min.js"></script>
+    </div>
+
+    <!--[if lt IE 8]>
+    <div id="old-browser">
+      <script>
+        document.getElementById('page').style.display = 'none';
+      </script>
+      <div>
+        You are using an outdated browser.<br/>
+        Please <a href="http://browsehappy.com/">upgrade your browser</a> to access this website.
+      </div>
+    </div>
     <![endif]-->
-
-    <footer>
-      <a href="https://www.virtkick.io/">VirtKick</a> &copy; 2014 StratusHost Damian Nowak
-    </footer>
-
-    <script src="/js/vendor/jquery-2.1.0.min.js"></script>
-    <script src="/js/plugins.js"></script>
-    <script src="/js/main.js"></script>
   </body>
 </html>

@@ -10,28 +10,41 @@ features:
   text: Orders, payments, invoices and helpdesk - it's all here.
     Kickstart your VPS hosting business without building everything from scratch.
 ---
-<div class="header">
-  <h1>1-Click Cloud Management Center</h1>
-  <p>Cloud made easy for regular users. Kickstart your virtualization!</p>
-</div>
+<div id="page-index">
+  <div class="header">
+    <% %w(left right).each do |align| %>
+      <% content_tag :div, class: "gold-sponsor-box #{align}" do %>
+        <a href="/">
+          Become<br/> a gold Sponsor
+        </a>
+        <p>
+          Gold sponsor
+        </p>
+      <% end %>
+    <% end %>
+    <h1>1-Click Cloud Management Center</h1>
+    <p>Cloud made easy for regular users. Kickstart your virtualization!</p>
+  </div>
+  <div class="clear"></div>
 
-<div class="features">
-  <% current_page.data.features.each do |feature| %>
-    <article>
-      <header><%= feature.header %></header>
-      <div>
-        <%= feature.text %>
-      </div>
-    </article>
-  <% end %>
-</div>
+  <div class="features">
+    <% current_page.data.features.each do |feature| %>
+      <article>
+        <header><%= feature.header %></header>
+        <div>
+          <%= feature.text %>
+        </div>
+      </article>
+    <% end %>
+  </div>
 
-<div class="newsletter">
-  <p>
-    Let me know when VirtKick is ready:
-  </p>
-  <p>
-    <input type="text" placeholder="e-mail address" />
-    <input type="submit" value="subscribe!" />
-  </p>
+  <div class="newsletter">
+    <p>
+      Let me know when VirtKick is ready:
+    </p>
+    <p>
+      <input type="text" placeholder="e-mail address" />
+      <input type="submit" value="subscribe!" />
+    </p>
+  </div>
 </div>
