@@ -1,4 +1,19 @@
 //= require_tree .
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700);
+
+$dark: #5D2749;
+$medium-dark: #A73E5C;
+$medium: #EC4863;
+$medium-light: #FF733E;
+$light: #FFD285;
+
+// Bootstrap overrides
+$grid-columns: 3;
+$font-family-sans-serif: 'Source Sans Pro', sans-serif;
+$font-size-base: 16px;
+$font-size-h2: floor(($font-size-base * 2));
+$font-size-h3: floor(($font-size-base * 1.5));
+$headings-color: $medium-light;
 @import "bootstrap";
 
 .navbar {
@@ -39,6 +54,10 @@
   clear: both;
 }
 
+body, .navbar-default {
+  background-color: #FEF8FA;
+}
+
 #page-index {
   $logo-height: 130px;
   $caption-height: 15px;
@@ -70,12 +89,37 @@
   }
 
   .header {
-    background: linear-gradient(37deg, #99325d, #5e479a);
-    color: #ffffff;
+    background: linear-gradient(37deg, $dark, $medium);
     text-align: center;
     padding-top: $margin;
     padding-bottom: $margin;
     height: $logo-height + $margin * 2 + $caption-height;
+    margin-bottom: 30px;
+
+    * {
+      color: #ffffff;
+    }
+  }
+
+  .features {
+    article {
+      header {
+        color: $medium-light;
+        font-size: 24px;
+      }
+      div {
+        line-height: 140%;
+      }
+    }
+  }
+
+  .newsletter {
+    margin-top: 20px;
+    text-align: center;
+
+    p {
+      font-size: $font-size-base * 1.4;
+    }
   }
 
 }

@@ -15,10 +15,10 @@ features:
     <% %w(left right).each do |align| %>
       <% content_tag :div, class: "gold-sponsor-box #{align}" do %>
         <a href="/">
-          Become<br/> a gold Sponsor
+          Become<br/> a Gold Sponsor
         </a>
         <p>
-          Gold sponsor
+          Gold Sponsor
         </p>
       <% end %>
     <% end %>
@@ -27,24 +27,26 @@ features:
   </div>
   <div class="clear"></div>
 
-  <div class="features">
-    <% current_page.data.features.each do |feature| %>
-      <article>
-        <header><%= feature.header %></header>
-        <div>
-          <%= feature.text %>
-        </div>
-      </article>
-    <% end %>
-  </div>
+  <div class="container">
+    <div class="features row">
+      <% current_page.data.features.each do |feature| %>
+        <article class="col-md-1">
+          <h3><%= feature.header %></h3>
+          <div>
+            <%= feature.text %>
+          </div>
+        </article>
+      <% end %>
+    </div>
 
-  <div class="newsletter">
-    <p>
-      Let me know when VirtKick is ready:
-    </p>
-    <p>
-      <input type="text" placeholder="e-mail address" />
-      <input type="submit" value="subscribe!" />
-    </p>
+    <div class="newsletter row col-md-3">
+      <h2>
+        Let me know when VirtKick is available:
+      </h2>
+      <p>
+        <input type="text" placeholder="e-mail address"/>
+        <input type="submit" value="subscribe!"/>
+      </p>
+    </div>
   </div>
 </div>
