@@ -11,26 +11,25 @@ features:
     Kickstart your VPS hosting business without building everything from scratch.
 ---
 <div id="page-index">
-  <div class="header">
-    <% %w(left right).each do |align| %>
-      <% content_tag :div, class: "gold-sponsor-box #{align}" do %>
-        <a href="/">
-          Become<br/> a Gold Sponsor
-        </a>
-        <p>
-          Gold Sponsor
-        </p>
-      <% end %>
-    <% end %>
-    <h1>1-Click Cloud Management Center</h1>
-    <p>Cloud made easy for regular users. Kickstart your virtualization!</p>
+  <div class="header row">
+    <div class="col-md-4 col-md-push-1">
+      <h1>1-Click Cloud Management Center</h1>
+      <p>Cloud made easy for regular users. Kickstart your virtualization!</p>
+    </div>
+    <div class="gold-sponsor-box col-md-1 col-md-pull-4">
+      <a href="/">Become<br/> a Gold Sponsor</a>
+      <p>Gold Sponsor</p>
+    </div>
+    <div class="gold-sponsor-box col-md-1">
+      <a href="/">Become<br/> a Gold Sponsor</a>
+      <p>Gold Sponsor</p>
+    </div>
   </div>
-  <div class="clear"></div>
 
   <div class="container">
     <div class="features row">
       <% current_page.data.features.each do |feature| %>
-        <article class="col-md-1">
+        <article class="col-md-2">
           <h3><%= feature.header %></h3>
           <div>
             <%= feature.text %>
@@ -39,7 +38,7 @@ features:
       <% end %>
     </div>
 
-    <div class="newsletter row col-md-3">
+    <div class="newsletter row">
       <h2>
         Let me know when VirtKick is available:
       </h2>

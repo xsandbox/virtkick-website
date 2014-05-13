@@ -1,35 +1,5 @@
-//= require_tree .
-@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700);
-@import url(http://fonts.googleapis.com/css?family=Exo+2:400);
-
-$bg: #fdf7f7;
-$dark: #5D2749;
-$medium-dark: #A73E5C;
-$medium: #EC4863;
-$medium-light: #FF733E;
-$light: #FFD285;
-
-// Bootstrap overrides, lookup the names at http://getbootstrap.com/customize/
-$body-bg: $bg;
-$grid-columns: 3;
-$font-family-sans-serif: 'Source Sans Pro', sans-serif;
-h1 { font-family: 'Exo 2', sans-serif !important; }
-$font-size-base: 16px;
-$font-size-h2: floor(($font-size-base * 2));
-$font-size-h3: floor(($font-size-base * 1.5));
-$headings-color: $medium-light;
-$navbar-margin-bottom: 0;
-$navbar-default-border: #A73E5C;
-$navbar-default-bg: $bg;
-$navbar-default-color: $medium-dark;
-$navbar-default-link-color: $navbar-default-color;
-$navbar-default-link-active-bg: $navbar-default-color;
-$navbar-default-link-active-color: $navbar-default-bg;
-$navbar-default-link-hover-bg: $light;
-$navbar-default-link-hover-color: $medium-dark;
-.navbar-static-top { border-width: 0 0 0; } // https://github.com/twbs/bootstrap/issues/11297
-@import "bootstrap";
-
+@import 'bootstrap-customize';
+@import 'fonts';
 
 nav {
   .navbar-brand {
@@ -68,27 +38,25 @@ nav {
   }
 }
 
-.left {
-  float: left;
-}
-
-.right {
-  float: right;
-}
-
-.clear {
-  clear: both;
-}
-
 #page-index {
   $logo-height: 130px;
   $caption-height: 15px;
   $margin: 15px;
 
+  .header {
+    background: linear-gradient(37deg, $dark, $medium);
+    text-align: center;
+    padding-top: $margin;
+    padding-bottom: $margin;
+    min-height: $logo-height + $margin * 2 + $caption-height;
+    margin-bottom: 30px;
+
+    * {
+      color: #ffffff;
+    }
+  }
+
   .gold-sponsor-box {
-    margin-left: 20px;
-    margin-right: 20px;
-    margin-bottom: $margin;
     color: #000000;
 
     a {
@@ -96,7 +64,7 @@ nav {
       height: $logo-height;
       width: $logo-height * 4/3;
       padding-top: 40px;
-      margin: 0;
+      margin: 0 auto;
       border: solid 1px #ffffff;
       color: #ffffff;
     }
@@ -108,18 +76,9 @@ nav {
       font-size: 14px;
       color: #ffffff;
     }
-  }
 
-  .header {
-    background: linear-gradient(37deg, $dark, $medium);
-    text-align: center;
-    padding-top: $margin;
-    padding-bottom: $margin;
-    height: $logo-height + $margin * 2 + $caption-height;
-    margin-bottom: 30px;
-
-    * {
-      color: #ffffff;
+    + .gold-sponsor-box {
+      margin-top: $margin;
     }
   }
 
