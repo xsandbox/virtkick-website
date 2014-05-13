@@ -1,7 +1,8 @@
 //= require_tree .
 @import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700);
+@import url(http://fonts.googleapis.com/css?family=Exo+2:400);
 
-$bg: #FEF8FA;
+$bg: #fdf7f7;
 $dark: #5D2749;
 $medium-dark: #A73E5C;
 $medium: #EC4863;
@@ -12,10 +13,12 @@ $light: #FFD285;
 $body-bg: $bg;
 $grid-columns: 3;
 $font-family-sans-serif: 'Source Sans Pro', sans-serif;
+h1 { font-family: 'Exo 2', sans-serif !important; }
 $font-size-base: 16px;
 $font-size-h2: floor(($font-size-base * 2));
 $font-size-h3: floor(($font-size-base * 1.5));
 $headings-color: $medium-light;
+$navbar-margin-bottom: 0;
 $navbar-default-border: #A73E5C;
 $navbar-default-bg: $bg;
 $navbar-default-color: $medium-dark;
@@ -27,16 +30,28 @@ $navbar-default-link-hover-color: $medium-dark;
 .navbar-static-top { border-width: 0 0 0; } // https://github.com/twbs/bootstrap/issues/11297
 @import "bootstrap";
 
-.navbar {
-  margin-bottom: 0px;
+
+nav {
+  .navbar-brand {
+    padding-top: 9px;
+
+    img.pix {
+      height: 32px;
+    }
+    img.name {
+      padding-left: 8px;
+      height: 24px;
+    }
+  }
+
+  .glyphicon-github {
+    // TODO: refactor
+    margin-top: -5px;
+    margin-left: 2px;
+    height: 16px;
+  }
 }
 
-.glyphicon-github {
-  // TODO: refactor
-  margin-top: -5px;
-  margin-left: 2px;
-  height: 16px;
-}
 
 #old-browser {
   position: fixed;
