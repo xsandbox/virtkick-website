@@ -41,7 +41,7 @@ nav {
 #page-index {
   $logo-height: 130px;
   $caption-height: 15px;
-  $margin: 15px;
+  $margin: 10px;
 
   .header {
     background: linear-gradient(37deg, $dark, $medium);
@@ -56,8 +56,10 @@ nav {
     }
   }
 
-  .gold-sponsor-box {
+  .sponsor-box-div {
     color: #000000;
+    margin-top: $margin;
+    margin-bottom: $margin;
 
     a {
       display: block;
@@ -65,8 +67,7 @@ nav {
       width: $logo-height * 4/3;
       padding-top: 40px;
       margin: 0 auto;
-      border: solid 1px #ffffff;
-      color: #ffffff;
+      text-align: center;
     }
 
     p {
@@ -77,8 +78,20 @@ nav {
       color: #ffffff;
     }
 
-    + .gold-sponsor-box {
-      margin-top: $margin;
+    &.gold-sponsor-box {
+      a {
+        $color: #ffffff;
+        border: solid 1px $color;
+        color: $color;
+      }
+    }
+
+    &.silver-sponsor-box {
+      a {
+        $color: $medium-dark;
+        border: solid 1px $color;
+        color: $color;
+      }
     }
   }
 
@@ -103,6 +116,9 @@ nav {
     }
   }
 
+  .silver-sponsors {
+    margin-top: 40px;
+  }
 }
 
 #page-community {
