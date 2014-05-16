@@ -96,6 +96,10 @@ nav {
   }
 
   .features {
+    .kickstarter-widget {
+      background-color: $light;
+    }
+
     article {
       header {
         color: $medium-light;

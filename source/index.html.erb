@@ -12,15 +12,15 @@ features:
 ---
 <div id="page-index">
   <div class="header row">
-    <div class="col-md-4 col-md-push-1">
+    <div class="col-md-8 col-md-push-2">
       <h1>1-Click Cloud Management Center</h1>
       <p>Cloud made easy for regular users. Kickstart your virtualization!</p>
     </div>
-    <div class="gold-sponsor-box sponsor-box-div col-md-1 col-md-pull-4">
+    <div class="gold-sponsor-box sponsor-box-div col-md-2 col-md-pull-8">
       <a href="/">Become<br/> a Gold Sponsor</a>
       <p>Gold Sponsor</p>
     </div>
-    <div class="gold-sponsor-box sponsor-box-div col-md-1">
+    <div class="gold-sponsor-box sponsor-box-div col-md-2">
       <a href="/">Become<br/> a Gold Sponsor</a>
       <p>Gold Sponsor</p>
     </div>
@@ -28,30 +28,44 @@ features:
 
   <div class="container">
     <div class="features row">
-      <% current_page.data.features.each do |feature| %>
-        <article class="col-md-2">
-          <h3><%= feature.header %></h3>
-          <div>
-            <%= feature.text %>
-          </div>
-        </article>
-      <% end %>
-    </div>
+      <div class="kickstarter-widget col-md-3">
+        <h3>Kickstarter campaign</h3>
+        <p>
+          We are raising funds on Kickstarter to make VirtKick happen.
+        </p>
+        <p>
+          Become a project backer, influence the project and get early access to VirtKick testing deployment,
+          Linux packages, VirtualBox images and much more!
+        </p>
 
-    <div class="newsletter row">
-      <h2>
-        Let me know when VirtKick is available:
-      </h2>
-      <p>
-        <input type="text" placeholder="e-mail address"/>
-        <input type="submit" value="subscribe!"/>
-      </p>
+        <!-- % funded -->
+        <!-- $ pledged -->
+      </div>
+      <div class="row col-md-9">
+        <% current_page.data.features.each do |feature| %>
+          <article class="col-md-4">
+            <h3><%= feature.header %></h3>
+            <div>
+              <%= feature.text %>
+            </div>
+          </article>
+        <% end %>
+      </div>
+      <div class="newsletter row col-md-9">
+        <h2>
+          Let me know when VirtKick is available:
+        </h2>
+        <p>
+          <input type="text" placeholder="e-mail address"/>
+          <input type="submit" value="subscribe!"/>
+        </p>
+      </div>
     </div>
 
     <div class="silver-sponsors row">
-      <div class="col-md-1"></div>
+      <div class="col-md-2"></div>
       <% (1..4).each do %>
-        <div class="silver-sponsor-box sponsor-box-div col-md-1">
+        <div class="silver-sponsor-box sponsor-box-div col-md-2">
           <a href="/">Become<br/> a Silver Sponsor</a>
         </div>
       <% end %>
