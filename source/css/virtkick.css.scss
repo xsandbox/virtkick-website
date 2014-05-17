@@ -98,6 +98,14 @@ nav {
   .features {
     .kickstarter-widget {
       background-color: $light;
+
+      .amount {
+        padding-right: 0;
+      }
+      .goal {
+        padding-left: 0;
+        text-align: right;
+      }
     }
 
     article {

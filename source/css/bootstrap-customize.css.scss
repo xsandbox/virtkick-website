@@ -6,6 +6,7 @@ $medium-light: #FF733E;
 $light: #FFD285;
 
 // Bootstrap overrides, lookup the names at http://getbootstrap.com/customize/
+$brand-primary: $medium-dark;
 $body-bg: $bg;
 $grid-columns: 12;
 $font-family-sans-serif: 'Source Sans Pro', sans-serif;
@@ -14,6 +15,7 @@ $font-size-base: 16px;
 $font-size-h2: floor(($font-size-base * 2));
 $font-size-h3: floor(($font-size-base * 1.5));
 $headings-color: $medium-dark;
+
 $navbar-margin-bottom: 0;
 $navbar-default-border: #A73E5C;
 $navbar-default-bg: $bg;
@@ -24,5 +26,6 @@ $navbar-default-link-active-color: $navbar-default-bg;
 $navbar-default-link-hover-bg: $light;
 $navbar-default-link-hover-color: $medium-dark;
 .navbar-static-top { border-width: 0 0 0; } // https://github.com/twbs/bootstrap/issues/11297
+
 @import "bootstrap";
 body { padding-top: $navbar-height; }
