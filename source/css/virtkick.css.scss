@@ -22,6 +22,19 @@ nav {
   }
 }
 
+@mixin gradient {
+  background: linear-gradient(37deg, $dark, $medium);
+
+  &, * {
+    color: #ffffff;
+  }
+}
+
+footer {
+  @include gradient;
+  text-align: center;
+  padding: 5px;
+}
 
 #old-browser {
   position: fixed;
@@ -44,14 +57,10 @@ nav {
   $margin: 10px;
 
   .header {
-    background: linear-gradient(37deg, $dark, $medium);
+    @include gradient;
     text-align: center;
     min-height: $logo-height + $margin * 2 + $caption-height;
     margin-bottom: 20px;
-
-    * {
-      color: #ffffff;
-    }
 
     h1 {
       padding-top: $margin;
@@ -91,7 +100,7 @@ nav {
         color: $color;
       }
 
-      @media(max-width: $screen-xs-max) {
+      @media(max-width: $screen-sm-max) {
         a {
           color: $medium-dark;
           border: solid 1px $medium-dark;
