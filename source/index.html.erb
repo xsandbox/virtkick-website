@@ -11,23 +11,37 @@ features:
     Kickstart your VPS hosting business without building everything from scratch.
 ---
 <div id="page-index">
-  <div class="header row">
-    <div class="col-md-8 col-md-push-2">
-      <h1>1-Click Cloud Management Center</h1>
-      <p>Cloud made easy for regular users. Kickstart your virtualization!</p>
-    </div>
-    <div class="gold-sponsor-box sponsor-box-div col-md-2 col-md-pull-8">
+  <div class="header">
+    <div class="gold-sponsor-box sponsor-box-div col-md-2 hidden-xs hidden-sm">
       <a href="/">Become<br/> a Gold Sponsor</a>
       <p>Gold Sponsor</p>
     </div>
-    <div class="gold-sponsor-box sponsor-box-div col-md-2">
+    <div class="col-md-8">
+      <h1>1-Click Cloud Management Center</h1>
+      <p class="subtitle">Cloud made easy for regular users. Kickstart your virtualization!</p>
+    </div>
+    <div class="gold-sponsor-box sponsor-box-div col-md-2 hidden-xs hidden-sm">
       <a href="/">Become<br/> a Gold Sponsor</a>
       <p>Gold Sponsor</p>
     </div>
   </div>
 
   <div class="container">
-    <div class="features row">
+    <div class="sponsors-mobile visible-xs visible-sm">
+      <h3>
+        Gold Sponsors:
+      </h3>
+      <div class="row">
+        <div class="gold-sponsor-box sponsor-box-div col-sm-6">
+          <a href="/">Become<br/> a Gold Sponsor</a>
+        </div>
+        <div class="gold-sponsor-box sponsor-box-div col-sm-6">
+          <a href="/">Become<br/> a Gold Sponsor</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="features">
       <div class="kickstarter-widget col-md-3">
         <% url = 'https://www.kickstarter.com/' %>
         <h3>Kickstarter campaign</h3>
@@ -75,7 +89,9 @@ features:
         </p>
       </div>
     </div>
+  </div>
 
+  <div class="container">
     <div class="silver-sponsors row">
       <div class="col-md-2"></div>
       <% (1..4).each do %>
@@ -83,7 +99,7 @@ features:
           <a href="/">Become<br/> a Silver Sponsor</a>
         </div>
       <% end %>
-      <div class="col-md-1"></div>
+      <div class="col-md-2"></div>
     </div>
   </div>
 </div>

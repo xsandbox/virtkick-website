@@ -46,20 +46,26 @@ nav {
   .header {
     background: linear-gradient(37deg, $dark, $medium);
     text-align: center;
-    padding-top: $margin;
-    padding-bottom: $margin;
     min-height: $logo-height + $margin * 2 + $caption-height;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 
     * {
       color: #ffffff;
+    }
+
+    h1 {
+      padding-top: $margin;
+    }
+
+    .subtitle {
+      padding-bottom: $margin;
     }
   }
 
   .sponsor-box-div {
     color: #000000;
-    margin-top: $margin;
-    margin-bottom: $margin;
+    padding-top: $margin;
+    padding-bottom: $margin;
 
     a {
       display: block;
@@ -83,6 +89,13 @@ nav {
         $color: #ffffff;
         border: solid 1px $color;
         color: $color;
+      }
+
+      @media(max-width: $screen-xs-max) {
+        a {
+          color: $medium-dark;
+          border: solid 1px $medium-dark;
+        }
       }
     }
 
