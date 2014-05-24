@@ -9,6 +9,7 @@ features:
 - header: E-commerce enabled
   text: Orders, payments, invoices and helpdesk - it's all here.
     Kickstart your VPS hosting business without building everything from scratch.
+live: true
 ---
 <div id="page-index">
   <div class="header">
@@ -31,7 +32,7 @@ features:
       <h3>
         Gold Sponsors:
       </h3>
-      <div class="row">
+      <div  class="row">
         <div class="gold-sponsor-box sponsor-box-div col-sm-6">
           <a href="/">Become<br/> a Gold Sponsor</a>
         </div>
@@ -43,31 +44,39 @@ features:
 
     <div class="features">
       <div class="kickstarter-widget col-md-3">
-        <% url = 'https://www.kickstarter.com/' %>
         <h3>Kickstarter campaign</h3>
         <p>
-          We are raising funds on Kickstarter to make VirtKick happen.
+          We <%= current_page.data.live ? 'are' : 'will be' %> raising funds on Kickstarter to make VirtKick happen.
         </p>
-        <div class="row">
-          <div class="amount col-xs-9">
-            <div class="progress progress-striped">
-              <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
-                60%
-              </div>
+
+        <% if current_page.data.live %>
+          <% kickstarter = kickstarter_details %>
+          <div class="progress progress-striped">
+            <div class="progress-bar" role="progressbar"
+                style="width: <%= kickstarter[:pledged_percent_capped] %>%">
             </div>
           </div>
-          <div class="goal col-xs-3">
-            $37,000
-          </div>
-        </div>
+          <p class="goal">
+            <%= kickstarter[:pledged_percent] %>% of $37,000 goal
+          </p>
+          <p>
+            <%= link_to 'Pledge now!', kickstarter[:url], :class => 'btn btn-lg btn-block btn-primary' %>
+          </p>
+        <% end %>
+
         <p>
-          <%= link_to 'Pledge now!', url, :class => 'btn btn-lg btn-block btn-primary' %>
-        </p>
-        <p>
-          Multiple rewards include: early access to a testing deployment of VirtKick, Linux packages,
+          Multiple rewards <%= current_page.data.live ? '' : 'will' %> include: early access to a testing deployment of VirtKick, Linux packages,
           VirtualBox image, Docker repo and more!
-          <%= link_to 'Check now', url %>.
+          <% if current_page.data.live %>
+            <%= link_to 'Check now', kickstarter[:url] %>.
+          <% end %>
         </p>
+
+        <% unless current_page.data.live %>
+          <p>
+            Check back soon or sign up for the newsletter!
+          </p>
+        <% end %>
       </div>
       <div class="row col-md-9">
         <% current_page.data.features.each do |feature| %>
