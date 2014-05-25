@@ -64,6 +64,10 @@ footer {
 
     h1 {
       padding-top: $margin;
+
+      @media(max-width: $screen-sm-max) {
+        margin-top: 0;
+      }
     }
 
     .subtitle {
