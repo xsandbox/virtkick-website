@@ -51,11 +51,44 @@ footer {
   }
 }
 
-#page-index {
-  $logo-height: 130px;
-  $caption-height: 15px;
-  $margin: 10px;
+$logo-height: 130px;
+$caption-height: 15px;
+$margin: 10px;
+$become-a-sponsor-top: 40px;
 
+.sponsor-box-div {
+  color: #000000;
+  padding-top: $margin;
+  padding-bottom: $margin;
+
+  a {
+    display: block;
+    height: $logo-height;
+    width: 100%;
+    padding-top: $become-a-sponsor-top;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  p {
+    height: $caption-height;
+    max-height: $caption-height;
+    margin: 0;
+    font-size: 14px;
+    color: #ffffff;
+  }
+
+  &.gold-sponsor-box, &.silver-sponsor-box, &.bronze-sponsor-box {
+    a {
+      $color: $medium-dark;
+      border: solid 1px $color;
+      color: $color;
+    }
+  }
+}
+
+
+#page-index {
   .header {
     @include gradient;
     text-align: center;
@@ -73,31 +106,8 @@ footer {
     .subtitle {
       padding-bottom: $margin;
     }
-  }
 
-  .sponsor-box-div {
-    color: #000000;
-    padding-top: $margin;
-    padding-bottom: $margin;
-
-    a {
-      display: block;
-      height: $logo-height;
-      width: $logo-height * 4/3;
-      padding-top: 40px;
-      margin: 0 auto;
-      text-align: center;
-    }
-
-    p {
-      height: $caption-height;
-      max-height: $caption-height;
-      margin: 0;
-      font-size: 14px;
-      color: #ffffff;
-    }
-
-    &.gold-sponsor-box {
+    .gold-sponsor-box {
       a {
         $color: #ffffff;
         border: solid 1px $color;
@@ -109,14 +119,6 @@ footer {
           color: $medium-dark;
           border: solid 1px $medium-dark;
         }
-      }
-    }
-
-    &.silver-sponsor-box {
-      a {
-        $color: $medium-dark;
-        border: solid 1px $color;
-        color: $color;
       }
     }
   }
@@ -160,30 +162,41 @@ footer {
 
   .silver-sponsors {
     margin-top: 40px;
+
+    h3 {
+      text-align: center;
+    }
   }
 }
 
 #page-community {
-  .sponsors {
-    text-align: center;
-  }
-
-  .banner {
-    display: inline-block;
-    border: solid 1px #c3beb9;
-
-    &.banner-super-sponsor {
-      width: 400px;
-      height: 300px;
-      margin-left: 30px;
-      margin-right: 30px;
-      margin-bottom: 20px;
+  .gold-sponsor-box {
+    a {
+      $color: $medium-dark;
+      border: solid 1px $color;
+      color: $color;
     }
 
-    &.banner-sponsor {
-      width: 100px;
-      height: 100px;
-      margin: 5px;
+    @media(min-width: $screen-sm) {
+      a {
+        padding-top: $become-a-sponsor-top + 50px;
+        height: 220px;
+      }
+    }
+  }
+
+  .silver-sponsor-box {
+    a {
+      $color: $medium-dark;
+      border: solid 1px $color;
+      color: $color;
+    }
+
+    @media(min-width: $screen-sm) {
+      a {
+        padding-top: $become-a-sponsor-top + 30px;
+        height: 180px;
+      }
     }
   }
 }
