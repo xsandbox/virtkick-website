@@ -34,6 +34,10 @@ footer {
   @include gradient;
   text-align: center;
   padding: 5px;
+
+  a:hover {
+    color: $light;
+  }
 }
 
 #old-browser {

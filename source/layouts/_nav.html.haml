@@ -3,12 +3,7 @@
   = navbar_collapse do
     = navbar_group class: 'foo', id: 'menu' do
       = navbar_item 'Home', '/'
-      = navbar_item 'News', '/news.html'
       = navbar_item 'Community', '/community.html'
-      = navbar_item 'Get started', '/get-started.html'
-      = navbar_item 'https://demo.virtkick.io/' do
-        Live demo
-        %span.glyphicon.glyphicon-play
       = navbar_item 'https://github.com/virtkick/virtkick-webapp' do
-        GitHub
-        %img.glyphicon-github{src: '/img/github-dark.png'}
+        GitHub&nbsp;
+        %i.fa-github.fa.fa-lg
