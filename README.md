@@ -1,5 +1,9 @@
 # VirtKick website
 
+[![GPA](https://img.shields.io/codeclimate/github/virtkick/virtkick-website.svg)](https://codeclimate.com/github/virtkick/virtkick-website)
+[![Build status](https://img.shields.io/travis/virtkick/virtkick-website.svg)](https://travis-ci.org/virtkick/virtkick-website)
+[![Dependencies status](http://img.shields.io/gemnasium/virtkick/virtkick-website.svg)](https://gemnasium.com/virtkick/virtkick-website)
+
 This is a website of VirtKick, a 1-click cloud management center.
 It's built with [Middleman](http://middlemanapp.com/).
 Visit [https://www.virtkick.io/](https://www.virtkick.io/) to preview.
@@ -18,7 +22,7 @@ The sources are licensed under GNU AGPL, see [LICENSE.md](https://github.com/vir
 rvm install 2.1
 rvm use 2.1 --default
 gem install bundler
-yaourt -S pngcrush pngout advancecomp # or apt-get install, or whatever
+yaourt -S pngcrush advancecomp # or apt-get install, or whatever
 ```
 
 ### Development
