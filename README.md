@@ -22,7 +22,7 @@ The sources are licensed under GNU AGPL, see [LICENSE.md](https://github.com/vir
 rvm install 2.1
 rvm use 2.1 --default
 gem install bundler
-yaourt -S pngcrush advancecomp # or apt-get install, or whatever
+yaourt -S optipng pngcrush advancecomp # or apt-get install, or whatever
 ```
 
 ### Development

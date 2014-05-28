@@ -3,6 +3,6 @@ cache: bundler
 rvm:
 - 2.1.2
 before_script:
-- sudo apt-get install -y pngcrush advancecomp
+- sudo apt-get install -y optipng pngcrush advancecomp
 script:
 - bundle exec middleman build
