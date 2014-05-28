@@ -2,8 +2,8 @@ source 'https://rubygems.org'
 
 ruby '2.1.2'
 
-gem 'middleman', '~> 3.3.2'
-gem 'middleman-livereload', '~> 3.1.0'
+gem 'middleman', '~> 3.3.0'
+gem 'middleman-livereload', '~> 3.3.0'
 gem 'middleman-imageoptim', '~> 0.1.4'
 gem 'middleman-pry'
 
