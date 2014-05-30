@@ -92,10 +92,16 @@ live: true
         <h2>
           Let me know when VirtKick is available:
         </h2>
-        <p>
-          <input type="text" placeholder="e-mail address"/>
-          <input type="submit" value="subscribe!"/>
-        </p>
+
+        <form method="post" class="form-inline" role="form"
+            action="https://nowaker.us8.list-manage.com/subscribe/post?u=b74a227fdbddc9f590a62114e&amp;id=08823d8a7b">
+          <div class="form-group">
+            <input type="text" name="EMAIL" placeholder="e-mail address" id="newsletter-email" class="form-control" autofocus />
+            &nbsp;
+            <input type="submit" name="subscribe" value="subscribe!" class="btn btn-primary btn-lg" />
+          </div>
+          <p class="result" data-success="Thank you! Please check your e-mail to confirm."></p>
+        </form>
       </div>
     </div>
   </div>
@@ -115,3 +121,24 @@ live: true
     </div>
   </div>
 </div>
+
+<% content_for :scripts do %>
+  <script>
+    $(function() {
+      $('.newsletter form').ajaxChimp({
+        callback: function(response) {
+          resultElement = $('.newsletter .result');
+          wrapperElement = $('.newsletter .form-group');
+
+          if (response.result == 'error') {
+            wrapperElement.removeClass('has-success').addClass('has-error');
+            resultElement.addClass('text-danger').text(response.msg);
+          } else {
+            wrapperElement.removeClass('has-error').addClass('has-success');
+            resultElement.removeClass('text-danger').text(resultElement.data('success'));
+          }
+        }
+      });
+    })
+  </script>
+<% end %>

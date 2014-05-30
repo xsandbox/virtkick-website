@@ -22,8 +22,9 @@
         <a href="https://www.virtkick.io/">VirtKick</a> &copy; 2014 StratusHost Damian Nowak
       </footer>
 
-      <script src="/js/vendor/jquery-2.1.0.min.js"></script>
       <script src="/js/virtkick.js"></script>
+
+      <%= yield_content :scripts %>
     </div>
 
     <!--[if lt IE 8]>
