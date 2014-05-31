@@ -159,6 +159,12 @@ $become-a-sponsor-top: 40px;
     margin-top: 20px;
     text-align: center;
 
+    @media(min-width: $screen-sm) {
+      #newsletter-email {
+        width: 300px;
+      }
+    }
+
     .result {
       margin-top: 10px;
     }
