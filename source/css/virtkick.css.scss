@@ -41,14 +41,12 @@ footer {
 }
 
 #old-browser {
-  position: fixed;
-  top: 50px;
   text-align: center;
   z-index: 1001;
 
   div {
     display: inline-block;
-    width: 400px;
+    width: 450px;
     padding: 20px;
     background-color: #ff8c1a;
     margin: 0 auto;
