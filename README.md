@@ -39,3 +39,6 @@ xdg-open http://0.0.0.0:4567/
 bundle exec middleman build
 ```
 
+## Contributing
+
+See [CONTRIBUTING.md](https://github.com/virtkick/virtkick-website/blob/master/CONTRIBUTING.md). Thanks!
