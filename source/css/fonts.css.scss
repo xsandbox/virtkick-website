@@ -4,12 +4,21 @@
   font-weight: 400;
   src: local('Exo 2'), local('Exo2-Regular'), url(/font/exo-2.woff) format('woff');
 }
+
+@font-face {
+  font-family: 'Earthbound';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Earthbound'), local('Earthbound-Regular'), url(/font/earthbound.woff) format('woff');
+}
+
 @font-face {
   font-family: 'Source Sans Pro';
   font-style: normal;
   font-weight: 400;
   src: local('Source Sans Pro'), local('SourceSansPro-Regular'), url(/font/source-sans-pro.woff) format('woff');
 }
+
 @font-face {
   font-family: 'Source Sans Pro';
   font-style: normal;

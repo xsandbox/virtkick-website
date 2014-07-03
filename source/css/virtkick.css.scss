@@ -3,29 +3,20 @@
 
 nav {
   .navbar-brand {
-    padding-top: 9px;
-
-    img.pix {
-      height: 32px;
-    }
-    img.name {
-      padding-left: 8px;
-      height: 24px;
-    }
+    font-family: Earthbound;
+    font-size: 32px;
+    padding-top: 10px;
   }
 
-  .glyphicon-github {
-    // TODO: refactor
-    margin-top: -5px;
-    margin-left: 2px;
-    height: 16px;
+  li {
+    text-transform: uppercase;
   }
 }
 
 @mixin gradient {
-  background: linear-gradient(37deg, $dark, $medium);
+  background: linear-gradient($dark, $medium);
 
-  &, * {
+  &, *:not(input) {
     color: #ffffff;
   }
 }
@@ -36,7 +27,7 @@ footer {
   padding: 5px;
 
   a:hover {
-    color: $light;
+    color: $medium-light;
   }
 }
 
@@ -82,7 +73,7 @@ $become-a-sponsor-top: 40px;
 
   &.gold-sponsor-box, &.silver-sponsor-box, &.bronze-sponsor-box {
     a {
-      $color: $medium-dark;
+      $color: $medium-light;
       border: solid 1px $color;
       color: $color;
     }
@@ -97,6 +88,12 @@ $become-a-sponsor-top: 40px;
     min-height: $logo-height + $margin * 2 + $caption-height;
     margin-bottom: 20px;
 
+    .row {
+      // Prevent a horizontal scrollbar.
+      margin-left: 0;
+      margin-right: 0;
+    }
+
     h1 {
       padding-top: $margin;
 
@@ -105,8 +102,10 @@ $become-a-sponsor-top: 40px;
       }
     }
 
-    .subtitle {
-      padding-bottom: $margin;
+    h2 {
+      margin-top: 0;
+      font-size: 28px;
+      color: #D0334E;
     }
 
     .gold-sponsor-box {
@@ -118,8 +117,8 @@ $become-a-sponsor-top: 40px;
 
       @media(max-width: $screen-sm-max) {
         a {
-          color: $medium-dark;
-          border: solid 1px $medium-dark;
+          color: $medium-light;
+          border: solid 1px $medium-light;
         }
       }
     }
@@ -155,7 +154,16 @@ $become-a-sponsor-top: 40px;
 
   .newsletter {
     margin-top: 20px;
-    text-align: center;
+
+    form input {
+      text-transform: uppercase;
+      text-align: center;
+
+      .input {
+        color: $medium-light;
+        text-align: center;
+      }
+    }
 
     @media(min-width: $screen-sm) {
       #newsletter-email {
@@ -194,7 +202,7 @@ $become-a-sponsor-top: 40px;
 
   .gold-sponsor-box {
     a {
-      $color: $medium-dark;
+      $color: $medium-light;
       border: solid 1px $color;
       color: $color;
     }
@@ -209,7 +217,7 @@ $become-a-sponsor-top: 40px;
 
   .silver-sponsor-box {
     a {
-      $color: $medium-dark;
+      $color: $medium-light;
       border: solid 1px $color;
       color: $color;
     }
