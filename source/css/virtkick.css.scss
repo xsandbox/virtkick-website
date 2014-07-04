@@ -21,20 +21,25 @@ nav {
   }
 }
 
-@mixin newsletter {
-  form input {
-    text-transform: uppercase;
-    text-align: center;
-
-    .input {
-      color: $medium-light;
+@mixin newsletter($input-height, $text-height) {
+  form {
+    input {
       text-align: center;
+      font-family: 'Open Sans', sans;
+      font-weight: 300;
+      font-size: $text-height;
+      height: $input-height;
+    }
+
+    .btn {
+      height: $input-height;
+      padding: 10px (2.5 * $text-height);
     }
   }
 
   @media(min-width: $screen-sm) {
     #newsletter-email {
-      width: 300px;
+      width: 280px;
     }
   }
 
@@ -47,14 +52,18 @@ nav {
 footer {
   text-align: center;
 
-  background-color: #721830;
+  .sputnik {
+    position: relative;
+    top: 72px;
+  }
 
   .newsletter {
-    @include newsletter;
+    @include newsletter(40px, 12px);
     padding-bottom: 40px;
+    background-color: #721830;
 
     h3 {
-      padding-top: 20px;
+      padding-top: 60px;
       padding-bottom: 10px;
 
       .first {
@@ -66,14 +75,18 @@ footer {
     }
   }
 
-  .nav {
-    width: 600px;
-    margin: 0 auto;
-    text-transform: uppercase;
-    margin-bottom: 20px;
+  .menu {
+    background-color: #721830;
 
-    a {
-      color: #ffffff;
+    .nav {
+      width: 600px;
+      margin: 0 auto;
+      text-transform: uppercase;
+      padding-bottom: 20px;
+
+      a {
+        color: #ffffff;
+      }
     }
   }
 
@@ -158,6 +171,12 @@ $become-a-sponsor-top: 40px;
       background-position: top center;
     }
 
+    .content {
+      background-image: url('/img/paperplane.png'), url('/img/sputnik.png');
+      background-repeat: no-repeat;
+      background-position: left top, right bottom;
+    }
+
     h1 {
       margin-top: 0;
       padding-top: 0;
@@ -178,24 +197,32 @@ $become-a-sponsor-top: 40px;
       text-transform: uppercase;
 
       .logo {
-        width: 100%;
-        height: 200px;
-        background-color: rgba(0, 0, 0, 0.1);
-        margin-bottom: 10px;
-        font-weight: bold;
-        vertical-align: middle;
-        padding-top: 75px;
-        border-radius: 5px;
+        max-width: 300px;
+        margin: 0 auto;
 
-        a {
-          opacity: 1;
+        .box {
+          height: 200px;
+          background-color: rgba(0, 0, 0, 0.1);
+          margin-bottom: 10px;
+          font-weight: bold;
+          vertical-align: middle;
+          padding-top: 75px;
+          border-radius: 5px;
+
+          a {
+            opacity: 1;
+          }
+        }
+
+        p {
+          font-size: 80%;
         }
       }
     }
 
     .newsletter {
       margin-top: 75px;
-      @include newsletter;
+      @include newsletter(50px, 16px);
 
       .result {
         font-size: 20px;

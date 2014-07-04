@@ -16,9 +16,10 @@
       <%= yield %>
 
       <footer>
+        <img src="/img/sputnik-small.png" class="sputnik" />
         <div class="newsletter">
           <h3>
-            <span class="first">Subscribe</span> <span class="second">now</span>
+            <span class="first">Subscribe</span> <span class="second">for updates</span>
           </h3>
           <form method="post" class="form-inline" role="form"
           action="https://nowaker.us8.list-manage.com/subscribe/post?u=b74a227fdbddc9f590a62114e&amp;id=08823d8a7b">
@@ -34,9 +35,11 @@
             </p>
           </form>
         </div>
-        <ul class="nav nav-justified">
-          <%= partial 'layouts/nav_items' %>
-        </ul>
+        <div class="menu">
+          <ul class="nav nav-justified">
+            <%= partial 'layouts/nav_items' %>
+          </ul>
+        </div>
         <div class="copyright">
           <a href="https://www.virtkick.io/">VirtKick</a> &copy; 2014 StratusHost Damian Nowak
         </div>

@@ -8,7 +8,7 @@ This is a website of VirtKick, a 1-click cloud management center.
 It's built with [Middleman](http://middlemanapp.com/).
 Visit [https://www.virtkick.io/](https://www.virtkick.io/) to preview.
 
-The sources are licensed under GNU AGPL, see [LICENSE.md](https://github.com/virtkick/virtkick-website/blob/master/LICENSE.md).
+The sources are licensed under GNU AGPLv3 or later, see [LICENSE.md](https://github.com/virtkick/virtkick-website/blob/master/LICENSE.md).
 
 ## Requirements
 
