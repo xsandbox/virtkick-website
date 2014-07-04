@@ -21,13 +21,70 @@ nav {
   }
 }
 
-footer {
-  @include gradient;
-  text-align: center;
-  padding: 5px;
+@mixin newsletter {
+  form input {
+    text-transform: uppercase;
+    text-align: center;
 
-  a:hover {
+    .input {
+      color: $medium-light;
+      text-align: center;
+    }
+  }
+
+  @media(min-width: $screen-sm) {
+    #newsletter-email {
+      width: 300px;
+    }
+  }
+
+  .result {
+    margin-top: 15px;
+    color: #F5A3B2;
+  }
+}
+
+footer {
+  text-align: center;
+
+  background-color: #721830;
+
+  .newsletter {
+    @include newsletter;
+    padding-bottom: 40px;
+
+    h3 {
+      padding-top: 20px;
+      padding-bottom: 10px;
+
+      .first {
+        color: #D44D5D;
+      }
+      .second {
+        color: #E7BDC2;
+      }
+    }
+  }
+
+  .nav {
+    width: 600px;
+    margin: 0 auto;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+
+    a {
+      color: #ffffff;
+    }
+  }
+
+  .copyright {
+    background-color: #320B16;
     color: $medium-light;
+    padding: 15px;
+
+    a:hover {
+      color: $medium-light;
+    }
   }
 }
 
@@ -138,25 +195,9 @@ $become-a-sponsor-top: 40px;
 
     .newsletter {
       margin-top: 75px;
-
-      form input {
-        text-transform: uppercase;
-        text-align: center;
-
-        .input {
-          color: $medium-light;
-          text-align: center;
-        }
-      }
-
-      @media(min-width: $screen-sm) {
-        #newsletter-email {
-          width: 300px;
-        }
-      }
+      @include newsletter;
 
       .result {
-        margin-top: 15px;
         font-size: 20px;
       }
     }

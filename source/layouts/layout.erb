@@ -16,11 +16,51 @@
       <%= yield %>
 
       <footer>
-        <a href="https://www.virtkick.io/">VirtKick</a> &copy; 2014 StratusHost Damian Nowak
+        <div class="newsletter">
+          <h3>
+            <span class="first">Subscribe</span> <span class="second">now</span>
+          </h3>
+          <form method="post" class="form-inline" role="form"
+          action="https://nowaker.us8.list-manage.com/subscribe/post?u=b74a227fdbddc9f590a62114e&amp;id=08823d8a7b">
+            <div class="form-group">
+              <input type="text" name="EMAIL" placeholder="e-mail address" id="newsletter-email" class="form-control input"/>
+            </div>
+            &nbsp;
+            <div class="form-group">
+              <input type="submit" name="subscribe" value="subscribe" class="btn btn-primary"/>
+            </div>
+            <p class="result" data-success="Thank you! Please check your e-mail to confirm.">
+              We will let you know when VirtKick is available!
+            </p>
+          </form>
+        </div>
+        <ul class="nav nav-justified">
+          <%= partial 'layouts/nav_items' %>
+        </ul>
+        <div class="copyright">
+          <a href="https://www.virtkick.io/">VirtKick</a> &copy; 2014 StratusHost Damian Nowak
+        </div>
       </footer>
 
       <script src="/js/virtkick.js"></script>
+      <script>
+        $(function() {
+          $('.newsletter form').ajaxChimp({
+            callback: function(response, element) {
+              resultElement = $('.newsletter .result');
+              wrapperElement = $('.newsletter .form-group');
 
+              if (response.result == 'error') {
+                wrapperElement.removeClass('has-success').addClass('has-error');
+                resultElement.addClass('text-danger').text(response.msg);
+              } else {
+                wrapperElement.removeClass('has-error').addClass('has-success');
+                resultElement.removeClass('text-danger').text(resultElement.data('success'));
+              }
+            }
+          });
+        })
+      </script>
       <%= yield_content :scripts %>
     </div>
 

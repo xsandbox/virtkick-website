@@ -129,24 +129,3 @@ live: false
     </div>
   </div>
 </div>
-
-<% content_for :scripts do %>
-  <script>
-    $(function() {
-      $('.newsletter form').ajaxChimp({
-        callback: function(response) {
-          resultElement = $('.newsletter .result');
-          wrapperElement = $('.newsletter .form-group');
-
-          if (response.result == 'error') {
-            wrapperElement.removeClass('has-success').addClass('has-error');
-            resultElement.addClass('text-danger').text(response.msg);
-          } else {
-            wrapperElement.removeClass('has-error').addClass('has-success');
-            resultElement.removeClass('text-danger').text(resultElement.data('success'));
-          }
-        }
-      });
-    })
-  </script>
-<% end %>
