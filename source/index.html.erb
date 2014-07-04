@@ -24,9 +24,6 @@ live: false
         </div>
       </div>
       <div class="content col-md-6">
-        <!--<img src="/img/paperplane.png" alt="" class="paperplane" />-->
-        <!--<img src="/img/sputnik.png" alt="" class="sputnik" />-->
-
         <h1>1-Click Cloud Management</h1>
         <h2>Cloud made easy. Really easy.</h2>
 
@@ -72,9 +69,23 @@ live: false
       </div>
     </div>
 
-    <div class="features">
-      <div class="kickstarter-widget col-md-3">
-        <h3>Kickstarter campaign</h3>
+    <div class="kickstarter-window">
+      <div class="controls">
+        <i class="fa fa-circle"></i>
+        <i class="fa fa-circle"></i>
+        <i class="fa fa-circle"></i>
+      </div>
+      <div class="content">
+        <div class="logos row">
+          <div class="col-md-6 gradient-border">
+            <img src="/img/virtkick-logo-pixelart-48.png" />
+            <img src="/img/virtkick-logo.png" alt="VirtKick" />
+          </div>
+          <div class="col-md-6">
+            <img src="/img/kickstarter-logo.png" alt="Kickstarter" class="kickstarter" />
+          </div>
+        </div>
+
         <p>
           We <%= current_page.data.live ? 'are' : 'will be' %> raising funds on Kickstarter to make VirtKick happen.
         </p>
@@ -90,13 +101,14 @@ live: false
             <%= kickstarter[:pledged_percent] %>% of $37,000 goal
           </p>
           <p>
-            <%= link_to 'Pledge now!', kickstarter[:url], :class => 'btn btn-lg btn-block btn-primary' %>
+            <%= link_to 'Pledge now!', kickstarter[:url], class: 'btn btn-lg btn-block btn-primary' %>
           </p>
         <% end %>
 
-        <p>
-          Multiple rewards <%= current_page.data.live ? '' : 'will' %> include: early access to a testing deployment of VirtKick, Linux packages,
-          VirtualBox image, Docker repo and more!
+        <p class="rewards">
+          Multiple rewards <%= current_page.data.live ? '' : 'will' %> include:
+          early access to a testing deployment of VirtKick,<br/>
+          Linux packages, VirtualBox image, Docker repo and more!
           <% if current_page.data.live %>
             <%= link_to 'Check now', kickstarter[:url] %>.
           <% end %>
@@ -108,7 +120,10 @@ live: false
           </p>
         <% end %>
       </div>
-      <div class="row col-md-9">
+    </div>
+
+    <div class="features">
+      <div class="row col-md-12">
         <% current_page.data.features.each do |feature| %>
           <article class="col-md-4">
             <h3><%= feature.header %></h3>

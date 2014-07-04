@@ -156,7 +156,7 @@ $become-a-sponsor-top: 40px;
     @include gradient;
     text-align: center;
     margin-bottom: 20px;
-    height: 450px;
+    height: 470px;
 
     .row {
       // Prevent a horizontal scrollbar.
@@ -230,23 +230,85 @@ $become-a-sponsor-top: 40px;
     }
   }
 
-  .features {
-    .kickstarter-widget {
-      background-color: $light;
+  .kickstarter-window {
+    position: relative;
+    top: -55px;
 
-      .amount {
-        padding-right: 0;
+    width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+
+    border-radius: 20px;
+    box-shadow: 0px 0px 40px 0px rgba(234,234,234,1);
+    background-color: rgba(255, 255, 255, 0.25);
+
+    .controls {
+      text-align: right;
+      padding-top: 7px;
+      padding-right: 15px;
+
+      i {
+        color: #FFD285;
+        padding-right: 2px;
       }
-      .goal {
-        padding-left: 0;
-        text-align: center;
-        font-size: 14px;
+      i + i {
+        color: #ED3956;
       }
-      .progress {
-        margin-bottom: 0;
+      i + i + i {
+        color: #A73E5C;
       }
     }
 
+    .logos {
+      margin-top: 30px;
+      margin-bottom: 30px;
+      text-align: center;
+
+      img {
+        margin-top: 15px;
+      }
+
+      img + img {
+        margin-left: 12px;
+      }
+
+      .kickstarter {
+        width: 200px;
+        padding-top: 15px;
+      }
+
+      .gradient-border {
+        background-image: url('/img/gradient-border.png');
+        background-repeat: no-repeat;
+        background-position: right top;
+        height: 75px;
+      }
+    }
+
+    .content {
+      padding-left: 80px;
+      padding-right: 80px;
+      padding-bottom: 30px;
+
+      .progress {
+        margin-bottom: 5px;
+      }
+
+      .goal {
+        margin-bottom: 20px;
+      }
+
+      .rewards {
+        margin-top: 20px;
+      }
+    }
+
+    p {
+      text-align: center;
+    }
+  }
+
+  .features {
     article {
       header {
         color: $medium-light;
