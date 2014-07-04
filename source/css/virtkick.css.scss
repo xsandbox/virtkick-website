@@ -14,7 +14,7 @@ nav {
 }
 
 @mixin gradient {
-  background: linear-gradient($dark, $medium);
+  background: linear-gradient(darken($dark, 5%), $medium);
 
   &, *:not(input) {
     color: #ffffff;
@@ -85,8 +85,8 @@ $become-a-sponsor-top: 40px;
   .header {
     @include gradient;
     text-align: center;
-    min-height: $logo-height + $margin * 2 + $caption-height;
     margin-bottom: 20px;
+    height: 450px;
 
     .row {
       // Prevent a horizontal scrollbar.
@@ -94,8 +94,16 @@ $become-a-sponsor-top: 40px;
       margin-right: 0;
     }
 
+    .moon {
+      height: 120px;
+      background-image: url('/img/moon.png');
+      background-repeat: no-repeat;
+      background-position: top center;
+    }
+
     h1 {
-      padding-top: $margin;
+      margin-top: 0;
+      padding-top: 0;
 
       @media(max-width: $screen-sm-max) {
         margin-top: 0;
@@ -108,18 +116,48 @@ $become-a-sponsor-top: 40px;
       color: #D0334E;
     }
 
-    .gold-sponsor-box {
-      a {
-        $color: #ffffff;
-        border: solid 1px $color;
-        color: $color;
+    .become-a-sponsor {
+      padding-top: 20px;
+      text-transform: uppercase;
+
+      .logo {
+        width: 100%;
+        height: 200px;
+        background-color: rgba(0, 0, 0, 0.1);
+        margin-bottom: 10px;
+        font-weight: bold;
+        vertical-align: middle;
+        padding-top: 75px;
+        border-radius: 5px;
+
+        a {
+          opacity: 1;
+        }
+      }
+    }
+
+    .newsletter {
+      margin-top: 75px;
+
+      form input {
+        text-transform: uppercase;
+        text-align: center;
+
+        .input {
+          color: $medium-light;
+          text-align: center;
+        }
       }
 
-      @media(max-width: $screen-sm-max) {
-        a {
-          color: $medium-light;
-          border: solid 1px $medium-light;
+      @media(min-width: $screen-sm) {
+        #newsletter-email {
+          width: 300px;
         }
+      }
+
+      .result {
+        margin-top: 15px;
+        font-size: 20px;
       }
     }
   }
@@ -149,30 +187,6 @@ $become-a-sponsor-top: 40px;
       div {
         line-height: 140%;
       }
-    }
-  }
-
-  .newsletter {
-    margin-top: 20px;
-
-    form input {
-      text-transform: uppercase;
-      text-align: center;
-
-      .input {
-        color: $medium-light;
-        text-align: center;
-      }
-    }
-
-    @media(min-width: $screen-sm) {
-      #newsletter-email {
-        width: 300px;
-      }
-    }
-
-    .result {
-      margin-top: 10px;
     }
   }
 

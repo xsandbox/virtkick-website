@@ -4,7 +4,6 @@ $medium: #C7233F;
 $medium-light: #D44D5D;
 $light: #FFD285;
 
-
 // Bootstrap overrides, lookup the names at http://getbootstrap.com/customize/
 $brand-primary: $medium-light;
 $body-bg: $bg;
@@ -24,7 +23,7 @@ $input-border-focus: $medium-light;
 }
 
 $navbar-margin-bottom: 0;
-$navbar-default-border: #A73E5C;
+$navbar-default-border: lighten($dark, 5%);
 $navbar-default-bg: $dark;
 $navbar-default-color: $bg;
 $navbar-default-link-color: $navbar-default-color;
@@ -32,14 +31,11 @@ $navbar-default-link-active-bg: $navbar-default-bg;
 $navbar-default-link-active-color: $navbar-default-color;
 $navbar-default-link-hover-bg: $navbar-default-bg;
 $navbar-default-link-hover-color: $navbar-default-color;
-$navbar-height: 64px;
+$navbar-height: 68px;
 
-.navbar-fixed-top {
-  border-width: 0 0 0 !important;
-}
 .navbar-nav {
   margin-top: 0 !important;
 }
 
 @import "bootstrap";
-body { padding-top: $navbar-height; }
+body { padding-top: $navbar-height + 1; }
