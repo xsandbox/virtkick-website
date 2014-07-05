@@ -58,18 +58,24 @@ live: false
   </div>
 
   <div class="content-container container">
-    <div class="sponsors-mobile visible-xs visible-sm">
-      <h3>
-        Gold Sponsors:
-      </h3>
-      <div  class="row">
-        <div class="gold-sponsor-box sponsor-box-div col-sm-6">
-          <a href="/become-a-sponsor.html">Become<br/> a Gold Sponsor</a>
-        </div>
-        <div class="gold-sponsor-box sponsor-box-div col-sm-6">
-          <a href="/become-a-sponsor.html">Become<br/> a Gold Sponsor</a>
-        </div>
+    <div class="sponsors row visible-xs visible-sm">
+      <div class="title col-md-12">
+        <h3>
+          Gold <span class="focus">Sponsors</span>
+        </h3>
       </div>
+      <% (1..2).each do %>
+        <div class="sponsor col-md-12">
+          <div class="controls">
+            <i class="fa fa-circle"></i>
+            <i class="fa fa-circle"></i>
+            <i class="fa fa-circle"></i>
+          </div>
+          <div class="content">
+            <a href="/become-a-sponsor.html">Become<br/> a Gold Sponsor</a>
+          </div>
+        </div>
+      <% end %>
     </div>
 
     <div class="kickstarter-window">
@@ -150,20 +156,22 @@ live: false
 
   <div class="sponsors-container">
     <div class="container">
-      <div class="silver-sponsors row">
+      <div class="sponsors row">
         <div class="title col-md-12">
           <h3>
             Silver <span class="focus">Sponsors</span>
           </h3>
         </div>
         <% (1..4).each do %>
-          <div class="silver-sponsor-box sponsor-box-div col-md-3">
+          <div class="sponsor col-md-3">
             <div class="controls">
               <i class="fa fa-circle"></i>
               <i class="fa fa-circle"></i>
               <i class="fa fa-circle"></i>
             </div>
-            <a href="/become-a-sponsor.html">Become<br/> a Silver Sponsor</a>
+            <div class="content">
+              <a href="/become-a-sponsor.html">Become<br/> a Silver Sponsor</a>
+            </div>
           </div>
         <% end %>
       </div>

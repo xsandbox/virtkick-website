@@ -49,6 +49,10 @@ footer {
       text-transform: uppercase;
       padding-bottom: 20px;
 
+      li {
+        display: inline-block;
+      }
+
       a {
         color: #ffffff;
       }
@@ -76,38 +80,6 @@ footer {
     padding: 20px;
     background-color: #ff8c1a;
     margin: 0 auto;
-  }
-}
-
-$logo-height: 130px;
-$caption-height: 15px;
-
-.sponsor-box-div {
-  color: #000000;
-
-  a {
-    display: block;
-    height: $logo-height;
-    width: 100%;
-    padding-top: 40px;
-    margin: 0 auto;
-    text-align: center;
-    background-color: #ffffff;
-  }
-
-  p {
-    height: $caption-height;
-    max-height: $caption-height;
-    margin: 0;
-    font-size: 14px;
-    color: #ffffff;
-  }
-
-  &.gold-sponsor-box, &.silver-sponsor-box, &.bronze-sponsor-box {
-    a {
-      $color: $medium-light;
-      color: $color;
-    }
   }
 }
 
