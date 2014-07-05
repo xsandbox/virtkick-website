@@ -309,13 +309,42 @@ $become-a-sponsor-top: 40px;
   }
 
   .features {
-    article {
-      header {
-        color: $medium-light;
-        font-size: 24px;
+    h2 {
+      margin-bottom: 50px;
+    }
+
+    h2, h3 {
+      .focus {
+        color: #673655;
       }
-      div {
+    }
+
+    article {
+      text-align: center;
+
+      .logo-container {
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 30px;
+        width: 130px;
+
+        .logo {
+          width: 130px;
+          height: 130px;
+          background-color: #F2F2F2;
+          margin: 0 auto;
+          vertical-align: middle;
+          display: table-cell;
+          border-radius: 5px;
+        }
+      }
+
+      p {
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 25px;
         line-height: 140%;
+        width: 80%;
       }
     }
   }

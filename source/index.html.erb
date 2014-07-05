@@ -1,12 +1,15 @@
 ---
 features:
-- header: 1-Click Install
+- header: '1-Click <span class="focus">Install</span>'
+  image: helpdesk
   text: We provide decent default settings in our packages and appliances.
     Get started in five minutes - don't care about the details at the beginning!
-- header: Useful UI
+- header: 'Useful <span class="focus">UI</span>'
+  image: monitoring
   text: Meet a useful user interface that lets you achieve most common tasks blazingly fast.
     Create and use your virtual machine with 5 clicks in 45 seconds.
-- header: E-commerce enabled
+- header: 'E-commerce <span class="focus">enabled</span>'
+  image: status-page
   text: Orders, payments, invoices and helpdesk - it's all here.
     Kickstart your VPS hosting business without building everything from scratch.
 live: false
@@ -123,13 +126,22 @@ live: false
     </div>
 
     <div class="features">
+      <h2 class="text-center">
+        Kickstart your <span class="focus">virtualization!</span>
+      </h2>
+
       <div class="row col-md-12">
         <% current_page.data.features.each do |feature| %>
           <article class="col-md-4">
-            <h3><%= feature.header %></h3>
-            <div>
-              <%= feature.text %>
+            <div class="logo-container">
+              <div class="logo">
+                <%= tag :img, src: "/img/bonus/#{feature.image}.png" %>
+              </div>
             </div>
+            <h3><%= feature.header %></h3>
+            <p>
+              <%= feature.text %>
+            </p>
           </article>
         <% end %>
       </div>
