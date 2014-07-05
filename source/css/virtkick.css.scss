@@ -1,5 +1,6 @@
 @import 'bootstrap-customize';
 @import 'fonts';
+@import '_mixins';
 
 nav {
   .navbar-brand {
@@ -10,42 +11,6 @@ nav {
 
   li {
     text-transform: uppercase;
-  }
-}
-
-@mixin gradient {
-  background: linear-gradient(darken($dark, 5%), $medium);
-
-  &, *:not(input) {
-    color: #ffffff;
-  }
-}
-
-@mixin newsletter($input-height, $text-height) {
-  form {
-    input {
-      text-align: center;
-      font-family: 'Open Sans', sans;
-      font-weight: 300;
-      font-size: $text-height;
-      height: $input-height;
-    }
-
-    .btn {
-      height: $input-height;
-      padding: 10px (2.5 * $text-height);
-    }
-  }
-
-  @media(min-width: $screen-sm) {
-    #newsletter-email {
-      width: 280px;
-    }
-  }
-
-  .result {
-    margin-top: 15px;
-    color: #F5A3B2;
   }
 }
 
@@ -116,21 +81,18 @@ footer {
 
 $logo-height: 130px;
 $caption-height: 15px;
-$margin: 10px;
-$become-a-sponsor-top: 40px;
 
 .sponsor-box-div {
   color: #000000;
-  padding-top: $margin;
-  padding-bottom: $margin;
 
   a {
     display: block;
     height: $logo-height;
     width: 100%;
-    padding-top: $become-a-sponsor-top;
+    padding-top: 40px;
     margin: 0 auto;
     text-align: center;
+    background-color: #ffffff;
   }
 
   p {
@@ -144,263 +106,24 @@ $become-a-sponsor-top: 40px;
   &.gold-sponsor-box, &.silver-sponsor-box, &.bronze-sponsor-box {
     a {
       $color: $medium-light;
-      border: solid 1px $color;
       color: $color;
     }
   }
 }
 
+.controls {
+  text-align: right;
+  padding-top: 7px;
+  padding-right: 15px;
 
-#page-index {
-  .header {
-    @include gradient;
-    text-align: center;
-    margin-bottom: 20px;
-    height: 470px;
-
-    .row {
-      // Prevent a horizontal scrollbar.
-      margin-left: 0;
-      margin-right: 0;
-    }
-
-    .moon {
-      height: 120px;
-      background-image: url('/img/moon.png');
-      background-repeat: no-repeat;
-      background-position: top center;
-    }
-
-    .content {
-      background-image: url('/img/paperplane.png'), url('/img/sputnik.png');
-      background-repeat: no-repeat;
-      background-position: left top, right bottom;
-    }
-
-    h1 {
-      margin-top: 0;
-      padding-top: 0;
-
-      @media(max-width: $screen-sm-max) {
-        margin-top: 0;
-      }
-    }
-
-    h2 {
-      margin-top: 0;
-      font-size: 28px;
-      color: #D0334E;
-    }
-
-    .become-a-sponsor {
-      padding-top: 20px;
-      text-transform: uppercase;
-
-      .logo {
-        max-width: 300px;
-        margin: 0 auto;
-
-        .box {
-          height: 200px;
-          background-color: rgba(0, 0, 0, 0.1);
-          margin-bottom: 10px;
-          font-weight: bold;
-          vertical-align: middle;
-          padding-top: 75px;
-          border-radius: 5px;
-
-          a {
-            opacity: 1;
-          }
-        }
-
-        p {
-          font-size: 80%;
-        }
-      }
-    }
-
-    .newsletter {
-      margin-top: 75px;
-      @include newsletter(50px, 16px);
-
-      .result {
-        font-size: 20px;
-      }
-    }
+  i {
+    color: #FFD285;
+    padding-right: 2px;
   }
-
-  .kickstarter-window {
-    position: relative;
-    top: -55px;
-
-    width: 700px;
-    margin-left: auto;
-    margin-right: auto;
-
-    border-radius: 20px;
-    box-shadow: 0px 0px 40px 0px rgba(234,234,234,1);
-    background-color: rgba(255, 255, 255, 0.25);
-
-    .controls {
-      text-align: right;
-      padding-top: 7px;
-      padding-right: 15px;
-
-      i {
-        color: #FFD285;
-        padding-right: 2px;
-      }
-      i + i {
-        color: #ED3956;
-      }
-      i + i + i {
-        color: #A73E5C;
-      }
-    }
-
-    .logos {
-      margin-top: 30px;
-      margin-bottom: 30px;
-      text-align: center;
-
-      img {
-        margin-top: 15px;
-      }
-
-      img + img {
-        margin-left: 12px;
-      }
-
-      .kickstarter {
-        width: 200px;
-        padding-top: 15px;
-      }
-
-      .gradient-border {
-        // background-image: url('/img/gradient-border.png'); // https://github.com/CodeCharmLtd/http-master/issues/71
-        border-right: solid 1px #D8D8D8;
-        background-repeat: no-repeat;
-        background-position: right top;
-        height: 75px;
-      }
-    }
-
-    .content {
-      padding-left: 80px;
-      padding-right: 80px;
-      padding-bottom: 30px;
-
-      .progress {
-        margin-bottom: 5px;
-      }
-
-      .goal {
-        margin-bottom: 20px;
-      }
-
-      .rewards {
-        margin-top: 20px;
-      }
-    }
-
-    p {
-      text-align: center;
-    }
+  i + i {
+    color: #ED3956;
   }
-
-  .features {
-    h2 {
-      margin-bottom: 50px;
-    }
-
-    h2, h3 {
-      .focus {
-        color: #673655;
-      }
-    }
-
-    article {
-      text-align: center;
-
-      .logo-container {
-        margin-left: auto;
-        margin-right: auto;
-        margin-bottom: 30px;
-        width: 130px;
-
-        .logo {
-          width: 130px;
-          height: 130px;
-          background-color: #F2F2F2;
-          margin: 0 auto;
-          vertical-align: middle;
-          display: table-cell;
-          border-radius: 5px;
-        }
-      }
-
-      p {
-        margin-left: auto;
-        margin-right: auto;
-        margin-top: 25px;
-        line-height: 140%;
-        width: 80%;
-      }
-    }
-  }
-
-  .silver-sponsors {
-    h3 {
-      text-align: center;
-    }
-  }
-}
-
-#page-community {
-  .contributors {
-    .avatar {
-      float: left;
-      margin-top: 10px;
-      margin-right: 5px;
-      margin-bottom: 5px;
-    }
-
-    header {
-      font-size: floor($font-size-base * 1.25);
-      span {
-        font-weight: normal;
-      }
-    }
-  }
-
-  .gold-sponsor-box {
-    a {
-      $color: $medium-light;
-      border: solid 1px $color;
-      color: $color;
-    }
-
-    @media(min-width: $screen-sm) {
-      a {
-        padding-top: $become-a-sponsor-top + 50px;
-        height: 220px;
-      }
-    }
-  }
-
-  .silver-sponsor-box {
-    a {
-      $color: $medium-light;
-      border: solid 1px $color;
-      color: $color;
-    }
-
-    @media(min-width: $screen-sm) {
-      a {
-        padding-top: $become-a-sponsor-top + 30px;
-        height: 180px;
-      }
-    }
+  i + i + i {
+    color: #A73E5C;
   }
 }

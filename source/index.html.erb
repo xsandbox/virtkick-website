@@ -148,18 +148,25 @@ live: false
     </div>
   </div>
 
-  <div class="container">
-    <div class="silver-sponsors row">
-      <div class="title col-md-12">
-        <h3>Silver Sponsors</h3>
-      </div>
-      <div class="col-md-2"></div>
-      <% (1..4).each do %>
-        <div class="silver-sponsor-box sponsor-box-div col-md-2">
-          <a href="/become-a-sponsor.html">Become<br/> a Silver Sponsor</a>
+  <div class="sponsors-container">
+    <div class="container">
+      <div class="silver-sponsors row">
+        <div class="title col-md-12">
+          <h3>
+            Silver <span class="focus">Sponsors</span>
+          </h3>
         </div>
-      <% end %>
-      <div class="col-md-2"></div>
+        <% (1..4).each do %>
+          <div class="silver-sponsor-box sponsor-box-div col-md-3">
+            <div class="controls">
+              <i class="fa fa-circle"></i>
+              <i class="fa fa-circle"></i>
+              <i class="fa fa-circle"></i>
+            </div>
+            <a href="/become-a-sponsor.html">Become<br/> a Silver Sponsor</a>
+          </div>
+        <% end %>
+      </div>
     </div>
   </div>
 </div>

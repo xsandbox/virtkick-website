@@ -1,0 +1,37 @@
+@import 'bootstrap-customize';
+
+@mixin gradient {
+  background: linear-gradient(darken($dark, 5%), $medium);
+
+  &, *:not(input) {
+    color: #ffffff;
+  }
+}
+
+@mixin newsletter($input-height, $text-height) {
+  form {
+    input {
+      text-align: center;
+      font-family: 'Open Sans', sans;
+      font-weight: 300;
+      font-size: $text-height;
+      height: $input-height;
+    }
+
+    .btn {
+      height: $input-height;
+      padding: 10px (2.5 * $text-height);
+    }
+  }
+
+  @media(min-width: $screen-sm) {
+    #newsletter-email {
+      width: 280px;
+    }
+  }
+
+  .result {
+    margin-top: 15px;
+    color: #F5A3B2;
+  }
+}
