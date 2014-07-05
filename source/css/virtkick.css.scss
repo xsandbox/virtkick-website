@@ -278,7 +278,8 @@ $become-a-sponsor-top: 40px;
       }
 
       .gradient-border {
-        background-image: url('/img/gradient-border.png');
+        // background-image: url('/img/gradient-border.png'); // https://github.com/CodeCharmLtd/http-master/issues/71
+        border-right: solid 1px #D8D8D8;
         background-repeat: no-repeat;
         background-position: right top;
         height: 75px;
