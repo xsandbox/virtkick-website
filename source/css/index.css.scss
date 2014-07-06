@@ -52,6 +52,16 @@ footer {
       color: #D0334E;
     }
 
+    .video {
+      width: 100%;
+      text-align: center;
+      float: left;
+
+      a {
+        color: $text-cooldown;
+      }
+    }
+
     .become-a-sponsor {
       padding-top: 20px;
       text-transform: uppercase;

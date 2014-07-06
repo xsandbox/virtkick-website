@@ -13,6 +13,7 @@ features:
   text: Orders, payments, invoices and helpdesk - it's all here.
     Kickstart your VPS hosting business without building everything from scratch.
 live: false
+video: false
 ---
 <div id="page-index">
   <div class="header">
@@ -29,6 +30,14 @@ live: false
       <div class="content col-md-6">
         <h1>1-Click Cloud Management</h1>
         <h2>Cloud made easy. Really easy.</h2>
+        <% if url = current_page.data.video %>
+          <p class="video">
+            <%# TODO: open in a modal window %>
+            <% content_tag :a, href: "https://www.youtube.com/watch?v=#{url}" do %>
+              Watch a minute long video.
+            <% end %>
+          </p>
+        <% end %>
 
         <div class="newsletter">
           <form method="post" class="form-inline" role="form"
