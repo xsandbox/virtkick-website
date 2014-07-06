@@ -8,8 +8,6 @@ This is a website of VirtKick, a 1-click cloud management center.
 It's built with [Middleman](http://middlemanapp.com/).
 Visit [https://www.virtkick.io/](https://www.virtkick.io/) to preview.
 
-The sources are licensed under GNU AGPLv3 or later, see [LICENSE.md](https://github.com/virtkick/virtkick-website/blob/master/LICENSE.md).
-
 ## Requirements
 
 - [RVM](https://rvm.io/)
@@ -42,3 +40,11 @@ bundle exec middleman build
 ## Contributing
 
 See [CONTRIBUTING.md](https://github.com/virtkick/virtkick-website/blob/master/CONTRIBUTING.md). Thanks!
+
+## License
+
+The sources are licensed under GNU AGPLv3 or later unless otherwise stated.
+See [LICENSE.md](https://github.com/virtkick/virtkick-website/blob/master/LICENSE.md).
+
+All Kickstarter artworks and logos (c) Kickstarter, Inc. All rights reserved.
+Terms and conditions apply: [Kickstarter Style Guide](https://www.kickstarter.com/help/style_guide).
