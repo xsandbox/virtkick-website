@@ -168,19 +168,32 @@ footer {
     }
   }
 
-  .features {
+  .slogan, .features {
+    .focus {
+      color: #673655;
+    }
+  }
+
+  .slogan {
     h2 {
       margin-top: 70px;
+      margin-bottom: 0;
+    }
+
+    h3 {
+      margin-top: 10px;
       margin-bottom: 50px;
-      line-height: 130%;
+      font-weight: 300;
+      font-size: 20px;
     }
 
     h2, h3 {
-      .focus {
-        color: #673655;
-      }
+      line-height: 130%;
+      text-align: center;
     }
+  }
 
+  .features {
     article {
       text-align: center;
       margin-bottom: 80px;

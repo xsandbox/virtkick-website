@@ -4,11 +4,11 @@ features:
   image: helpdesk
   text: We provide decent default settings in our packages and appliances.
     Get started in five minutes - don't care about the details at the beginning!
-- header: 'Useful <span class="focus">UI</span>'
+- header: 'User <span class="focus">Centric</span>'
   image: monitoring
-  text: Meet a useful user interface that lets you achieve most common tasks blazingly fast.
+  text: Meet a user-centric interface that lets you achieve most common tasks blazingly fast.
     Create and use your virtual machine with 5 clicks in 45 seconds.
-- header: 'E-commerce <span class="focus">enabled</span>'
+- header: 'E-commerce <span class="focus">Enabled</span>'
   image: status-page
   text: Orders, payments, invoices and helpdesk - it's all here.
     Kickstart your VPS hosting business without building everything from scratch.
@@ -27,7 +27,7 @@ video: false
           p Gold Sponsor
       .content.col-md-6
         h1 1-Click Cloud Management
-        h2 Cloud made easy. Really easy.
+        h2 Cloud made easy. Really easy. Open source.
         - if url = current_page.data.video
           p.video
           - content_tag :a, href: "https://www.youtube.com/watch?v=#{url}" do
@@ -90,25 +90,25 @@ video: false
 
         - unless current_page.data.live
           p Check back soon or sign up for the newsletter!
-    .features
-      h2.text-center
-        | Kickstart your <span class="focus">virtualization!</span>
-      .row.col-md-12
-        - current_page.data.features.each do |feature|
-          article.col-md-4
-            .logo-container
-              .logo
-                = tag :img, src: "/img/bonus/#{feature.image}.png"
-            h3= feature.header
-            p
-              = feature.text
+
+    .slogan
+      h2 Kickstart your <span class="focus">virtualization!</span>
+      h3 Use on bare metal servers or Amazon EC2.
+
+    .features.row.col-md-12
+      - current_page.data.features.each do |feature|
+        article.col-md-4
+          .logo-container
+            .logo
+              = tag :img, src: "/img/bonus/#{feature.image}.png"
+          h3= feature.header
+          p
+            = feature.text
   .sponsors-container
     .container
       .sponsors.row
         .title.col-md-12
-          h3
-            | Silver
-            span.focus Sponsors
+          h3 Silver <span class="focus">Sponsors</span>
         - (1..4).each do
           .sponsor.col-md-3
             .controls
