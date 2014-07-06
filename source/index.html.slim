@@ -12,6 +12,25 @@ features:
   image: status-page
   text: Orders, payments, invoices and helpdesk - it's all here.
     Kickstart your VPS hosting business without building everything from scratch.
+integrations:
+- header: Linux
+  image: helpdesk
+  text: Virtualize your bare metal servers with Qemu-KVM or Xen.
+- header: Amazon
+  image: helpdesk
+  text: Alternatively use Amazon cloud to deploy your machines.
+- header: Storage
+  image: helpdesk
+  text: Reliably store your data with LVM, ZFS, Ceph or GlusterFS.
+- header: Docker
+  image: helpdesk
+  text: Browse the repo and create containers just like usual VMs.
+- header: Chef
+  image: helpdesk
+  text: Cook a new machine from a Chef recipe or role.
+- header: VMWare
+  image: helpdesk
+  text: Import and convert existing VMs and networks from VMWare.
 live: false
 video: false
 ---
@@ -101,9 +120,23 @@ video: false
           .logo-container
             .logo
               = tag :img, src: "/img/bonus/#{feature.image}.png"
-          h3= feature.header
-          p
-            = feature.text
+          h3 = feature.header
+          p = feature.text
+
+    .slogan
+      h2 Integrate with existing solutions and <span class="focus">technologies!</span>
+      h3
+
+    .integrations.features.row.col-md-12
+      - current_page.data.integrations.each do |feature|
+        article.col-md-2
+          .logo-container
+            .logo
+              = tag :img, src: "/img/bonus/#{feature.image}.png"
+          h3 = feature.header
+          p = feature.text
+
+
   .sponsors-container
     .container
       .sponsors.row
