@@ -99,3 +99,39 @@ footer {
     color: #A73E5C;
   }
 }
+
+.focus {
+  color: #673655;
+}
+
+.sponsors {
+  background-color: #F7F7F7;
+
+  h3 {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    color: #698986;
+
+    .focus {
+      color: #74586A;
+    }
+  }
+
+  .sponsor {
+    margin-bottom: 30px;
+
+    .controls {
+      background-color: #F5606B;
+      font-size: 10px;
+      padding-bottom: 4px;
+    }
+
+    .content {
+      background-color: #ffffff;
+      text-align: center;
+      width: 100%;
+      height: 130px;
+      padding-top: 40px;
+    }
+  }
+}

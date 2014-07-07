@@ -1,0 +1,122 @@
+---
+title: VirtKick Community
+contributors:
+- name: Damian Nowak
+  email: nowaker@virtkick.io
+  nickname: Nowaker
+  github: https://github.com/Nowaker
+  text: Nowaker is the creator and the mastermind of VirtKick.
+    He is responsible for all coding - both the webapp and the internals.
+- name: Mateusz Kwiatkowski
+  email: kwiat@virtkick.io
+  nickname: kwiat
+  text: Kwiat is a virtualization and storage expert.
+    While he doesn't code, he helps Damian resolve tough problems with the technology.
+- name: Wojtek Jodel
+  email: m13@balloonstudio.pl
+  nickname: m13
+  text: Wojtek is the UI designer. He makes sure the UI is usable, simple and beautiful.
+    Any VirtKick graphics are crafted by him.
+---
+#page-community
+  .community
+    h1 Community
+
+    .container
+      .col-md-6
+        .logo-container
+          .logo
+            a href='https://webchat.freenode.net/?channels=virtkick'
+              img src='/img/irc.png'
+        h2 IRC
+        p
+          a href='https://webchat.freenode.net/?channels=virtkick' #virtkick on Freenode
+      .col-md-6
+        .logo-container
+          .logo
+            a href='https://github.com/virtkick/virtkick-webapp/issues'
+              img src='/img/bugs.png'
+        h2 Bugs
+        p
+          a href='https://github.com/virtkick/virtkick-webapp/issues' @virtkick on GitHub
+    | &nbsp;
+
+  .container
+    .contributors.row.col-md-12
+      h2 Project <span class="focus">Contributors</span>
+
+      - current_page.data.contributors.each do |contributor|
+        article.col-md-4
+          .logo-container
+            .logo
+              = gravatar_for contributor.email
+          h3
+            = contributor.name
+            | &nbsp;
+            = link_to '<i class="fa fa-envelope"></i>', "mailto:#{contributor.email}", class: 'email'
+            | &nbsp;
+            = link_to '<i class="fa fa-github"></i>', contributor.github if contributor.github
+          p = contributor.text
+
+
+  .sponsors
+    .container
+      h2 Our <span class="focus">Sponsors</span>
+
+    .gold
+      .color
+      .container
+        .sponsors.row
+          .title.col-md-12
+            h3 Gold <span class="focus">Sponsors</span>
+            .col-md-2
+            - (1..2).each do
+              .sponsor.col-md-4
+                .controls
+                  i.fa.fa-circle
+                  i.fa.fa-circle
+                  i.fa.fa-circle
+                .content
+                  a href='/become-a-sponsor.html'
+                    | Become<br/> a Gold Sponsor
+
+    .silver
+      .color
+      .container
+        .sponsors.row
+          .title.col-md-12
+            h3 Silver <span class="focus">Sponsors</span>
+            - (1..4).each do
+              .sponsor.col-md-3
+                .controls
+                  i.fa.fa-circle
+                  i.fa.fa-circle
+                  i.fa.fa-circle
+                .content
+                  a href='/become-a-sponsor.html'
+                    | Become<br/> a Silver Sponsor
+
+    .bronze
+      .color
+      .container
+        .sponsors.row
+          .title.col-md-12
+            h3 Bronze <span class="focus">Sponsors</span>
+            - (1..6).each do
+              .sponsor.col-md-2
+                .controls
+                  i.fa.fa-circle
+                  i.fa.fa-circle
+                  i.fa.fa-circle
+                .content
+                  a href='/become-a-sponsor.html'
+                    | Become<br/> a Bronze Sponsor
+    | &nbsp;
+
+  .container
+    h2 Our <span class="focus">Donors</span>
+    p These people made VirtKick happen and backed the project on Kickstarter. Thank you!
+    ul
+      li John Doe
+      li
+        = link_to 'Become a Donor', KICKSTARTER_URL
