@@ -14,23 +14,28 @@ features:
     Kickstart your VPS hosting business without building everything from scratch.
 integrations:
 - header: Linux
-  image: helpdesk
-  text: Virtualize your bare metal servers with Qemu-KVM or Xen.
+  image: linux
+  text: Virtualize your bare metal servers<br/>with Qemu-KVM or Xen.
+  r: http://www.linuxfoundation.org/programs/legal/trademark/attribution
 - header: Amazon
-  image: helpdesk
-  text: Alternatively use Amazon cloud to deploy your machines.
-- header: Storage
-  image: helpdesk
-  text: Reliably store your data with LVM, ZFS, Ceph or GlusterFS.
-- header: Docker
-  image: helpdesk
-  text: Browse the repo and create containers just like usual VMs.
+  image: amazon
+  text: Alternatively use Amazon Web Services<br/>to deploy your machines.
+  tm: https://aws.amazon.com/trademark-guidelines/
+- header: VMware
+  image: vmware
+  text: Import and convert your existing VMWare machines and data.
+  r: http://www.vmware.com/help/legal.html
 - header: Chef
-  image: helpdesk
-  text: Cook a new machine from a Chef recipe or role.
-- header: VMWare
-  image: helpdesk
-  text: Import and convert existing VMs and networks from VMWare.
+  image: chef
+  text: Cook a new virtual machine<br/>from a Chef recipe or role.
+  tm: http://www.getchef.com/trademark-policy/
+- header: Docker
+  image: docker
+  text: Browse the repo and create containers just like usual machines.
+  r: https://www.dotcloud.com/trademark.html
+- header: Storage
+  image: storage
+  text: Reliably store your data with<br/>LVM, ZFS, Ceph™ or GlusterFS®.
 live: false
 video: false
 ---
@@ -127,13 +132,16 @@ video: false
       h2 Integrate with existing solutions and <span class="focus">technologies!</span>
       h3
 
-    .integrations.features.row.col-md-12
+    .integrations.col-md-12
       - current_page.data.integrations.each do |feature|
-        article.col-md-2
-          .logo-container
-            .logo
-              = tag :img, src: "/img/bonus/#{feature.image}.png"
-          h3 = feature.header
+        article.col-md-4
+          = tag :img, src: "/img/integration/#{feature.image}.png"
+          h3
+            = feature.header
+            - if feature.r
+              | <sup>®</sup>
+            - elsif feature.tm
+              | ™
           p = feature.text
 
 
