@@ -1,15 +1,15 @@
 ---
 features:
 - header: '1-Click <span class="focus">Install</span>'
-  image: helpdesk
+  image: 1-click-install
   text: We provide decent default settings in our packages and appliances.
     Get started in five minutes - don't care about the details at the beginning!
 - header: 'User <span class="focus">Centric</span>'
-  image: monitoring
+  image: user-centric
   text: Meet a user-centric interface that lets you achieve most common tasks blazingly fast.
     Create and use your virtual machine with 5 clicks in 45 seconds.
 - header: 'E-commerce <span class="focus">Enabled</span>'
-  image: status-page
+  image: e-commerce
   text: Orders, payments, invoices and helpdesk - it's all here.
     Kickstart your VPS hosting business without building everything from scratch.
 integrations:
@@ -124,7 +124,7 @@ video: false
         article.col-md-4
           .logo-container
             .logo
-              = tag :img, src: "/img/bonus/#{feature.image}.png"
+              = tag :img, src: "/img/features/#{feature.image}.png"
           h3 = feature.header
           p = feature.text
 
