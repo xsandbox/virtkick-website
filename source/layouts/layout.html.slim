@@ -1,0 +1,78 @@
+doctype html
+html
+  head
+    meta charset='utf-8'
+    meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'
+    title
+      = current_page.data.title || 'VirtKick, 1-Click Cloud Management'
+    meta name='description' content='Simple and easy cloud management center. Use on your home server, Amazon EC2 or physical servers in the data center! 100% open source.'
+    meta name='viewport' content='width=device-width'
+    link rel='shortcut icon' href='/favicon.ico'
+    link rel='stylesheet' href='/css/virtkick.css'
+    = stylesheet_link_tag "/css/#{current_page.path.sub('.html', '')}"
+    = yield_content :scripts
+    javascript:
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-53467319-1', 'auto');
+      ga('send', 'pageview');
+  body
+    #page
+      = partial 'layouts/nav'
+      = yield
+      footer
+        img.sputnik src='/img/sputnik-small.png' style='z-index: 2000'
+        .newsletter.col-md-12 style='float: inherit'
+          h3
+            span.first Subscribe
+            span.second for updates
+          form.form-inline action='https://nowaker.us8.list-manage.com/subscribe/post?u=b74a227fdbddc9f590a62114e&amp;id=08823d8a7b' method='post' role='form'
+            .form-group
+              input#newsletter-email.form-control.input name='EMAIL' placeholder='E-MAIL ADDRESS' type='text'
+            | \&nbsp;
+            .form-group
+              input.btn.btn-primary name='subscribe' type='submit' value='SUBSCRIBE'
+            p.result data-success='Thank you! Please check your e-mail to confirm.'
+              | We will let you know when VirtKick is available!
+        .menu.hidden-xs.hidden-sm
+          ul.nav
+            = partial 'layouts/nav_items'
+        .copyright.col-md-12
+          a href='https://www.virtkick.io/'  VirtKick
+          |  &copy; 2014 StratusHost Damian Nowak
+          br
+          span.trademarks
+            | Marks and names mentioned herein may be trademarks of their respective companies.
+            = succeed '.' do
+              a href='/legal.html'  Read more
+
+      script src='/js/virtkick.js'
+      javascript:
+        $(function() {
+          $('.newsletter form').ajaxChimp({
+            callback: function(response, element) {
+              resultElement = $('.newsletter .result');
+              wrapperElement = $('.newsletter .form-group');
+
+              if (response.result == 'error') {
+                wrapperElement.removeClass('has-success').addClass('has-error');
+                resultElement.addClass('text-danger').text(response.msg);
+              } else {
+                wrapperElement.removeClass('has-error').addClass('has-success');
+                resultElement.removeClass('text-danger').text(resultElement.data('success'));
+              }
+            }
+          });
+        });
+      = yield_content :scripts
+
+    /[if lte IE 8]
+      #old-browser
+        javascript:
+          document.getElementById('page').style.display = 'none';
+        div
+          | You are using an outdated browser.<br/>
+            Please <a href="http://browsehappy.com/">upgrade your browser</a> to access this website.
