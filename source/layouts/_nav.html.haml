@@ -2,4 +2,4 @@
   = navbar_header brand: '<img src="/img/virtkick-logo-pixelart-48.png" class="pix" /> virtkick', brand_link: '/'
   = navbar_collapse do
     = navbar_group class: 'navbar-right', id: 'menu' do
-      = partial 'layouts/nav_items'
+      = partial 'layouts/nav_items', locals: {header: true}

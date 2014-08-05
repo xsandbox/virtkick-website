@@ -6,3 +6,11 @@
 = navbar_item 'https://github.com/virtkick' do
   GitHub&nbsp;
   %i.fa-github.fa.fa-lg
+
+%li.twitter
+  - if header
+    %a.twitter-follow-button{href: 'https://twitter.com/virtkick', 'data-dnt' => 'true', 'data-show-count' => 'false', 'data-show-screen-name' => 'false', 'data-size' => 'large'}
+  - else
+    %a{href: 'https://twitter.com/virtkick'}
+      Twitter 
+      %i.fa-twitter.fa.fa-lg
