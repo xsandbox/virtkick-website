@@ -10,7 +10,7 @@ footer {
   .header {
     @include gradient;
     text-align: center;
-    min-height: 470px;
+    min-height: 440px;
 
     .row {
       // Prevent a horizontal scrollbar.

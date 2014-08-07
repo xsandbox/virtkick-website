@@ -84,36 +84,6 @@ video: false
           .content
             a href="/become-a-sponsor.html"
               | Become<br/> a Gold Sponsor
-    .kickstarter-window
-      .controls
-        i.fa.fa-circle
-        i.fa.fa-circle
-        i.fa.fa-circle
-      .content
-        .logos.row
-          .col-md-6.gradient-border
-            img src="/img/virtkick-logo-pixelart-48.png"
-            img alt="VirtKick" src="/img/virtkick-logo.png"
-          .col-md-6
-            img.kickstarter alt="Kickstarter" src="/img/kickstarter-logo.png"
-        p
-          | We #{current_page.data.live ? 'are' : 'will be'} raising funds on Kickstarter to make VirtKick happen.
-        - if current_page.data.live
-          - kickstarter = kickstarter_details
-          .progress.progress-striped
-            .progress-bar role="progressbar" style=("width: #{kickstarter[:pledged_percent_capped]}%")
-          p.goal #{kickstarter[:pledged_percent]}% of $37,000 goal
-          p
-            = link_to 'Pledge now!', kickstarter[:url], class: 'btn btn-lg btn-block btn-primary'
-        p.rewards
-          | Multiple rewards #{current_page.data.live ? '' : 'will'} include:
-          |  early access to a testing deployment of VirtKick,
-          br
-          | Linux packages, VirtualBox image, Docker repo and more!&nbsp;
-          = link_to 'Check now.', kickstarter[:url] if current_page.data.live
-
-        - unless current_page.data.live
-          p Check back soon or sign up for the newsletter!
 
     .slogan#features
       h2 Kickstart your <span class="focus">virtualization!</span>
