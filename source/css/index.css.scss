@@ -50,6 +50,14 @@ footer {
       margin-top: 0;
       font-size: 28px;
       color: #D0334E;
+      margin-bottom: 10px;
+    }
+
+    h3 {
+      margin-top: 0;
+      font-size: 18px;
+      color: #D0334E;
+      font-weight: lighter;
     }
 
     .video {
@@ -91,7 +99,7 @@ footer {
     }
 
     .newsletter {
-      margin-top: 75px;
+      margin-top: 55px;
       @include newsletter(50px, 16px);
 
       .result {
