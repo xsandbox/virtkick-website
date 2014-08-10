@@ -3,6 +3,13 @@ cache: bundler
 rvm:
 - 2.1.2
 before_script:
-- sudo apt-get install -y optipng pngcrush advancecomp
+- sudo apt-get install -y advancecomp jpegoptim libjpeg-progs optipng pngcrush
 script:
 - bundle exec middleman build
+notifications:
+  email: false
+  irc:
+    channels:
+    - 'chat.freenode.net#virtkick'
+    template:
+    - '%{result}: %{repository} %{commit} %{commit_message}'
