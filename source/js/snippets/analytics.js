@@ -12,6 +12,7 @@ if (window.location.host.indexOf('virtkick.io') != -1) {
   })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
 
   ga('create', 'UA-53467319-1', 'virtkick.io');
+  ga('require', 'displayfeatures');
   ga('send', 'pageview');
 } else {
   var ga = function() {
