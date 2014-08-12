@@ -104,6 +104,11 @@ footer {
 
       .result {
         font-size: 20px;
+        color: $text-cooldown;
+      }
+
+      .performed {
+        color: #ffffff !important;
       }
     }
   }
