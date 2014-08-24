@@ -8,8 +8,5 @@ script:
 - bundle exec middleman build
 notifications:
   email: false
-  irc:
-    channels:
-    - 'chat.freenode.net#virtkick'
-    template:
-    - '%{result}: %{repository} %{commit} %{commit_message}'
+  webhooks: http://n.tkte.ch/h/3275/BLR4JlXy_0HXFOljf3WLgWaD
+
