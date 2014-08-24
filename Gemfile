@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 ruby '2.1.2'
 
-gem 'middleman', '~> 3.3.0', git: 'https://github.com/middleman/middleman.git', branch: 'v3-stable'
+gem 'middleman', '~> 3.3.0'
 gem 'middleman-imageoptim', '~> 0.1.4'
 gem 'middleman-livereload', '~> 3.3.0'
 gem 'middleman-pry'
@@ -12,5 +12,4 @@ gem 'bootstrap-sass', '~> 3.1'
 gem 'middleman-bootstrap-navbar', '~> 2.0'
 
 gem 'font-awesome-middleman', '~> 4.1'
-gem 'nokogiri', '1.6.2.1'
-
+gem 'nokogiri'
