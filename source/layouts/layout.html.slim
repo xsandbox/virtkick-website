@@ -60,6 +60,10 @@ html
                 resultElement.text(resultElement.data('success'));
                 ga('send', 'event', 'newsletter', 'subscribe');
               }
+            },
+            errorCallback: function($form) {
+              // Disconnect.me extension blocks any JSONP requests.
+              $form.unbind('submit').submit();
             }
           });
         });

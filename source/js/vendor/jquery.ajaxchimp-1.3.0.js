@@ -117,13 +117,15 @@ For e.g. 'http://blahblah.us1.list-manage.com/subscribe/post-json?u=5afsdhfuhdsi
                     data[item.name] = item.value;
                 });
 
+                var errorCallback =
+
                 $.ajax({
                     url: url,
                     data: data,
                     success: successCallback,
                     dataType: 'jsonp',
-                    error: function (resp, text) {
-                        console.log('mailchimp ajax submit error: ' + text);
+                    error: function() {
+                      settings.errorCallback(form);
                     }
                 });
 
