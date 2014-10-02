@@ -41,10 +41,30 @@ bundle exec middleman build
 
 See [CONTRIBUTING.md](https://github.com/virtkick/virtkick-website/blob/master/CONTRIBUTING.md). Thanks!
 
-## License
+# License
 
-The sources are licensed under GNU AGPLv3 or later unless otherwise stated.
-See [LICENSE.md](https://github.com/virtkick/virtkick-website/blob/master/LICENSE.md).
+VirtKick, a simple orchestrator.
+Copyright (C) 2014 StratusHost Damian Nowak
 
-All Kickstarter artworks and logos (c) Kickstarter, Inc. All rights reserved.
-Terms and conditions apply: [Kickstarter Style Guide](https://www.kickstarter.com/help/style_guide).
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU Affero General Public License as
+published by the Free Software Foundation, either version 3 of the
+License, or (at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU Affero General Public License for more details.
+
+You should have received a copy of the GNU Affero General Public License
+along with this program.  If not, see https://www.gnu.org/licenses/agpl-3.0.html.
+
+
+# Trademark
+
+The VirtKick name and logo are trademarks of Damian Nowak.
+You may not use them for promotional purposes,
+or in any way that claims, suggests or looks like
+there's a relationship or endorsement by VirtKick.
+
+Other marks and names mentioned herein may be trademarks of their respective companies.
