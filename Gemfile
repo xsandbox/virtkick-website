@@ -5,7 +5,6 @@ ruby '2.1.2'
 gem 'middleman', '~> 3.3.0'
 gem 'middleman-imageoptim', '~> 0.1.4'
 gem 'middleman-livereload', '~> 3.3.0'
-gem 'middleman-pry'
 gem 'middleman-slim', '~> 0.1'
 
 gem 'bootstrap-sass', '~> 3.1'
