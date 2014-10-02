@@ -5,18 +5,27 @@ contributors:
   email: nowaker@virtkick.io
   nickname: Nowaker
   github: https://github.com/Nowaker
-  text: Nowaker is the creator and the mastermind of VirtKick.
-    He is responsible for all coding - both the webapp and the internals.
+  text: Nowaker is the mastermind of VirtKick and leads the project.<br/>
+    He's responsible for the webapp and the backend.
+- name: Damian Kaczmarek
+  email: rush@virtkick.io
+  nickname: Rush
+  github: https://github.com/RushPL
+  text: Rush complements the team with his C++ and node.js superpowers.<br/>
+    He hacks low level things like C bindings, TLS and websockets.
 - name: Mateusz Kwiatkowski
   email: kwiat@virtkick.io
   nickname: kwiat
-  text: Kwiat is a virtualization and storage expert.
-    While he doesn't code, he helps Damian resolve tough problems with the technology.
+  text: Kwiat is the devops and takes care of the infrastructure.<br/>
+    He's the only one to know how networks really work.
 - name: Wojtek Jodel
-  email: m13@balloonstudio.pl
+  email: m13@virtkick.io
   nickname: m13
-  text: Wojtek is the UI designer. He makes sure the UI is usable, simple and beautiful.
-    Any VirtKick graphics are crafted by him.
+  text: Wojtek is the graphics designer. All VirtKick artwork are crafted by him.<br/>
+    He makes sure the UI is simple, usable and beautiful.
+donors:
+- Jack Davies
+- James Arici
 ---
 #page-community
   .community
@@ -43,10 +52,10 @@ contributors:
 
   .container
     .contributors.row.col-md-12
-      h2 Project <span class="focus">Contributors</span>
+      h2 Project <span class="focus">Developers</span>
 
       - current_page.data.contributors.each do |contributor|
-        article.col-md-4
+        article.col-md-6
           .logo-container
             .logo
               = gravatar_for contributor.email
@@ -114,5 +123,20 @@ contributors:
     | &nbsp;
 
   .container
-    h2 Our <span class="focus">Donors</span>
-    p Nothing here yet - crowdfunding campaign yet to come!
+    h2
+      | Our <span class="focus">Donors</span>
+
+    ul
+      - current_page.data.donors.each do |donor|
+        li = donor
+      li
+        | anonymous
+
+    p.badges
+      = link_to '(https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=AGF4FPG7JZ7NY&lc=US' do
+        img src='/img/paypal-donate.png'
+      = link_to 'https://gratipay.com/Nowaker' do
+        img src='https://img.shields.io/gratipay/Nowaker.svg?style=flat-square'
+
+    p Have some bare metal servers to share? Please <a href="mailto:nowaker@virtkick.io">let us know</a>.
+
