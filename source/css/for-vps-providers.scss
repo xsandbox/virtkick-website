@@ -3,5 +3,20 @@
 
 
 #page-providers {
+  .integrations {
+    text-align: center;
 
+    article {
+      height: 240px;
+
+      .logo-container {
+        height: 80px;
+
+        .logo {
+          // http://stackoverflow.com/a/16629627/504845
+          line-height: 80px;
+        }
+      }
+    }
+  }
 }

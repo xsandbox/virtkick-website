@@ -13,29 +13,30 @@ features:
   image: helpdesk
   text: Let your customers open tickets in VirtKick.
 integrations:
-- header: Linux
-  image: linux
-  text: Virtualize your bare metal servers<br/>with Qemu-KVM or Xen.
-  r: http://www.linuxfoundation.org/programs/legal/trademark/attribution
-- header: Amazon
-  image: amazon
-  text: Use Amazon Web Services as an alternative<br/>to deploy your machines.
-  r: https://aws.amazon.com/trademark-guidelines/
-- header: VMware
-  image: vmware
-  text: Import and convert your existing<br/>VMware machines and data.
-  r: http://www.vmware.com/help/legal.html
-- header: Chef
-  image: chef
-  text: Choose roles to apply and<br/>have your new VM baked by Chef.
-  tm: http://www.getchef.com/trademark-policy/
-- header: Docker
-  image: docker
-  text: Browse the repo and create<br/>containers just like usual machines.
-  r: https://www.dotcloud.com/trademark.html
-- header: Storage
-  image: storage
-  text: Reliably store your data with<br/>LVM, ZFS, Ceph® or GlusterFS®.
+- header: Helpdesk
+  image: helpdesk
+  text: Provide outstanding support wherever you are.
+- header: Live Chat
+  image: live-chat
+  text: Offer even better support for your users and talk to them directly.
+- header: Marketing
+  image: marketing
+  text: Keep in touch with your users - send newsletters and updates.
+- header: Monitoring
+  image: monitoring
+  text: Get alerts about anomalies and failures on your servers.
+- header: Fraud
+  image: fraud-prevention
+  text: Prevent fraudulent credit card payments from being finalized.
+- header: Status Page
+  image: status-page
+  text: Get your off-site status page and inform your users about outages.
+- header: DNS
+  image: dns
+  text: Integrate with DNS so any VM can have its own hostname.
+- header: E-mails
+  image: transactional-emails
+  text: Stop depending on SMTP and deliver e-mails worry-free.
 live: false
 video: false
 ---
@@ -77,7 +78,7 @@ video: false
 
     .slogan#features
       h2 Kickstart your <span class="focus">VPS business</span> immediately!
-      h3 VirtKick ships with integrated billing. All you need is here.
+      h3 VirtKick ships with integrated billing and support. All you need is here.
 
     .features.row.col-md-12
       - current_page.data.features.each do |feature|
@@ -87,5 +88,20 @@ video: false
               = tag :img, src: "/img/billing/#{feature.image}.png"
           h3 = feature.header
           p = feature.text
+
+    .slogan.clear#integrations
+      h2 VPS business isn't all about VPS.
+      h3 Integrate with existing <span class="focus">solutions</span> and offer outstanding service!
+
+    .integrations.row.col-md-12
+      - current_page.data.integrations.each do |feature|
+        article.col-md-3
+          .logo-container
+            .logo
+              = tag :img, src: "/img/bonus/#{feature.image}.png"
+          h3 = feature.header
+          p = feature.text
+
+
 
   = partial 'layouts/silver-sponsors'
