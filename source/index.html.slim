@@ -2,16 +2,13 @@
 features:
 - header: '1-Click <span class="focus">Install</span>'
   image: 1-click-install
-  text: We provide decent default settings in our packages and appliances.
-    Get started in five minutes - don't worry about the details at the beginning!
+  text: Get started in five minutes - don't worry about the details at the beginning!
 - header: 'User <span class="focus">Centric</span>'
   image: user-centric
-  text: Meet a user-centric interface that lets you achieve most common tasks blazingly fast.
-    Create and use your virtual machine with 5 clicks in 45 seconds.
-- header: 'E-commerce <span class="focus">Enabled</span>'
-  image: e-commerce
-  text: Orders, payments, invoices and helpdesk - it's all here.
-    Kickstart your VPS hosting business without building everything from scratch.
+  text: Super usable management panel. Spin a new virtual machine with 5 clicks.
+- header: 'Open <span class="focus">Source</span>'
+  image: open-source
+  text: Free for everyone, including businesses. No annoying branding.
 integrations:
 - header: Linux
   image: linux
@@ -44,9 +41,9 @@ video: false
     .moon.row
     .row
       .content.col-md-8.col-md-offset-2
-        h1 Cloud made easy.
-        h2 Manage virtual machines or Docker containers.
-        h3 100% open source.
+        h1 Take Cloud Back
+        h2 Manage virtual machines or Docker containers
+        h3 100% open source
         - if url = current_page.data.video
           p.video
           - content_tag :a, href: "https://www.youtube.com/watch?v=#{url}" do
@@ -77,7 +74,7 @@ video: false
 
     .slogan#features
       h2 Kickstart your <span class="focus">cloud!</span>
-      h3 Use on bare metal servers or Amazon.
+      h3 Use on your computer, homelab or in the data center.
 
     .features.row.col-md-12
       - current_page.data.features.each do |feature|
