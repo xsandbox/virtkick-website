@@ -1,16 +1,14 @@
 = navbar_item 'Home', '/'
+= navbar_item 'For Hackers', '/#integrations'
+= navbar_item 'For Providers', '/for-vps-providers.html'
 = navbar_item 'Community', '/community.html'
-= navbar_item 'https://demo.virtkick.io/' do
+= navbar_item 'https://demo.virtkick.io/', {}, target: '_blank' do
   Live demo&nbsp;
   %i.fa-play.fa
-= navbar_item 'https://github.com/virtkick' do
+= navbar_item 'https://github.com/virtkick', {}, target: '_blank' do
   GitHub&nbsp;
   %i.fa-github.fa.fa-lg
+= navbar_item 'https://twitter.com/virtkick', {}, target: '_blank' do
+  Twitter&nbsp;
+  %i.fa-twitter.fa.fa-lg
 
-%li.twitter
-  - if header
-    %a.twitter-follow-button{href: 'https://twitter.com/virtkick', 'data-dnt' => 'true', 'data-show-count' => 'false', 'data-show-screen-name' => 'false', 'data-size' => 'large'}
-  - else
-    %a{href: 'https://twitter.com/virtkick'}
-      Twitter 
-      %i.fa-twitter.fa.fa-lg

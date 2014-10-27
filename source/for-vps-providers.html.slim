@@ -1,14 +1,17 @@
 ---
 features:
-- header: '1-Click <span class="focus">Install</span>'
-  image: 1-click-install
-  text: Get started in five minutes - don't worry about the details at the beginning!
-- header: 'User <span class="focus">Centric</span>'
-  image: user-centric
-  text: Super usable management panel. Spin a new virtual machine with 5 clicks.
-- header: 'Open <span class="focus">Source</span>'
-  image: open-source
-  text: Free for everyone, including businesses. No annoying branding.
+- header: Payments
+  image: payments
+  text: Integrate with popular gateways.
+- header: Invoices
+  image: invoices
+  text: Issue an invoice after the customer has paid.
+- header: Quotas
+  image: quotas
+  text: Limit data transfer or charge for overage.
+- header: Helpdesk
+  image: helpdesk
+  text: Let your customers open tickets in VirtKick.
 integrations:
 - header: Linux
   image: linux
@@ -36,13 +39,13 @@ integrations:
 live: false
 video: false
 ---
-#page-index
+#page-providers
   .header
     .moon.row
     .row
       .content.col-md-8.col-md-offset-2
-        h1 Take Cloud Back
-        h2 Manage virtual machines or Docker containers
+        h1 VirtKick
+        h2 A free alternative to SolusVM
         h3 100% open source
         - if url = current_page.data.video
           p.video
@@ -73,33 +76,16 @@ video: false
               | Become<br/> a Gold Sponsor
 
     .slogan#features
-      h2 Kickstart your <span class="focus">cloud!</span>
-      h3 Use on your computer, homelab or in the data center.
+      h2 Kickstart your <span class="focus">VPS business</span> immediately!
+      h3 VirtKick ships with integrated billing. All you need is here.
 
     .features.row.col-md-12
       - current_page.data.features.each do |feature|
-        article.col-md-4
+        article.col-md-3
           .logo-container
             .logo
-              = tag :img, src: "/img/features/#{feature.image}.png"
+              = tag :img, src: "/img/billing/#{feature.image}.png"
           h3 = feature.header
           p = feature.text
-
-    .slogan.clear#integrations
-      h2 Integrate with existing solutions and <span class="focus">technologies!</span>
-      h3
-
-    .integrations.col-md-12
-      - current_page.data.integrations.each do |feature|
-        article.col-md-4
-          = tag :img, src: "/img/integration/#{feature.image}.png"
-          h3
-            = feature.header
-            - if feature.r
-              | <sup>®</sup>
-            - elsif feature.tm
-              | ™
-          p = feature.text
-
 
   = partial 'layouts/silver-sponsors'
