@@ -10,29 +10,16 @@ features:
   image: open-source
   text: Free for everyone, including businesses. No annoying branding.
 integrations:
-- header: Linux
+- header: Machines
   image: linux
-  text: Virtualize your bare metal servers<br/>with Qemu-KVM or Xen.
-  r: http://www.linuxfoundation.org/programs/legal/trademark/attribution
+  text: Virtualize on your bare metal servers<br/>with KVM, OpenVZ, Xen or Bhyve.
+- header: Containers
+  image: docker
+  text: Browse the Docker Hub and create<br/>containers just like usual machines.
 - header: Amazon
   image: amazon
   text: Use Amazon Web Services as an alternative<br/>to deploy your machines.
   r: https://aws.amazon.com/trademark-guidelines/
-- header: VMware
-  image: vmware
-  text: Import and convert your existing<br/>VMware machines and data.
-  r: http://www.vmware.com/help/legal.html
-- header: Chef
-  image: chef
-  text: Choose roles to apply and<br/>have your new VM baked by Chef.
-  tm: http://www.getchef.com/trademark-policy/
-- header: Docker
-  image: docker
-  text: Browse the repo and create<br/>containers just like usual machines.
-  r: https://www.dotcloud.com/trademark.html
-- header: Storage
-  image: storage
-  text: Reliably store your data with<br/>LVM, ZFS, Ceph® or GlusterFS®.
 live: false
 video: false
 ---
@@ -73,8 +60,8 @@ video: false
               | Become<br/> a Gold Sponsor
 
     .slogan#features
-      h2 Kickstart your <span class="focus">cloud!</span>
-      h3 Use on your computer, homelab or in the data center.
+      h2 A cloud panel for the <span class="focus">modern</span> web!
+      h3 Use on your computer, home server or in the data center.
 
     .features.row.col-md-12
       - current_page.data.features.each do |feature|
@@ -86,7 +73,7 @@ video: false
           p = feature.text
 
     .slogan.clear#integrations
-      h2 Integrate with existing solutions and <span class="focus">technologies!</span>
+      h2 Go your own <span class="focus">virtualization</span> way!
       h3
 
     .integrations.col-md-12
