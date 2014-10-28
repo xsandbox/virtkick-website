@@ -1,0 +1,26 @@
+@import 'bootstrap-customize';
+@import '_mixins';
+
+
+#page-devops {
+  .features {
+    article {
+      height: 240px;
+
+      .logo-container {
+        img {
+          height: 138px;
+        }
+      }
+    }
+  }
+
+  .integrations {
+    article {
+      text-align: center;
+      height: 320px;
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+}

@@ -1,0 +1,91 @@
+---
+features:
+- header: Packages
+  image: linux-packages
+  text: 'Packages for most popular distros: Ubuntu, Debian, CentOS, Arch Linux.'
+- header: Docker Images
+  image: docker-images
+  text: Setup VirtKick panel in a container. Connect a remote hypervisor.
+- header: Appliances
+  image: appliances
+  text: Appliances for KVM and VirtualBox. Connect a remote hypervisor.
+integrations:
+- header: DNS
+  image: amazon
+  text: Manage DNS records<br/>directly in VirtKick.
+- header: Storage
+  image: storage
+  text: Reliably store your data with<br/>LVM, ZFS, Ceph® or GlusterFS®.
+- header: Provisioning
+  image: chef
+  text: Choose roles and bake your VM<br/>with Ansible, Rex or Chef.
+live: false
+video: false
+---
+#page-devops
+  .header
+    .moon.row
+    .row
+      .content.col-md-8.col-md-offset-2
+        h1 Take Cloud Back
+        h2 Manage virtual machines or Docker containers
+        h3 100% open source
+        - if url = current_page.data.video
+          p.video
+          - content_tag :a, href: "https://www.youtube.com/watch?v=#{url}" do
+            | Watch a minute long video.
+        .newsletter
+          form.form-inline action="https://virtkick.us8.list-manage.com/subscribe/post?u=b74a227fdbddc9f590a62114e&amp;id=08823d8a7b" method="post" role="form"
+            p.result data-success='Thank you! Please check your e-mail to confirm.'
+              | Sign up for updates. Be notified of the closed beta!
+            .form-group
+              input#newsletter-email.form-control.input name="EMAIL" placeholder=("E-MAIL ADDRESS") type="text"
+            input.btn.btn-primary.btn-lg name="subscribe" type="submit" value="SUBSCRIBE"
+
+  .content-container.container
+    .sponsors.row.visible-xs.visible-sm
+      .title.col-md-12
+        h3
+          | Gold
+          span.focus Sponsors
+      - (1..2).each do
+        .sponsor.col-md-12
+          .controls
+            i.fa.fa-circle
+            i.fa.fa-circle
+            i.fa.fa-circle
+          .content
+            a href="/become-a-sponsor.html"
+              | Become<br/> a Gold Sponsor
+
+    .slogan#features
+      h2 Choose your way and <span class="focus">kickstart</span> your cloud.
+      h3
+
+    .features.row.col-md-12
+      - current_page.data.features.each do |feature|
+        article.col-md-4
+          .logo-container
+            .logo
+              = tag :img, src: "/img/devops/#{feature.image}.png"
+          h3 = feature.header
+          p = feature.text
+
+    .slogan.clear#integrations
+      h2 Simple <span class="focus">doesn't</span> mean simplistic.
+      h3
+
+    .integrations.col-md-12
+      - current_page.data.integrations.each do |feature|
+        article.col-md-4
+          = tag :img, src: "/img/integration/#{feature.image}.png"
+          h3
+            = feature.header
+            - if feature.r
+              | <sup>®</sup>
+            - elsif feature.tm
+              | ™
+          p = feature.text
+
+
+  = partial 'layouts/silver-sponsors'
