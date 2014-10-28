@@ -3,7 +3,7 @@
 [![GPA](https://img.shields.io/codeclimate/github/virtkick/virtkick-website.svg?style=flat-square)](https://codeclimate.com/github/virtkick/virtkick-website)
 [![Build status](https://img.shields.io/travis/virtkick/virtkick-website.svg?style=flat-square)](https://travis-ci.org/virtkick/virtkick-website)
 [![Dependencies status](http://img.shields.io/gemnasium/virtkick/virtkick-website.svg?style=flat-square)](https://gemnasium.com/virtkick/virtkick-website)
-[![Gratipay](https://img.shields.io/gratipay/Nowaker.svg?style=flat-square)](https://gratipay.com/Nowaker/)
+[![Gratipay](https://img.shields.io/gratipay/virtkick.svg?style=flat-square)](https://gratipay.com/virtkick/)
 
 This is a website of VirtKick, a 1-click cloud management center.
 It's built with [Middleman](http://middlemanapp.com/).
