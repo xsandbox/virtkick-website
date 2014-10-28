@@ -1,0 +1,27 @@
+- if data.settings.live
+  .kickstarter-window
+    .controls
+      i.fa.fa-circle
+      i.fa.fa-circle
+      i.fa.fa-circle
+    .content
+      - igg = igg_details
+      .logos.row
+        .col-md-6.gradient-border
+          img src='/img/logo/virtkick-logo-pixelart-48.png'
+          img alt='VirtKick' src='/img/virtkick-logo.png'
+        .col-md-6
+          a href=igg[:url]
+            img.kickstarter alt='Indiegogo' src='/img/indiegogo-logo.png'
+      p We're raising funds on Indiegogo to make VirtKick happen.
+      .progress.progress-striped
+        .progress-bar role='progressbar' style='width: #{igg[:pledged_percent_capped]}%'
+      p.goal #{igg[:pledged_percent]}% of #{igg[:goal_formatted]} goal
+      p
+        = link_to 'Pledge now!', igg[:url], class: 'btn btn-lg btn-block btn-primary'
+      p.rewards
+        | Multiple rewards include:
+        |  early access to a testing deployment of VirtKick,
+        br
+        | Linux packages, VirtualBox image, Docker repo and more!&nbsp;
+        = link_to 'Check now.', igg[:url] if current_page.data.live

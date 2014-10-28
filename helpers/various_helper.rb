@@ -2,7 +2,7 @@ require 'digest'
 require 'nokogiri'
 
 module VariousHelper
-  KICKSTARTER_URL = 'https://www.kickstarter.com/projects/howmydoin/howmydoin-the-future-of-feedback'
+  INDIEGOGO_URL = 'https://www.indiegogo.com/projects/an-hour-of-code-for-every-student/x/8368808'
 
   def gravatar_for email, options = {}
     options = {:alt => 'avatar', :class => 'avatar', :size => 80}.merge! options
@@ -12,17 +12,17 @@ module VariousHelper
     image_tag url, options
   end
 
-  def kickstarter_details project_url = KICKSTARTER_URL
+  def igg_details project_url = INDIEGOGO_URL
     metadata = {}
     metadata[:url] = project_url
 
     if build? or ENV['LIVE']
-      # Based on https://github.com/webmonarch/kickstarter_curl
       doc = Nokogiri::HTML open project_url
-      metadata[:backers] = element(doc, 'backers-count').to_i
-      metadata[:goal] = element(doc, 'goal').to_i
-      metadata[:pledged] = element(doc, 'pledged').to_i
-      metadata[:pledged_percent] = (element(doc, 'percent-raised').to_f * 100).ceil
+      metadata[:backers] = element(doc, '[data-tab-id="pledges"] .i-count').to_i
+      metadata[:goal_formatted] = element(doc, '.i-raised .currency span')
+      metadata[:goal] = currency_to_number metadata[:goal_formatted]
+      metadata[:pledged] = currency_to_number element(doc, '.i-balance .currency span')
+      metadata[:pledged_percent] = (metadata[:pledged].to_f / metadata[:goal].to_f * 100).ceil
     else
       metadata[:backers] = 12
       metadata[:goal] = 16000
@@ -34,10 +34,13 @@ module VariousHelper
   end
 
   private
-  def element doc, element
-    element = "data-#{element}"
-    node = doc.css("*[#{element}]")
-    node.attr(element).value
+  def element doc, selector
+    node = doc.css(selector)
+    node.text
+  end
+
+  def currency_to_number currency
+    currency.gsub(/\D/,'').to_i
   end
 
   def kickstarter_bar_width pledged_percent
