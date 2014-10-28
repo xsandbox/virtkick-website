@@ -24,40 +24,10 @@ live: false
 video: false
 ---
 #page-index
-  .header
-    .moon.row
-    .row
-      .content.col-md-8.col-md-offset-2
-        h1 Take Cloud Back
-        h2 Manage virtual machines or Docker containers
-        h3 100% open source
-        - if url = current_page.data.video
-          p.video
-          - content_tag :a, href: "https://www.youtube.com/watch?v=#{url}" do
-            | Watch a minute long video.
-        .newsletter
-          form.form-inline action="https://virtkick.us8.list-manage.com/subscribe/post?u=b74a227fdbddc9f590a62114e&amp;id=08823d8a7b" method="post" role="form"
-            p.result data-success='Thank you! Please check your e-mail to confirm.'
-              | Sign up for updates. Be notified of the closed beta!
-            .form-group
-              input#newsletter-email.form-control.input name="EMAIL" placeholder=("E-MAIL ADDRESS") type="text"
-            input.btn.btn-primary.btn-lg name="subscribe" type="submit" value="SUBSCRIBE"
+  = partial 'layouts/_jumbotron'
 
   .content-container.container
-    .sponsors.row.visible-xs.visible-sm
-      .title.col-md-12
-        h3
-          | Gold
-          span.focus Sponsors
-      - (1..2).each do
-        .sponsor.col-md-12
-          .controls
-            i.fa.fa-circle
-            i.fa.fa-circle
-            i.fa.fa-circle
-          .content
-            a href="/become-a-sponsor.html"
-              | Become<br/> a Gold Sponsor
+    = partial 'layouts/_jumbotron-mobile'
 
     .slogan#features
       h2 A cloud panel for the <span class="focus">modern</span> web!
