@@ -43,7 +43,7 @@ nav {
 
   .content {
     background-repeat: no-repeat;
-    background-position: left center, right bottom;
+    background-position: left center, right center;
 
     @media(min-width: $screen-lg) {
       background-image: url('/img/paperplane.png'), url('/img/sputnik-small.png');
@@ -184,6 +184,10 @@ nav {
   }
 
   .content {
+    p:first-child {
+      margin-top: 15px;
+    }
+
     .progress {
       margin-bottom: 5px;
     }
@@ -194,6 +198,10 @@ nav {
 
     .rewards {
       margin-top: 20px;
+    }
+
+    .btn {
+      background-color: #EB1478;
     }
   }
 
