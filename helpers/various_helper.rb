@@ -2,7 +2,7 @@ require 'digest'
 require 'nokogiri'
 
 module VariousHelper
-  INDIEGOGO_URL = 'https://www.indiegogo.com/projects/an-hour-of-code-for-every-student/x/8368808'
+  INDIEGOGO_URL = 'https://www.indiegogo.com/projects/virtkick-take-cloud-back'
 
   def gravatar_for email, options = {}
     options = {:alt => 'avatar', :class => 'avatar', :size => 80}.merge! options
