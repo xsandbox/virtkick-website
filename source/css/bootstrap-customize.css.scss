@@ -8,6 +8,7 @@ $light: #FFD285;
 $brand-primary: $medium-light;
 $body-bg: $bg;
 $grid-columns: 12;
+$grid-float-breakpoint: 1024px;
 $font-family-sans-serif: 'Source Sans Pro', sans-serif;
 $font-size-base: 16px;
 $font-size-h2: floor(($font-size-base * 2));
@@ -37,7 +38,7 @@ $navbar-default-link-active-bg: $medium-light;
 $navbar-default-link-active-color: $navbar-default-color;
 $navbar-default-link-hover-bg: $navbar-default-bg;
 $navbar-default-link-hover-color: $navbar-default-color;
-$navbar-height: 68px;
+$navbar-height: 44px;
 
 $nav-link-hover-bg: transparent;
 
