@@ -1,0 +1,32 @@
+@import 'bootstrap-customize';
+@import '_mixins';
+
+#page-developers {
+  @media(min-width: $screen-md) {
+    .developers, .users {
+      p {
+        text-align: center;
+      }
+
+      img {
+        margin-top: 20px;
+      }
+    }
+
+    .developers img {
+      float: right;
+    }
+
+    .users img {
+      float: left;
+    }
+
+    #federation {
+      margin-bottom: 20px;
+    }
+  }
+
+  .users, .developers {
+    text-align: center;
+  }
+}
