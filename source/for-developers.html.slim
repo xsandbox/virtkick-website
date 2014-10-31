@@ -1,3 +1,7 @@
+---
+title: VirtKick - Federated VPS for developers
+description: Free containers and machines for open source projects. Test your Dockerfiles or Chef cookbooks with Travis CI.
+---
 #page-developers
   = partial 'layouts/_jumbotron', locals: {h1: 'Federated VPS', h2: 'Containers and machines for open source repos', h3: 'SETI@home for cloud computing'}
   .content-container.container
@@ -12,13 +16,15 @@
       .developers.col-md-4
         h3 Developers
         p Add encrypted API key to travis.yml. Provision Docker containers or virtual machines with VirtKick API during Travis CI builds.
-        img src='/img/federation/developers.png'
-      .col-md-4
-        img src='/img/federation/federated-vps.png' style='width: 100%'
+        img.hidden-xs.hidden-sm src='/img/federation/developers.png'
+        img.hidden-md.hidden-lg src='/img/federation/developers-small.png'
+      .col-md-4.text-center
+        img.fed src='/img/federation/federated-vps.png'
       .users.col-md-4
+        img.hidden-md.hidden-lg src='/img/federation/users-small.png'
         h3 Users
-        p Install VirtKick on your computer or server. Sign in to VirtKick Federation, register your unused resources and stay on-line.
-        img src='/img/federation/users.png'
+        p Install VirtKick on your computer or server. Sign in to VirtKick Federation, register your unused resources and let magic happen.
+        img.hidden-xs.hidden-sm src='/img/federation/users.png'
 
     .slogan
       h2 VirtKick Federation

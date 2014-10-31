@@ -2,31 +2,36 @@
 @import '_mixins';
 
 #page-developers {
-  @media(min-width: $screen-md) {
-    .developers, .users {
-      p {
-        text-align: center;
+  #federation {
+    margin-bottom: 20px;
+
+    @media(min-width: $screen-md) {
+      .developers, .users {
+        p {
+          text-align: center;
+        }
+
+        img {
+          margin-top: 20px;
+        }
       }
 
-      img {
-        margin-top: 20px;
+      .developers img {
+        float: right;
+      }
+
+      .users img {
+        float: left;
       }
     }
 
-    .developers img {
-      float: right;
+    .fed {
+      width: 100%;
+      max-width: 400px;
     }
 
-    .users img {
-      float: left;
+    .users, .developers {
+      text-align: center;
     }
-
-    #federation {
-      margin-bottom: 20px;
-    }
-  }
-
-  .users, .developers {
-    text-align: center;
   }
 }
