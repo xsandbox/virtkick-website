@@ -1,0 +1,49 @@
+#page-blog {
+  .kickstarter-window {
+    margin-top: 30px;
+  }
+
+  .blog {
+    font-size: 20px;
+
+    h1.title:first-child {
+      .date {
+        font-size: 18px;
+        margin-left: 15px;
+        position: relative;
+        top: -2px;
+      }
+    }
+
+    h1.title {
+      margin-top: 50px;
+    }
+
+    p.links {
+      margin-top: 50px;
+    }
+
+    h2 {
+      margin-top: 50px;
+    }
+
+    .author {
+      margin-top: 60px;
+      margin-bottom: 20px;
+
+      img {
+        float: left;
+        width: 56px;
+        margin-right: 8px;
+      }
+
+      .name {
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+
+@import 'pygments-railscasts';
+@import 'pygments-github';

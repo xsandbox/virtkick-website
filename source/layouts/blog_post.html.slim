@@ -1,0 +1,13 @@
+= wrap_layout :blog do
+  h1.title
+    = link_to current_article.title, current_article
+    span.date
+      = current_article.date.strftime '%B %Y'
+
+  = yield
+
+  .author
+    = gravatar_for current_article.data.email
+    span.name = current_article.data.author
+    br
+    span.title = current_article.data.role

@@ -7,9 +7,14 @@ html
       = current_page.data.title || 'VirtKick - Take Cloud Back'
     meta name='description' content='#{current_page.data.description || 'One-Click Cloud. Manage your virtual machines and Docker containers. 100% open source.'}'
     meta name='viewport' content='width=device-width'
+    - if @noindex
+      meta name='robots' content='noindex'
     link rel='shortcut icon' href='/favicon.ico'
     link rel='stylesheet' href='/css/virtkick.css'
-    = stylesheet_link_tag "/css/#{current_page.path.sub('.html', '')}"
+    - if content_for? :css
+      = yield_content :css
+    - else
+      = stylesheet_link_tag "/css/#{current_page.path.sub('.html', '')}"
     = javascript_include_tag '/js/snippets.js'
     = yield_content :scripts
   body

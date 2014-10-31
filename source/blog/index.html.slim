@@ -1,0 +1,18 @@
+---
+pageable: true
+per_page: 5
+layout: blog
+---
+
+- page_articles.each_with_index do |article, i|
+  h1.title
+    = link_to article.title, article
+    span.date
+      = article.date.strftime '%B %Y'
+
+  = article.summary 250
+
+
+- if page_articles.size == current_page.data.per_page
+  p.links
+    a href='/blog/archives.html' See all previous posts.
