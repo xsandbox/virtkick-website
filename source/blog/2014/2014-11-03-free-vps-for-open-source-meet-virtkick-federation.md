@@ -26,9 +26,8 @@ Our next big goal is federated VPS for open source. Or SETI@home for virtual ser
 You're voluntarily donating free resources on your computer or server to the federation.
 Then developers spin up their virtual machines or Docker containers and test things out with Travis CI builds.
 
-<div class="blogpost-federation text-center" style="margin-top: 40px; margin-bottom: 40px">
-  <img src="/img/federation/federated-vps.png" alt="VirtKick Federation" style="width: 100%; max-width: 300px; " />
-  <h3>We accept API calls from developers and proxy them to users.</h3>
+<div class="blogpost-federation text-center" style="margin-bottom: 50px">
+  <img src="/img/federation/virtkick-federation.png" alt="VirtKick Federation" style="width: 100%; max-width: 620px;" />
 </div>
 
 The most popular use case is unit testing Dockerfiles, Chef cookbooks, Ansible playbooks, and so on.
