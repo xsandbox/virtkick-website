@@ -2,11 +2,21 @@
   .kickstarter-window {
     margin-top: 30px;
   }
+  .bottom .kickstarter-window {
+    margin-top: 20px;
+    margin-bottom: 30px;
+  }
 
   .blog {
     font-size: 20px;
+    line-height: 150%;
 
-    h1.title:first-child {
+    p {
+      margin: 0 0 24px !important;
+    }
+
+
+    h1.title {
       .date {
         font-size: 18px;
         margin-left: 15px;

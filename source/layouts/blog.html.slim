@@ -3,7 +3,12 @@
 
 = wrap_layout :layout do
   #page-blog.container
-    = partial 'layouts/_crowdfunding'
+    .row.top
+      = partial 'layouts/_crowdfunding'
 
-    .blog.col-md-8.col-md-offset-2
-      = yield
+    .row
+      .blog.col-md-8.col-md-offset-2
+        = yield
+
+    .row.bottom
+      = partial 'layouts/_crowdfunding'
