@@ -22,7 +22,7 @@ who provide outstanding services for open source projects. Not to mention
 [DigitalOcean](https://www.bountysource.com/teams/rvm/backers) who support them financially.
 We want to join this elite group but also take you, individual open source supporters, to the party.
 
-Our next big goal is federated VPS for open source. Or SETI@home for VPS, if you will.
+Our next big goal is federated VPS for open source. Or SETI@home for virtual servers, if you will.
 You're voluntarily donating free resources on your computer or server to the federation.
 Then developers spin up their virtual machines or Docker containers and test things out with Travis CI builds.
 
