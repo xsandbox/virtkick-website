@@ -29,6 +29,19 @@
     }
   }
 
+  .packages {
+    article {
+      height: 240px;
+
+      .logo-container {
+        img {
+          height: 138px;
+        }
+      }
+    }
+  }
+
+
   .integrations {
     article {
       text-align: center;

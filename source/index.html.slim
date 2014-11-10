@@ -9,10 +9,20 @@ features:
 - header: 'Open <span class="focus">Source</span>'
   image: open-source
   text: Free for everyone, including businesses. Developed with privacy in mind.
+packages:
+- header: One-Click Packages
+  image: linux-packages
+  text: 'Install on most popular systems:<br/>Mac, Ubuntu, CentOS, Arch and more.'
+- header: Docker Images
+  image: docker-images
+  text: Setup VirtKick panel in a container. Connect a remote hypervisor.
+- header: Appliances
+  image: appliances
+  text: Appliances for KVM and VirtualBox. Connect a remote hypervisor.
 integrations:
 - header: Machines
   image: linux
-  text: Virtualize on your bare metal servers<br/>with KVM, OpenVZ, Xen or Bhyve.
+  text: Virtualize on your server or Mac<br/>with KVM, OpenVZ or VirtualBox.
 - header: Containers
   image: docker
   text: Browse the Docker Hub and create<br/>containers just like usual machines.
@@ -20,6 +30,16 @@ integrations:
   image: amazon
   text: Use Amazon Web Services as an alternative<br/>to deploy your machines.
   r: https://aws.amazon.com/trademark-guidelines/
+devops:
+- header: DNS
+  image: amazon
+  text: Manage DNS records<br/>directly in VirtKick.
+- header: API
+  image: storage
+  text: DigitalOcean-compatible API<br/>and Heroku-styled CLI.
+- header: Provisioning
+  image: chef
+  text: Choose roles and bake your VM<br/>with Ansible, Rex or Chef.
 ---
 #page-index
   .page-top.cosmic
@@ -29,7 +49,7 @@ integrations:
   .content-container.container
     = partial 'layouts/_jumbotron-mobile'
 
-    .slogan#features
+    .slogan
       h2 A cloud panel for the <span class="focus">modern</span> web!
       h3 Say <span class="focus">"no"</span> to NSA. Take cloud back to your computer, home network or a dedicated server.
 
@@ -49,12 +69,41 @@ integrations:
 
 
   .content-container.container
+    .slogan
+      h2 Choose your way and <span class="focus">kickstart</span> your cloud.
+      h3
+
+    .packages.features.row.col-md-12
+      - current_page.data.packages.each do |feature|
+        article.col-md-4
+          .logo-container
+            .logo
+              = tag :img, src: "/img/features/#{feature.image}.png"
+          h3 = feature.header
+          p = feature.text
+
     .slogan.clear#integrations
-      h2 Go your own <span class="focus">virtualization</span> way!
-      h3 Not sure what it is? No problem, you don't need to know. VirtKick <span class="focus">just</span> works.
+      h2 Many <span class="focus">virtualization</span> technologies supported.
+      h3
 
     .integrations.col-md-12
       - current_page.data.integrations.each do |feature|
+        article.col-md-4
+          = tag :img, src: "/img/integration/#{feature.image}.png"
+          h3
+            = feature.header
+            - if feature.r
+              | <sup>®</sup>
+            - elsif feature.tm
+              | ™
+          p = feature.text
+
+    .slogan.clear#integrations
+      h2 Techies will <span class="focus">love</span> these features.
+      h3
+
+    .devops.features.col-md-12
+      - current_page.data.devops.each do |feature|
         article.col-md-4
           = tag :img, src: "/img/integration/#{feature.image}.png"
           h3
