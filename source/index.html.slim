@@ -82,11 +82,11 @@ devops:
           h3 = feature.header
           p = feature.text
 
-    .slogan.clear#integrations
+    .slogan.clear#integrations.hidden
       h2 Many <span class="focus">virtualization</span> technologies supported.
       h3
 
-    .integrations.col-md-12
+    .integrations.col-md-12.hidden
       - current_page.data.integrations.each do |feature|
         article.col-md-4
           = tag :img, src: "/img/integration/#{feature.image}.png"
@@ -98,11 +98,11 @@ devops:
               | ™
           p = feature.text
 
-    .slogan.clear#integrations
+    .slogan.clear#integrations.hidden
       h2 Techies will <span class="focus">love</span> these features.
       h3
 
-    .devops.features.col-md-12
+    .devops.features.col-md-12.hidden
       - current_page.data.devops.each do |feature|
         article.col-md-4
           = tag :img, src: "/img/integration/#{feature.image}.png"
