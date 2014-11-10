@@ -3,6 +3,7 @@ $dark: #581935;
 $medium: #C7233F;
 $medium-light: #D44D5D;
 $light: #FFD285;
+$violet-menu: #60545e;
 
 // Bootstrap overrides, lookup the names at http://getbootstrap.com/customize/
 $brand-primary: $medium-light;
@@ -29,16 +30,17 @@ h1, h2 {
   border: 0 !important;
 }
 
-$navbar-margin-bottom: 0;
 $navbar-default-border: lighten($dark, 5%);
-$navbar-default-bg: $dark;
+$navbar-default-bg: transparent;
 $navbar-default-color: $bg;
 $navbar-default-link-color: $navbar-default-color;
-$navbar-default-link-active-bg: $medium-light;
-$navbar-default-link-active-color: $navbar-default-color;
+$navbar-default-link-active-bg: transparent;
+$navbar-default-link-active-color: white;
 $navbar-default-link-hover-bg: $navbar-default-bg;
 $navbar-default-link-hover-color: $navbar-default-color;
-$navbar-height: 44px;
+$navbar-margin-bottom: 0;
+$navbar-default-border: 0;
+$navbar-height: 102px;
 
 $nav-link-hover-bg: transparent;
 
@@ -47,6 +49,5 @@ $nav-link-hover-bg: transparent;
 }
 
 @import "bootstrap";
-body { padding-top: $navbar-height + 1; }
 
 $text-cooldown: #F5A3B2;

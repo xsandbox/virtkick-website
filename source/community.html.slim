@@ -28,26 +28,28 @@ donors:
 - James Arici
 ---
 #page-community
-  .community
-    h1 Community
+  .page-top.cream
+    = partial 'layouts/nav', locals: {logo: 'color'}
+    .community
+      h1 Community
 
-    .container
-      .col-md-6
-        .logo-container
-          .logo
-            a href='https://webchat.freenode.net/?channels=virtkick'
-              img src='/img/irc.png'
-        h2 IRC
-        p
-          a href='https://webchat.freenode.net/?channels=virtkick' #virtkick on Freenode
-      .col-md-6
-        .logo-container
-          .logo
-            a href='https://github.com/virtkick/virtkick/issues'
-              img src='/img/bugs.png'
-        h2 Bugs
-        p
-          a href='https://github.com/virtkick/virtkick/issues' @virtkick on GitHub
+      .container
+        .col-md-6
+          .logo-container
+            .logo
+              a href='https://webchat.freenode.net/?channels=virtkick'
+                img src='/img/irc.png'
+          h2 IRC
+          p
+            a href='https://webchat.freenode.net/?channels=virtkick' #virtkick on Freenode
+        .col-md-6
+          .logo-container
+            .logo
+              a href='https://github.com/virtkick/virtkick/issues'
+                img src='/img/bugs.png'
+          h2 Bugs
+          p
+            a href='https://github.com/virtkick/virtkick/issues' @virtkick on GitHub
 
   .container
     .contributors.row.col-md-12
