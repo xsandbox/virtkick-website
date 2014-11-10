@@ -4,6 +4,8 @@ $medium: #C7233F;
 $medium-light: #D44D5D;
 $light: #FFD285;
 $violet-menu: #60545e;
+$brown-dark: #3b1e28;
+$igg-pink: #e8345d;
 
 // Bootstrap overrides, lookup the names at http://getbootstrap.com/customize/
 $brand-primary: $medium-light;
@@ -16,6 +18,8 @@ $font-size-h2: floor(($font-size-base * 2));
 $font-size-h3: floor(($font-size-base * 1.5));
 $headings-color: $medium-light;
 $input-border-focus: $medium-light;
+$progress-bg: #4f2843;
+$progress-bar-bg: #ffab29;
 
 $headings-font-family: 'Open Sans', sans;
 h1, h2 {

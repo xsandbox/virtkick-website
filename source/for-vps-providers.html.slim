@@ -44,9 +44,9 @@ integrations:
   .page-top.cosmic
     = partial 'layouts/nav', locals: {logo: 'white'}
     = partial 'layouts/_jumbotron', locals: {h1: 'VirtKick', h2: 'A free alternative to SolusVM'}
+  = partial 'layouts/_crowdfunding', locals: {position: 'bottom'}
   .content-container.container
     = partial 'layouts/_jumbotron-mobile'
-    = partial 'layouts/_crowdfunding'
 
     .slogan#features
       h2 Kickstart your <span class="focus">VPS business</span> immediately!

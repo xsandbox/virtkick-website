@@ -1,11 +1,23 @@
 - if data.settings.live
-  .kickstarter-window
-    .controls
-      i.fa.fa-circle
-      i.fa.fa-circle
-      i.fa.fa-circle
-    .content
+  .igg-window
+    - if position == 'bottom'
+      .alien.bottom
+        img src='/img/alien-white.png'
+    - if position == 'top'
+      .alien.top
+        img src='/img/alien-pink.png'
+    .info
       - igg = igg_details
-      p We're running a crowdfunding campaign to speed up development.
-      p
-        = link_to 'See features and rewards on Indiegogo &raquo;', igg[:url], class: 'btn btn-lg btn-block btn-primary'
+      .container
+        .row
+          .col-md-3
+            h3 We are Crowdfunding!
+          .col-md-3
+            p We're running a crowdfunding campaign to speed up development.
+          .col-md-3
+            .progress.progress-striped
+              .progress-bar role='progressbar' style='width: #{igg[:pledged_percent_capped]}%'
+              .goal #{igg[:pledged_percent]}%
+          .col-md-3
+            p
+              = link_to 'Proceed to Indiegogo &raquo;', igg[:url], class: 'btn btn-lg btn-block btn-primary'
