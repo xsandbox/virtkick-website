@@ -286,7 +286,6 @@ nav {
     }
 
     .btn {
-
       background-color: $igg-pink;
     }
 
@@ -296,6 +295,69 @@ nav {
   }
 }
 
+#newsletter-modal {
+  z-index: 2;
+  background-color: transparent;
+  display: none;
+  position:fixed;
+  width: 420px;
+  height: 170px;
+  bottom: 20px;
+  right: 20px;
+
+
+  .modal-dialog {
+    margin: 0;
+    width: 420px;
+    .modal-content {
+      border: 0;
+      border-radius: 4px !important;
+      background-color: $medium-light;
+      .modal-header {
+        padding: 10px;
+        color: white;
+        border-bottom: 0;
+        p {
+          font-size: 1.2em;
+          color: white;
+        }
+      }
+      .modal-body {
+        color: white;
+        box-shadow: none;
+        border-bottom: 0;
+        background-color: $brown-dark;
+        input.btn {
+          margin-left: 10px;
+        }
+        border-bottom-left-radius: 4px !important;
+        border-bottom-right-radius: 4px !important;
+      }
+    }
+  }
+}
+
+@media (max-width: $screen-sm-min) {
+  #newsletter-modal {
+    bottom: 0px;
+    right: 0px;
+    width: 100%;
+
+    .modal-dialog {
+      width: 100%;
+
+      .modal-content {
+        border-radius: 0px !important;
+        .form-group {
+          display: inline-block;
+          #newsletter-email {
+            max-width: 350px;
+          }
+        }
+      }
+    }
+  }
+}
 .slogan {
   h2 {
     margin-top: 70px;
