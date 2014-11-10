@@ -304,9 +304,12 @@ nav {
 
   h3 {
     margin-top: 10px;
-    margin-bottom: 50px;
     font-weight: 300;
     font-size: 20px;
+  }
+
+  h3:last-child {
+    margin-bottom: 50px;
   }
 
   h2, h3 {
