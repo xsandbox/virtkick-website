@@ -1,23 +1,39 @@
 - if data.settings.live
+  - bottom = position == 'bottom'
   .igg-window
-    - if position == 'bottom'
+    - if bottom
       .alien.bottom
         img src='/img/alien-white.png'
-    - if position == 'top'
+    - else
       .alien.top
         img src='/img/alien-pink.png'
     .info
       - igg = igg_details
       .container
-        .row
-          .col-md-3
-            h3 We are Crowdfunding!
-          .col-md-3
-            p We're running a crowdfunding campaign to speed up development.
-          .col-md-3
-            .progress.progress-striped
-              .progress-bar role='progressbar' style='width: #{igg[:pledged_percent_capped]}%'
-              .goal #{igg[:pledged_percent]}%
-          .col-md-3
-            p
-              = link_to 'Proceed to Indiegogo &raquo;', igg[:url], class: 'btn btn-lg btn-block btn-primary'
+        - if bottom
+          .bottom
+            .row
+              .col-md-3.col-md-offset-3
+                h3 We are crowdfunding!
+              .col-md-3
+                .progress.progress-striped
+                  .progress-bar role='progressbar' style='width: #{igg[:pledged_percent_capped]}%'
+                  .goal #{igg[:pledged_percent]}%
+            .row
+              .col-md-3.col-md-offset-3
+                | Help us deliver more features and polish existing ones.
+              .col-md-3
+                = link_to 'Proceed to Indiegogo &raquo;', igg[:url], class: 'btn btn-lg btn-block btn-primary'
+        - else
+          .top
+            .col-md-3
+              h3 We are Crowdfunding!
+            .col-md-3
+              p We're running a crowdfunding campaign to speed up development.
+            .col-md-3
+              .progress.progress-striped
+                .progress-bar role='progressbar' style='width: #{igg[:pledged_percent_capped]}%'
+                .goal #{igg[:pledged_percent]}%
+            .col-md-3
+              p
+                = link_to 'Proceed to Indiegogo &raquo;', igg[:url], class: 'btn btn-lg btn-block btn-primary'

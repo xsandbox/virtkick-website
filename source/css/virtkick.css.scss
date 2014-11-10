@@ -266,13 +266,23 @@ nav {
 
     h3 {
       margin-top: 0;
-      font-weight: bold;
+      font-weight: normal;
+    }
+
+    .bottom {
+      h3 {
+        margin-top: 5px;
+      }
+
+      p {
+        margin-top: 20px;
+      }
     }
 
     .progress {
       border-radius: 4px !important;
       position: relative;
-      margin-bottom: 5px;
+      margin-bottom: 10px;
       height: 46px !important;
 
       .goal {
@@ -291,7 +301,7 @@ nav {
     }
 
     p {
-      text-align: center;
+      text-align: left;
     }
   }
 }
