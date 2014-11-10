@@ -3,7 +3,9 @@ title: VirtKick - Federated VPS for developers
 description: Free containers and machines for open source projects. Test your Dockerfiles or Chef cookbooks with Travis CI.
 ---
 #page-developers
-  = partial 'layouts/_jumbotron', locals: {h1: 'Federated VPS', h2: 'Containers and machines for open source repos', h3: 'SETI@home for cloud computing'}
+  .page-top.cosmic
+    = partial 'layouts/nav', locals: {logo: 'white'}
+    = partial 'layouts/_jumbotron', locals: {h1: 'Federated VPS', h2: 'Containers and machines for open source repos', h3: 'SETI@home for cloud computing'}
   .content-container.container
     = partial 'layouts/_jumbotron-mobile'
     = partial 'layouts/_crowdfunding'

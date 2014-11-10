@@ -3,19 +3,58 @@
 @import '_mixins';
 
 nav {
+  @media (max-width: $grid-float-breakpoint-max) {
+    #menu {
+      margin-top: 15px !important;
+    }
+  }
+
+  .navbar-toggle {
+    margin-top: 30px;
+    border-color: $medium-light !important;
+    
+    .icon-bar {
+      background-color: $medium-light !important;
+    }
+
+    &:hover, &:focus {
+      border-color: white !important;
+      background-color: white !important;
+
+      .icon-bar {
+        background-color: $medium-light !important;
+      }
+    }
+  }
+
   .navbar-brand {
-    font-family: Earthbound;
-    font-size: 28px;
-    padding-top: 8px;
-    padding-right: 5px;
+    padding: 3px 0 0 27px;
+    margin: 0;
+
+    .virt-name {
+      padding-left: 3px;
+      padding-top: 22px;
+    }
   }
 
   li {
     a {
-      padding-left: 10px !important ;
-      padding-right: 10px !important ;
+      padding-top: 10px !important;
+      padding-bottom: 10px !important;
+      margin: 15px 2px 15px 2px !important;
     }
-//    text-transform: uppercase;
+
+    @media (max-width: $grid-float-breakpoint-max) {
+      a {
+        margin: 3px 10px 3px 10px !important;
+      }
+    }
+
+    &.active a {
+      border-radius: 4px;
+      background-color: $medium-light !important;
+      color: white !important;
+    } 
   }
 
   li.twitter {
@@ -28,22 +67,68 @@ nav {
   }
 }
 
+.page-top {
+  position: relative;
+
+  .navbar > .container {
+    background-image: url('/img/trace.png');
+    background-repeat: no-repeat;
+    background-position: top left;
+  }
+
+  .navbar > .container {
+    background-image: none;
+  }
+
+  @media(min-width: $screen-lg-min) {
+    .navbar > .container {
+      background-image: url('/img/trace.png');
+    }
+  }
+
+  &.white {
+    background: white;
+
+    .navbar li a, .navbar li a:hover { 
+      color: $violet-menu;
+    }
+  }
+  
+  &.cream { 
+    background: -webkit-linear-gradient(white, #f9f3f4);
+    background: -o-linear-gradient(white, #f9f3f4);
+    background: linear-gradient(white, #f9f3f4);
+
+    @media(min-width: $screen-lg-min) {
+      .navbar > .container {
+        background-image: url('/img/trace.png');
+      }
+    }
+
+    .navbar li a, .navbar li a:hover { 
+      color: $violet-menu;
+    }
+  }
+
+  &.cosmic {
+    @include gradient;
+    
+    @media(min-width: $screen-lg-min) {
+      .navbar > .container {
+        background-image: url('/img/trace-with-moon.png');
+      }
+    }
+  }
+}
+
 .header {
-  @include gradient;
   text-align: center;
-  min-height: 440px;
+  min-height: 350px;
 
   .row {
     // Prevent a horizontal scrollbar.
     margin-left: 0;
     margin-right: 0;
-  }
-
-  .moon {
-    height: 120px;
-    background-image: url('/img/moon.png');
-    background-repeat: no-repeat;
-    background-position: top center;
   }
 
   .content {

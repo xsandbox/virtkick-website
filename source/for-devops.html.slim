@@ -21,7 +21,9 @@ integrations:
   text: Choose roles and bake your VM<br/>with Ansible, Rex or Chef.
 ---
 #page-devops
-  = partial 'layouts/_jumbotron'
+  .page-top.cosmic
+    = partial 'layouts/nav', locals: {logo: 'white'}
+    = partial 'layouts/_jumbotron'
   .content-container.container
     = partial 'layouts/_jumbotron-mobile'
     = partial 'layouts/_crowdfunding'
