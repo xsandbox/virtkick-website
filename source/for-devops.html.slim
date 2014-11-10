@@ -24,9 +24,9 @@ integrations:
   .page-top.cosmic
     = partial 'layouts/nav', locals: {logo: 'white'}
     = partial 'layouts/_jumbotron'
+  = partial 'layouts/_crowdfunding', locals: {position: 'bottom'}
   .content-container.container
     = partial 'layouts/_jumbotron-mobile'
-    = partial 'layouts/_crowdfunding'
 
     .slogan#features
       h2 Choose your way and <span class="focus">kickstart</span> your cloud.
