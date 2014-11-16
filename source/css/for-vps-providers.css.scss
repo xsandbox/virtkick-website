@@ -3,7 +3,30 @@
 
 
 #page-providers {
+  h1, h2, h3, h4, h5, h6 {
+    text-align: center;
+  }
+
+  .content-container {
+    h2 {
+      margin-top: 80px;
+      margin-bottom: 0px;
+    }
+
+    h4 {
+      font-size: 20px;
+      margin-top: 20px;
+      margin-bottom: 60px;
+    }
+  }
+
+  .features article .logo-container .logo img {
+    height: 80px;
+  }
+
   .integrations {
+    margin-top: 30px;
+    margin-bottom: 80px;
     text-align: center;
 
     article {
