@@ -5,6 +5,10 @@
 nav {
   margin-bottom: 30px;
 
+  #menu {
+    padding-top: 3px;
+  } 
+
   @media (max-width: $grid-float-breakpoint-max) {
     #menu {
       font-size: 10px !important;
@@ -69,6 +73,11 @@ nav {
       margin-top: 20px;
     }
   }
+}
+
+h1.section {
+  margin-top: 80px;
+  margin-bottom: 60px;
 }
 
 h2.section {

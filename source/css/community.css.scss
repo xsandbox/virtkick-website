@@ -10,6 +10,7 @@ $become-a-sponsor-top: 40px;
   }
 
   .community {
+    padding-bottom: 40px;
     text-align: center;
     
     h1 {
@@ -95,7 +96,7 @@ $become-a-sponsor-top: 40px;
     }
 
     .bronze {
-
+      font-size: 14px;
       .color {
         @media(min-width: $screen-lg) {
           position: absolute;
