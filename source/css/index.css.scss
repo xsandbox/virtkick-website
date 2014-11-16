@@ -2,6 +2,11 @@
 @import '_mixins';
 
 #page-index {
+
+  h1, h2, h3, h4, h5, h6 {
+    text-align: center;
+  }
+
   .screenshots {
     background-color: #F5606B;
     text-align: center;
@@ -31,11 +36,9 @@
 
   .packages {
     article {
-      height: 240px;
-
       .logo-container {
         img {
-          height: 138px;
+          height: 90px;
         }
       }
     }
@@ -50,4 +53,5 @@
       padding-right: 0;
     }
   }
+
 }

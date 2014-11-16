@@ -8,8 +8,6 @@
   }
 
   .blog {
-    font-size: 20px;
-    line-height: 150%;
 
     p {
       margin: 0 0 24px !important;
@@ -17,6 +15,7 @@
 
 
     h1.title {
+      font-size: 32px;
       .date {
         font-size: 18px;
         margin-left: 15px;
@@ -46,7 +45,7 @@
         width: 56px;
         margin-right: 8px;
       }
-
+      
       .name {
         font-weight: bold;
       }

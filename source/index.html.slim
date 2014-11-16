@@ -50,8 +50,8 @@ devops:
     = partial 'layouts/_jumbotron-mobile'
 
     .slogan
-      h2 A cloud panel for the <span class="focus">modern</span> web!
-      h3 Say <span class="focus">"no"</span> to NSA. Take cloud back to your computer, home network or a dedicated server.
+      h2.section A cloud panel for the <span class="focus">modern</span> web!
+      h4 Say <span class="focus">"no"</span> to NSA. Take cloud back to your computer, home network or a dedicated server.
 
     .features.row.col-md-12
       - current_page.data.features.each do |feature|
@@ -70,8 +70,7 @@ devops:
 
   .content-container.container
     .slogan
-      h2 Choose your way and <span class="focus">kickstart</span> your cloud.
-      h3
+      h2.section Choose your way and <span class="focus">kickstart</span> your cloud.
 
     .packages.features.row.col-md-12
       - current_page.data.packages.each do |feature|
@@ -84,7 +83,6 @@ devops:
 
     .slogan.clear#integrations.hidden
       h2 Many <span class="focus">virtualization</span> technologies supported.
-      h3
 
     .integrations.col-md-12.hidden
       - current_page.data.integrations.each do |feature|
@@ -99,8 +97,7 @@ devops:
           p = feature.text
 
     .slogan.clear#integrations.hidden
-      h2 Techies will <span class="focus">love</span> these features.
-      h3
+      h2.section Techies will <span class="focus">love</span> these features.
 
     .devops.features.col-md-12.hidden
       - current_page.data.devops.each do |feature|

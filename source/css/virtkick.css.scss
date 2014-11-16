@@ -7,6 +7,7 @@ nav {
 
   @media (max-width: $grid-float-breakpoint-max) {
     #menu {
+      font-size: 10px !important;
       margin-top: 15px !important;
     }
   }
@@ -30,7 +31,7 @@ nav {
   }
 
   .navbar-brand {
-    padding: 3px 0 0 27px;
+    padding: 3px 0 0 29px;
     margin: 0;
 
     .virt-name {
@@ -41,6 +42,7 @@ nav {
 
   li {
     a {
+      font-size: 15px;
       padding-top: 10px !important;
       padding-bottom: 10px !important;
       margin: 15px 2px 15px 2px !important;
@@ -67,6 +69,11 @@ nav {
       margin-top: 20px;
     }
   }
+}
+
+h2.section {
+  margin-top: 80px;
+  margin-bottom: 60px;
 }
 
 .page-top {
@@ -125,7 +132,8 @@ nav {
 
 .header {
   text-align: center;
-  min-height: 350px;
+  padding-top: 20px;
+  padding-bottom: 65px;
 
   .row {
     // Prevent a horizontal scrollbar.
@@ -146,27 +154,22 @@ nav {
   }
 
   h1 {
-    margin-top: 0;
-    padding-top: 0;
-    font-size: 40px;
-    font-weight: bold;
-
-    @media(max-width: $screen-sm-max) {
-      margin-top: 0;
-    }
+    font-size: 38px !important;
+    margin-top: 20px;
+    margin-bottom: 18px;
   }
 
   h2 {
-    margin-top: 0;
-    font-size: 25px;
-    font-weight: bold;
-    color: $medium-light !important;
+    font-size: 26px !important;
+    margin-top: 0px;
     margin-bottom: 10px;
+    color: $medium-light !important;
   }
 
   h3 {
-    margin-top: 0;
-    font-size: 18px;
+    font-size: 20px !important;
+    margin-top: 0px;
+    margin-bottom: 40px;
     color: $medium-light !important;
   }
 
@@ -181,7 +184,8 @@ nav {
   }
 
   .become-a-sponsor {
-    padding-top: 20px;
+    margin-top: 30px;
+    font-size: 13px;
     text-transform: uppercase;
 
     .logo {
@@ -192,10 +196,11 @@ nav {
         height: 200px;
         background-color: rgba(0, 0, 0, 0.1);
         margin-bottom: 10px;
-        font-weight: bold;
         vertical-align: middle;
         padding-top: 75px;
         border-radius: 5px;
+        font-size: 15px;
+        font-weight: bold;
 
         a {
           opacity: 1;
@@ -205,20 +210,14 @@ nav {
           color: white;
         }
       }
-
-      p {
-        font-size: 80%;
-      }
     }
   }
 
   .newsletter {
-    margin-top: 55px;
     margin-bottom: 15px;
     @include newsletter(50px, 16px);
 
     .result {
-      font-size: 20px;
       color: $text-cooldown;
     }
 
@@ -262,39 +261,43 @@ nav {
   .info {
     width: 100%;
     background-color: $brown-dark;
-    padding-top: 32px;
-    padding-bottom: 22px;
+    padding-top: 33px;
+    padding-bottom: 33px;
     color: white;
+    line-height: 20px;
 
     h3 {
-      margin-top: 5px;
-      font-weight: normal;
+      text-align: left !important;
+      margin-top: 10px;
     }
 
     .bottom {
       p {
-        margin-top: 20px;
+        margin-top: 10px;
       }
     }
 
     .progress {
+      box-shadow: none;
       border-radius: 4px !important;
       position: relative;
       margin-bottom: 10px;
       height: 46px !important;
-
+      
       .goal {
-        font-size: 20px;
+        font-size: 18px;
+        font-weight: bold;
         position: absolute;
-        top: 8px;
+        top: 12px;
         left: 45%;
         color: white;
-        font-weight: bold;
       }
     }
 
     .btn {
-
+      padding: 12px 18px;
+      font-size: 18px;
+      font-weight: bold;
       background-color: $igg-pink;
     }
 
@@ -304,32 +307,12 @@ nav {
   }
 }
 
-.slogan {
-  h2 {
-    margin-top: 70px;
-    margin-bottom: 0;
-  }
-
-  h3 {
-    margin-top: 10px;
-    font-weight: 300;
-    font-size: 20px;
-  }
-
-  h3:last-child {
-    margin-bottom: 50px;
-  }
-
-  h2, h3 {
-    line-height: 130%;
-    text-align: center;
-  }
-}
-
 .features {
+  margin-top: 30px;
+  margin-bottom: 100px;
+
   article {
     text-align: center;
-    margin-bottom: 80px;
 
     .logo-container {
       margin-left: auto;
@@ -351,7 +334,6 @@ nav {
       margin-left: auto;
       margin-right: auto;
       margin-top: 25px;
-      line-height: 140%;
       width: 80%;
     }
   }
@@ -371,8 +353,9 @@ footer {
   }
 
   .newsletter {
+    margin-bottom: 0px;
+    padding-bottom: 10px;
     @include newsletter(40px, 12px);
-    padding-bottom: 40px;
     background-color: #721830;
 
     h3 {
@@ -389,6 +372,8 @@ footer {
   }
 
   .menu {
+    padding-top: 20px;
+    padding-bottom: 20px;
     background-color: #721830;
 
     .nav {
@@ -402,12 +387,14 @@ footer {
       }
 
       a {
+        font-size: 14px;
         color: #ffffff;
       }
     }
   }
 
   .copyright {
+    font-size: 14px;
     background-color: #320B16;
     color: $medium-light;
     padding: 15px;
@@ -417,7 +404,7 @@ footer {
     }
 
     .trademarks {
-      font-size: 14px;
+      font-size: 12px;
     }
   }
 }
@@ -461,11 +448,12 @@ footer {
 }
 
 .sponsors {
+  margin-top: 40px;
   background-color: #F7F7F7;
 
   h3 {
     margin-top: 30px;
-    margin-bottom: 30px;
+    margin-bottom: 70px;
     color: #698986;
 
     .focus {
@@ -474,20 +462,23 @@ footer {
   }
 
   .sponsor {
-    margin-bottom: 30px;
-
+    margin-bottom: 20px;
     .controls {
+      border-top-left-radius: 4px;
+      border-top-right-radius: 4px;
       background-color: #F5606B;
       font-size: 10px;
       padding-bottom: 4px;
     }
 
     .content {
+      border-bottom-left-radius: 4px;
+      border-bottom-right-radius: 4px;
       background-color: #ffffff;
       text-align: center;
       width: 100%;
-      height: 130px;
       padding-top: 40px;
+      padding-bottom: 50px;
     }
   }
 }
