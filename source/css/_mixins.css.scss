@@ -11,10 +11,8 @@
 @mixin newsletter($input-height, $text-height) {
   form {
     input {
-      text-align: center;
-      font-family: 'Open Sans', sans;
-      font-weight: 300;
       font-size: $text-height;
+      text-align: center;
       height: $input-height;
       margin-left: 4px;
       margin-right: 4px;
