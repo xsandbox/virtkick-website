@@ -59,10 +59,10 @@ html
 
               if (response.result == 'error') {
                 wrapperElement.removeClass('has-success').addClass('has-error');
-                resultElement.text(response.msg);
+                resultElement.html(response.msg);
               } else {
                 wrapperElement.removeClass('has-error').addClass('has-success');
-                resultElement.text(resultElement.data('success'));
+                resultElement.html(resultElement.data('success'));
                 ga('send', 'event', 'newsletter', 'subscribe');
               }
             },
@@ -88,7 +88,15 @@ html
               forceHash:           'newsletter',
               delayHash:           'go'
             });
-          }, 1000);
+          }, 10000);
+
+          $('.newsletter-header .close').click(function () {
+            $('.newsletter-wrapper').removeClass('brown');
+            $('.newsletter-content').removeClass('shown'); 
+            setTimeout(function () {
+              CoverPop.close();
+            }, 850);
+          });
         });
       = yield_content :scripts
 
