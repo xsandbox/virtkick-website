@@ -316,73 +316,157 @@ h2.section {
   }
 }
 
-.features {
-  margin-top: 30px;
-  margin-bottom: 100px;
+.CoverPop-open {
+  body {
+    overflow: hidden;
+  }
 
-#newsletter-modal {
-  z-index: 2;
-  background-color: transparent;
-  display: none;
-  position:fixed;
-  width: 420px;
-  height: 170px;
-  bottom: 20px;
-  right: 20px;
-
-
-  .modal-dialog {
-    margin: 0;
-    width: 420px;
-    .modal-content {
-      border: 0;
-      border-radius: 4px !important;
-      background-color: $medium-light;
-      .modal-header {
-        padding: 10px;
-        color: white;
-        border-bottom: 0;
-        p {
-          font-size: 1.2em;
-          color: white;
-        }
-      }
-      .modal-body {
-        color: white;
-        box-shadow: none;
-        border-bottom: 0;
-        background-color: $brown-dark;
-        input.btn {
-          margin-left: 10px;
-        }
-        border-bottom-left-radius: 4px !important;
-        border-bottom-right-radius: 4px !important;
-      }
-    }
+  #newsletter-cover {
+    display: block;
   }
 }
 
-@media (max-width: $screen-sm-min) {
-  #newsletter-modal {
-    bottom: 0px;
-    right: 0px;
-    width: 100%;
+#newsletter-cover {
+  display: none;
+  position: fixed;
+  overflow-y: scroll;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1000;
+  pointer-events:none;
+  background-color: transparent;
+  backface-visibility: hidden;
 
-    .modal-dialog {
-      width: 100%;
+  .newsletter-wrapper {
+    text-align: left;
+    position: absolute;
+    pointer-events: auto;
+    text-align: center;
+    width: 480px;
+    height: 190px;
+    bottom: 20px;
+    right: 20px;
+    padding: 20px 20px;
+    margin: 10% auto 0;
+    border-radius: 4px;
+    background-color: transparent;
 
-      .modal-content {
-        border-radius: 0px !important;
+    &.brown {
+      -webkit-animation: brown-bg 0.65s ease-in;
+      -moz-animation-name: brown-bg 0.65s ease-in;
+      -ms-animation-name: brown-bg 0.65s ease-in;
+      -o-animation-name: brown-bg 0.65s ease-in;
+      animation-name: brown-bg 0.65s ease-in;
+      background-color: $brown-dark;
+    }
+
+    .ufo {
+      -webkit-animation: flicker 0.6s ease-in;
+      -moz-animation-name: flicker 0.6s ease-in;
+      -ms-animation-name: flicker 0.6s ease-in;
+      -o-animation-name: flicker 0.6s ease-in;
+      animation-name: flicker 0.6s ease-in;
+      position: absolute;
+      z-index: 2;
+      top: -84px;
+      left: 175px;
+
+      img {
+        width: 117px;
+        height: 142px;
+      }
+    }
+    
+    .newsletter-content {
+      opacity: 0;
+      display: none;
+
+      &.shown {
+        opacity: 1;
+        display: block;
+        -webkit-animation: fade-in 0.85s ease-in;
+        -moz-animation-name: fade-in 0.85s ease-in;
+        -ms-animation-name: fade-in 0.85s ease-in;
+        -o-animation-name: fade-in 0.85s ease-in;
+        animation-name: fade-in 0.85s ease-in;
+      }
+
+      .newsletter-header {
+        position: relative;
+        z-index: 3;
+        color: white;
+        font-size: 18px;
+        font-weight: bold;
+        padding-bottom: 10px;
+        border-bottom: 2px solid lighten($brown-dark, 5%);
+
+        .fa {
+          color: $medium-light;
+          margin-right: 10px;
+        }
+
+        .close {
+          margin-top: -8px;
+          font-size: 40px !important;
+          opacity: 1 !important;
+          text-shadow: none !important;
+          color: $medium-light;
+        }
+
+        .title {
+          margin-bottom: 0px;
+        }
+      }
+
+      .newsletter {
+        color: white;
+        padding-top: 10px;
+
         .form-group {
-          display: inline-block;
-          #newsletter-email {
-            max-width: 350px;
+          input {
+            margin-left: 5px;
+            margin-right: 5px;
+          }
+          
+          input#newsletter-email {
+            width: 250px;
+          }
+          
+          input.btn {
+            background-color: $igg-pink;
+            padding: 8px 20px;
           }
         }
       }
     }
   }
 }
+
+@media (max-width: $screen-sm-min) {
+  #newsletter-cover {
+    width: 100%;
+
+    .newsletter-wrapper {
+      width: 100%;
+      bottom: 0;
+      right: 0;
+      border-radius: 0px !important;
+
+      .newsletter .form-group {
+        display: inline-block;
+        input {
+          display: inline-block;
+        }
+      }
+    }
+  }
+}
+
+.features {
+  margin-top: 30px;
+  margin-bottom: 100px;
 
   article {
     text-align: center;

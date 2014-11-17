@@ -71,6 +71,24 @@ html
               $form.unbind('submit').submit();
             }
           });
+
+          /// show popup with nesletter
+          setTimeout(function () {
+            CoverPop.start({
+              coverId:             'newsletter-cover',
+              expires:             30,
+              closeClassNoDefault: 'CoverPop-close',
+              closeClassDefault:   'CoverPop-close-go',
+              cookieName:          '_igg_newsletter',
+              onPopUpOpen:         function () {
+                $('.newsletter-wrapper').addClass('brown');
+                $('.newsletter-content').addClass('shown');
+              },
+              onPopUpClose:        function () {},
+              forceHash:           'newsletter',
+              delayHash:           'go'
+            });
+          }, 1000);
         });
       = yield_content :scripts
 
