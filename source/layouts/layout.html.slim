@@ -72,8 +72,7 @@ html
             }
           });
 
-          /// show popup with nesletter
-          setTimeout(function () {
+          var showNewsletter = function () {
             CoverPop.start({
               coverId:             'newsletter-cover',
               expires:             30,
@@ -88,8 +87,19 @@ html
               forceHash:           'newsletter',
               delayHash:           'go'
             });
-          }, 10000);
+          };
 
+          // show popup with newsletter after 10 seconds
+          setTimeout(showNewsletter, 5000);
+
+          // show popup on scrolling to the bottom of the page          
+          $(window).scroll(function () {
+             if ($(window).scrollTop() >= $(document).height() - $(window).height() - 500) {
+                showNewsletter();
+             }
+          });
+
+          // add close popup handler
           $('.newsletter-header .close').click(function () {
             $('.newsletter-wrapper').removeClass('brown');
             $('.newsletter-content').removeClass('shown'); 

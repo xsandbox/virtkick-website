@@ -371,8 +371,8 @@ h2.section {
         z-index: 2;
         top: -84px;
         left: 175px;
-        @include animation(flicker-out, 0.6s, ease-in);
-        opacity: 1;
+        @include animation(fade-out, 0.6s, ease-in);
+        opacity: 0;
 
         img {
           width: 117px;
@@ -385,7 +385,7 @@ h2.section {
       background-color: $brown-dark;
       
       .ufo {
-        @include animation(flicker, 0.6s, ease-in);
+        @include animation(fade-in, 0.6s, ease-in);
         opacity: 1;
       }
     }
