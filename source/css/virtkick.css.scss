@@ -152,12 +152,13 @@ h2.section {
 
   .content {
     background-repeat: no-repeat;
-    background-position: left center, right center;
+    background-position: 6% 68%, right center;
 
     @media(min-width: $screen-lg) {
       background-image: url('/img/paperplane.png'), url('/img/sputnik-small.png');
     }
     @media(min-width: 1660px) {
+      background-position: 12% 78%, right center;
       background-image: url('/img/paperplane.png'), url('/img/sputnik.png') !important;
     }
   }
@@ -172,14 +173,14 @@ h2.section {
     font-size: 26px !important;
     margin-top: 0px;
     margin-bottom: 10px;
-    color: $medium-light !important;
+    color: $intense !important;
   }
 
   h3 {
     font-size: 20px !important;
     margin-top: 0px;
     margin-bottom: 40px;
-    color: $medium-light !important;
+    color: $intense !important;
   }
 
   .video {
@@ -222,16 +223,27 @@ h2.section {
     }
   }
 
-  .newsletter {
-    margin-bottom: 15px;
-    @include newsletter(50px, 16px);
+  .cta {
+    .btn {
+      border-radius: 6px;
+      font-weight: bold;
+      padding: 15px 40px;
+      margin: 6px;
 
-    .result {
-      color: $text-cooldown;
-    }
+      &.btn-primary {
+        &:hover {
+          background-color: darken($medium-light, 5%);
+        }
+      }
 
-    .performed {
-      color: #ffffff !important;
+      &.btn-yellow {
+        padding-left: 50px;
+        padding-right: 50px;
+
+        &:hover {
+          background-color: darken($yellow, 10%);
+        }
+      }
     }
   }
 }
