@@ -152,12 +152,13 @@ h2.section {
 
   .content {
     background-repeat: no-repeat;
-    background-position: left center, right center;
+    background-position: 6% 68%, right center;
 
     @media(min-width: $screen-lg) {
       background-image: url('/img/paperplane.png'), url('/img/sputnik-small.png');
     }
     @media(min-width: 1660px) {
+      background-position: 12% 78%, right center;
       background-image: url('/img/paperplane.png'), url('/img/sputnik.png') !important;
     }
   }
@@ -172,14 +173,14 @@ h2.section {
     font-size: 26px !important;
     margin-top: 0px;
     margin-bottom: 10px;
-    color: $medium-light !important;
+    color: $intense !important;
   }
 
   h3 {
     font-size: 20px !important;
     margin-top: 0px;
     margin-bottom: 40px;
-    color: $medium-light !important;
+    color: $intense !important;
   }
 
   .video {
@@ -222,16 +223,27 @@ h2.section {
     }
   }
 
-  .newsletter {
-    margin-bottom: 15px;
-    @include newsletter(50px, 16px);
+  .cta {
+    .btn {
+      border-radius: 6px;
+      font-weight: bold;
+      padding: 15px 40px;
+      margin: 6px;
 
-    .result {
-      color: $text-cooldown;
-    }
+      &.btn-primary {
+        &:hover {
+          background-color: darken($medium-light, 5%);
+        }
+      }
 
-    .performed {
-      color: #ffffff !important;
+      &.btn-yellow {
+        padding-left: 50px;
+        padding-right: 50px;
+
+        &:hover {
+          background-color: darken($yellow, 10%);
+        }
+      }
     }
   }
 }
@@ -312,6 +324,148 @@ h2.section {
 
     p {
       text-align: left;
+    }
+  }
+}
+
+.CoverPop-open {
+  body {
+    overflow: hidden;
+  }
+
+  #newsletter-cover {
+    display: block;
+  }
+}
+
+#newsletter-cover {
+  display: none;
+  position: fixed;
+  overflow-y: scroll;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1000;
+  pointer-events:none;
+  background-color: transparent;
+  backface-visibility: hidden;
+
+  .newsletter-wrapper {
+    text-align: left;
+    position: absolute;
+    pointer-events: auto;
+    text-align: center;
+    width: 480px;
+    height: 190px;
+    bottom: 20px;
+    right: 20px;
+    padding: 20px 20px;
+    margin: 10% auto 0;
+    border-radius: 4px;
+    @include animation(transparent-bg, 0.65s, ease-in);
+    background-color: transparent;
+
+    .ufo {
+        position: absolute;
+        z-index: 2;
+        top: -84px;
+        left: 175px;
+        @include animation(flicker-out, 0.6s, ease-in);
+        opacity: 1;
+
+        img {
+          width: 117px;
+          height: 142px;
+        }
+    }
+
+    &.brown {
+      @include animation(brown-bg, 0.65s, ease-in);
+      background-color: $brown-dark;
+      
+      .ufo {
+        @include animation(flicker, 0.6s, ease-in);
+        opacity: 1;
+      }
+    }
+
+    .newsletter-content {
+      opacity: 0;
+      @include animation(fade-out, 0.65s, ease-in);
+
+      &.shown {
+        opacity: 1;
+        @include animation(fade-in, 0.85s, ease-in);
+      }
+
+      .newsletter-header {
+        position: relative;
+        z-index: 3;
+        color: white;
+        font-size: 18px;
+        font-weight: bold;
+        padding-bottom: 10px;
+        border-bottom: 2px solid lighten($brown-dark, 5%);
+
+        .fa {
+          color: $medium-light;
+          margin-right: 10px;
+        }
+
+        .close {
+          margin-top: -8px;
+          font-size: 40px !important;
+          opacity: 1 !important;
+          text-shadow: none !important;
+          color: $medium-light;
+        }
+
+        .title {
+          margin-bottom: 0px;
+        }
+      }
+
+      .newsletter {
+        color: white;
+        padding-top: 10px;
+
+        .form-group {
+          input {
+            margin-left: 5px;
+            margin-right: 5px;
+          }
+          
+          input#newsletter-email {
+            width: 250px;
+          }
+          
+          input.btn {
+            background-color: $igg-pink;
+            padding: 8px 20px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: $screen-sm-min) {
+  #newsletter-cover {
+    width: 100%;
+
+    .newsletter-wrapper {
+      width: 100%;
+      bottom: 0;
+      right: 0;
+      border-radius: 0px !important;
+
+      .newsletter .form-group {
+        display: inline-block;
+        input {
+          display: inline-block;
+        }
+      }
     }
   }
 }

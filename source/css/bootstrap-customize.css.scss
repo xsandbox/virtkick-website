@@ -3,9 +3,12 @@ $dark: #581935;
 $medium: #C7233F;
 $medium-light: #D44D5D;
 $light: #FFD285;
+$intense: #ec4863;
 $violet-menu: #60545e;
 $brown-dark: #3b1e28;
 $igg-pink: #e8345d;
+$yellow: #ffab29;
+$violet-text: #5c365a;
 
 // Bootstrap overrides, lookup the names at http://getbootstrap.com/customize/
 $brand-primary: $medium-light;
@@ -64,6 +67,13 @@ h5, h6 {
   border: 0 !important;
   outline: none !important;
 }
+
+.btn-yellow {
+  color: $violet-text !important;
+  background-color: $yellow;
+  border-color: $yellow;
+}
+
 .form-control {
   border: 0 !important;
 }

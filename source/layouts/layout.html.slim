@@ -18,6 +18,7 @@ html
     = javascript_include_tag '/js/snippets.js'
     = yield_content :scripts
   body
+    = partial 'layouts/_newsletter'
     #page
       = yield
       footer
@@ -58,10 +59,10 @@ html
 
               if (response.result == 'error') {
                 wrapperElement.removeClass('has-success').addClass('has-error');
-                resultElement.text(response.msg);
+                resultElement.html(response.msg);
               } else {
                 wrapperElement.removeClass('has-error').addClass('has-success');
-                resultElement.text(resultElement.data('success'));
+                resultElement.html(resultElement.data('success'));
                 ga('send', 'event', 'newsletter', 'subscribe');
               }
             },
@@ -69,6 +70,32 @@ html
               // Disconnect.me extension blocks any JSONP requests.
               $form.unbind('submit').submit();
             }
+          });
+
+          /// show popup with nesletter
+          setTimeout(function () {
+            CoverPop.start({
+              coverId:             'newsletter-cover',
+              expires:             30,
+              closeClassNoDefault: 'CoverPop-close',
+              closeClassDefault:   'CoverPop-close-go',
+              cookieName:          '_igg_newsletter',
+              onPopUpOpen:         function () {
+                $('.newsletter-wrapper').addClass('brown');
+                $('.newsletter-content').addClass('shown');
+              },
+              onPopUpClose:        function () {},
+              forceHash:           'newsletter',
+              delayHash:           'go'
+            });
+          }, 10000);
+
+          $('.newsletter-header .close').click(function () {
+            $('.newsletter-wrapper').removeClass('brown');
+            $('.newsletter-content').removeClass('shown'); 
+            setTimeout(function () {
+              CoverPop.close();
+            }, 850);
           });
         });
       = yield_content :scripts
