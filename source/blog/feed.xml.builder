@@ -1,8 +1,8 @@
 xml.instruct!
 xml.feed 'xmlns' => 'http://www.w3.org/2005/Atom' do
-  site_url = 'https://www.nowaker.net/'
-  xml.title 'Damian Nowak'
-  xml.subtitle 'CEO & Ruby Developer'
+  site_url = 'https://www.virtkick.io/'
+  xml.title 'VirtKick'
+  xml.subtitle 'Your self-hosted VPS panel, similar to DigitalOcean. 100% open source.'
   xml.id URI.join(site_url, blog.options.prefix.to_s)
   xml.link 'href' => URI.join(site_url, blog.options.prefix.to_s)
   xml.link 'href' => URI.join(site_url, current_page.path), 'rel' => 'self'

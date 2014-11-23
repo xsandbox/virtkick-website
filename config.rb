@@ -11,7 +11,7 @@ activate :bootstrap_navbar
 
 
 activate :blog do |blog|
-  blog.prefix = 'blog'
+  blog.prefix = 'blog/'
   blog.permalink = '{title}.html'
   blog.sources = '{year}/{year}-{month}-{day}-{title}.html'
 
