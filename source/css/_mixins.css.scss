@@ -38,10 +38,10 @@
 
 @mixin animation($animation-name, $duration, $transition) {
   -webkit-animation: $animation-name $duration $transition;
-  -moz-animation-name: $animation-name $duration $transition;
-  -ms-animation-name: $animation-name $duration $transition;
-  -o-animation-name: $animation-name $duration $transition;
-  animation-name: $animation-name $duration $transition;
+  -moz-animation: $animation-name $duration $transition;
+  -ms-animation: $animation-name $duration $transition;
+  -o-animation: $animation-name $duration $transition;
+  animation: $animation-name $duration $transition;
 }
 
 @mixin keyframes($name) {
