@@ -328,25 +328,18 @@ h2.section {
   }
 }
 
-.CoverPop-open {
-  body {
-    overflow: hidden;
-  }
-
-  #newsletter-cover {
-    display: block;
-  }
+.CoverPop-open #newsletter-cover {
+  display: block;
 }
 
 #newsletter-cover {
   display: none;
   position: fixed;
-  overflow-y: scroll;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  z-index: 1000;
+  z-index: 2001;
   pointer-events:none;
   background-color: transparent;
   backface-visibility: hidden;
