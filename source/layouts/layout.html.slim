@@ -72,13 +72,13 @@ html
             }
           });
 
-          var showNewsletter = function () {
+          var showNewsletter = function (cookie) {
             CoverPop.start({
               coverId:             'newsletter-cover',
               expires:             30,
               closeClassNoDefault: 'CoverPop-close',
               closeClassDefault:   'CoverPop-close-go',
-              cookieName:          '_igg_newsletter',
+              cookieName:          cookie,
               onPopUpOpen:         function () {
                 $('.newsletter-wrapper').addClass('brown');
                 $('.newsletter-content').addClass('shown');
@@ -89,16 +89,18 @@ html
             });
           };
 
-          // show popup with newsletter after 10 seconds
-          setTimeout(showNewsletter, 5000);
+          // show popup with newsletter after one second
+          setTimeout(function () {
+            showNewsletter('_igg_newsletter');
+          }, 1000);
 
-          // show popup on scrolling to the bottom of the page          
+          // show popup on scrolling near (500px) to the bottom of the page
           $(window).scroll(function () {
              if ($(window).scrollTop() >= $(document).height() - $(window).height() - 500) {
-                showNewsletter();
+                showNewsletter('_igg_newsletter_scroll');
              }
           });
-
+          
           // add close popup handler
           $('.newsletter-header .close').click(function () {
             $('.newsletter-wrapper').removeClass('brown');
