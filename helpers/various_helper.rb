@@ -21,7 +21,7 @@ module VariousHelper
       metadata[:backers] = element(doc, '[data-tab-id="pledges"] .i-count').to_i
       metadata[:goal_formatted] = element(doc, '.i-raised .currency span')
       metadata[:goal] = currency_to_number metadata[:goal_formatted]
-      metadata[:pledged] = currency_to_number element(doc, '.i-balance .currency span')
+      metadata[:pledged] = currency_to_number(element(doc, '.i-balance .currency span')) + 18000 # seed accelerator
       metadata[:pledged_percent] = (metadata[:pledged].to_f / metadata[:goal].to_f * 100).ceil
     else
       metadata[:backers] = 12
