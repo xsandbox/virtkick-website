@@ -21,8 +21,16 @@ contributors:
 - name: Wojtek Jodel
   email: m13@virtkick.io
   nickname: m13
+  github: https://github.com/malps13
   text: Wojtek is the graphics designer. All VirtKick artwork are crafted by him.
     He makes sure the UI is simple, usable and beautiful.
+- name: Mirek Wozniak
+  email: 7e4023159f2394482b3f42a53ac41609
+  md5: true
+  nickname: wozmir
+  github: https://github.com/wozmir
+  text: Wozmir is the only non-tech guy in this circle.
+    He turns our gibberish talk into English so others can understand.
 donors:
 - Jack Davies
 - James Arici
@@ -63,9 +71,10 @@ donors:
               = gravatar_for contributor.email
           h3
             = contributor.name
-            | &nbsp;
-            = link_to '<i class="fa fa-envelope"></i>', "mailto:#{contributor.email}", class: 'email'
-            | &nbsp;
+            | &nbsp;&nbsp;
+            - unless contributor.md5
+              = link_to '<i class="fa fa-envelope"></i>', "mailto:#{contributor.email}", class: 'email'
+              | &nbsp;
             = link_to '<i class="fa fa-github"></i>', contributor.github if contributor.github
           p = contributor.text
 
