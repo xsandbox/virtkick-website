@@ -19,7 +19,8 @@ html
     = javascript_include_tag '/js/snippets.js'
     = yield_content :scripts
   body
-    = partial 'layouts/_newsletter'
+    = partial 'layouts/_pop_newsletter'
+    = partial 'layouts/_pop_indiegogo'
     #page
       = yield
       footer
@@ -78,42 +79,67 @@ html
             }
           });
 
-          var showNewsletter = function (cookie) {
+          var showPopup = function (id, cookie, stick, onPopupClose) {
             CoverPop.start({
-              coverId:             'newsletter-cover',
+              coverId:             id,
               expires:             30,
               closeClassNoDefault: 'CoverPop-close',
               closeClassDefault:   'CoverPop-close-go',
               cookieName:          cookie,
               onPopUpOpen:         function () {
-                $('.newsletter-wrapper').addClass('brown');
-                $('.newsletter-content').addClass('shown');
+                $('#' + id).addClass('show');
+                if (stick) {
+                  var top = $('html').outerHeight()-$('footer').outerHeight();
+                  $('#' + id).addClass('sticked').css('top', top + "px");
+                }
+                $('#' + id + ' .popup-wrapper').addClass('brown');
+                $('#' + id + ' .popup-content').addClass('shown');
               },
-              onPopUpClose:        function () {},
-              forceHash:           'newsletter',
+              onPopUpClose:        function () {
+                $('#' + id).removeClass('sticked show').css('top', '0px');
+                if (typeof onPopupClose === 'function') {
+                  onPopupClose();
+                }
+              },
+              forceHash:           'popup',
               delayHash:           'go'
             });
           };
 
-          // show popup with newsletter after one second
-          setTimeout(function () {
-            showNewsletter('_igg_newsletter');
-          }, 1000);
+          var delayPopup = function (id, cookie, stick, onPopupClose) {
+            setTimeout(function () {
+              showPopup(id, cookie, stick, onPopupClose);
+            }, 1000);
+          };
 
-          // show popup on scrolling near (500px) to the bottom of the page
-          $(window).scroll(function () {
-             if ($(window).scrollTop() >= $(document).height() - $(window).height() - 500) {
-                showNewsletter('_igg_newsletter_scroll');
-             }
-          });
-          
-          // add close popup handler
-          $('.newsletter-header .close').click(function () {
-            $('.newsletter-wrapper').removeClass('brown');
-            $('.newsletter-content').removeClass('shown'); 
+          var closePopup = function (elem) {
+            $(elem).closest('.popup-wrapper').removeClass('brown');
+            $(elem).closest('.popup-content').removeClass('shown'); 
             setTimeout(function () {
               CoverPop.close();
             }, 850);
+          };
+
+          // show igg/newsletter popup after one second
+          if (document.cookie.indexOf('_igg_newsletter') === -1) {
+            delayPopup('newsletter-popup-cover', '_igg_newsletter', false, function () {
+              delayPopup('indiegogo-popup-cover', '_igg_popup', false);
+            });
+          } else if (document.cookie.indexOf('_igg_popup') === -1) {
+            delayPopup('indiegogo-popup-cover', '_igg_popup', false);
+          }
+
+          // show newsletter popup on scrolling near (500px) to the bottom of the page
+          $(window).scroll(function () {
+             if ($(window).scrollTop() >= $(document).height() - $(window).height() - 500) {
+              showPopup('newsletter-popup-cover', '_igg_newsletter_scroll', true);
+              delayPopup('indiegogo-popup-cover', '_igg_popup', false);
+             }
+          });
+
+          // add close popup handler
+          $('.popup-header .close').click(function () {
+            closePopup(this);
           });
 
           // send info to GA with some timeout in case of problems

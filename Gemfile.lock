@@ -169,7 +169,8 @@ PLATFORMS
 DEPENDENCIES
   bootstrap-sass (~> 3.1)
   builder (~> 3.0)
-  font-awesome-middleman (~> 4.1)
+  font-awesome-middleman (= 4.2.1)
+  listen (~> 2.7.11)
   middleman (~> 3.3.0)
   middleman-blog
   middleman-bootstrap-navbar (~> 2.0)
