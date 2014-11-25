@@ -55,6 +55,7 @@ html
             callback: function(response, element) {
               resultElement = $('.newsletter .result');
               wrapperElement = $('.newsletter .form-group');
+              iggElement = $('.newsletter .igg-info')
 
               resultElement.addClass('performed');
 
@@ -65,6 +66,9 @@ html
                 wrapperElement.removeClass('has-error').addClass('has-success');
                 resultElement.html(resultElement.data('success'));
                 ga('send', 'event', 'newsletter', 'subscribe');
+                // show igg info
+                wrapperElement.fadeOut(500);
+                iggElement.delay(500).fadeIn(500);
               }
             },
             errorCallback: function($form) {
