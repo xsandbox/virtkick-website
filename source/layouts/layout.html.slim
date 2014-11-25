@@ -79,7 +79,7 @@ html
             }
           });
 
-          var showNewsletter = function (id, cookie, stick) {
+          var showPopup = function (id, cookie, stick, onPopupClose) {
             CoverPop.start({
               coverId:             id,
               expires:             30,
@@ -97,31 +97,49 @@ html
               },
               onPopUpClose:        function () {
                 $('#' + id).removeClass('sticked show').css('top', '0px');
+                if (typeof onPopupClose === 'function') {
+                  onPopupClose();
+                }
               },
               forceHash:           'popup',
               delayHash:           'go'
             });
           };
 
-          // show popup with newsletter after one second
-          setTimeout(function () {
-            showNewsletter('newsletter-popup-cover', '_igg_newsletter', false);
-          }, 1000);
+          var delayPopup = function (id, cookie, stick, onPopupClose) {
+            setTimeout(function () {
+              showPopup(id, cookie, stick, onPopupClose);
+            }, 1000);
+          };
 
-          // show popup on scrolling near (500px) to the bottom of the page
+          var closePopup = function (elem) {
+            $(elem).closest('.popup-wrapper').removeClass('brown');
+            $(elem).closest('.popup-content').removeClass('shown'); 
+            setTimeout(function () {
+              CoverPop.close();
+            }, 850);
+          };
+
+          // show igg/newsletter popup after one second
+          if (document.cookie.indexOf('_igg_newsletter') === -1) {
+            delayPopup('newsletter-popup-cover', '_igg_newsletter', false, function () {
+              delayPopup('indiegogo-popup-cover', '_igg_popup', false);
+            });
+          } else if (document.cookie.indexOf('_igg_popup') === -1) {
+            delayPopup('indiegogo-popup-cover', '_igg_popup', false);
+          }
+
+          // show newsletter popup on scrolling near (500px) to the bottom of the page
           $(window).scroll(function () {
              if ($(window).scrollTop() >= $(document).height() - $(window).height() - 500) {
-                showNewsletter('newsletter-popup-cover', '_igg_newsletter_scroll', true);
+              showPopup('newsletter-popup-cover', '_igg_newsletter_scroll', true);
+              delayPopup('indiegogo-popup-cover', '_igg_popup', false);
              }
           });
 
           // add close popup handler
           $('.popup-header .close').click(function () {
-            $(this).closest('.popup-wrapper').removeClass('brown');
-            $(this).closest('.popup-content').removeClass('shown'); 
-            setTimeout(function () {
-              CoverPop.close();
-            }, 850);
+            closePopup(this);
           });
 
           // send info to GA with some timeout in case of problems
