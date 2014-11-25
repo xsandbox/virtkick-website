@@ -328,11 +328,11 @@ h2.section {
   }
 }
 
-.CoverPop-open #newsletter-cover {
+.CoverPop-open .popup-cover.shown {
   display: block;
 }
 
-#newsletter-cover {
+.popup-cover {
   display: none;
   position: fixed;
   top: 0;
@@ -344,7 +344,15 @@ h2.section {
   background-color: transparent;
   backface-visibility: hidden;
 
-  .newsletter-wrapper {
+  &.sticked {
+    position: absolute;
+
+    .close {
+      display: none;
+    }
+  }
+
+  .popup-wrapper {
     text-align: left;
     position: absolute;
     pointer-events: auto;
@@ -352,25 +360,46 @@ h2.section {
     width: 480px;
     height: 190px;
     bottom: 20px;
-    right: 20px;
     padding: 20px 20px;
     margin: 10% auto 0;
     border-radius: 4px;
     @include animation(transparent-bg, 0.65s, ease-in);
     background-color: transparent;
 
-    .ufo {
-        position: absolute;
-        z-index: 2;
-        top: -84px;
-        left: 175px;
-        @include animation(fade-out, 0.6s, ease-in);
-        opacity: 0;
+    &.left {
+      left: 20px;
+    }
 
-        img {
-          width: 117px;
-          height: 142px;
-        }
+    &.right {
+      right: 20px;
+    }
+
+    .ufo {
+      position: absolute;
+      z-index: 2;
+      top: -84px;
+      left: 175px;
+      @include animation(fade-out, 0.6s, ease-in);
+      opacity: 0;
+
+      img {
+        width: 117px;
+        height: 142px;
+      }
+    }
+
+    .sputnik {
+      position: absolute;
+      z-index: 2;
+      top: -84px;
+      left: 175px;
+      @include animation(fade-out, 0.6s, ease-in);
+      opacity: 0;
+
+      img {
+        width: 117px;
+        height: 142px;
+      }
     }
 
     &.brown {
@@ -383,7 +412,7 @@ h2.section {
       }
     }
 
-    .newsletter-content {
+    .popup-content {
       opacity: 0;
       @include animation(fade-out, 0.65s, ease-in);
 
@@ -392,7 +421,7 @@ h2.section {
         @include animation(fade-in, 0.85s, ease-in);
       }
 
-      .newsletter-header {
+      .popup-header {
         position: relative;
         z-index: 3;
         color: white;
@@ -419,7 +448,7 @@ h2.section {
         }
       }
 
-      .newsletter {
+      .popup {
         color: white;
         padding-top: 10px;
 
