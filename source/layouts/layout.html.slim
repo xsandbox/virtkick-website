@@ -66,8 +66,9 @@ html
                 wrapperElement.removeClass('has-error').addClass('has-success');
                 resultElement.html(resultElement.data('success'));
                 ga('send', 'event', 'newsletter', 'subscribe');
-                // show igg info
+                // hide form
                 wrapperElement.fadeOut(500);
+                // show igg info
                 iggElement.delay(500).fadeIn(500);
               }
             },
@@ -113,6 +114,38 @@ html
             setTimeout(function () {
               CoverPop.close();
             }, 850);
+          });
+
+          // send info to GA with some timeout in case of problems
+          var trackLink = function (e, category, action) {
+            e.preventDefault();
+
+            // store desired url
+            var href = $(e.currentTarget).attr('href');
+
+            // set timeout if GA is not reachable
+            var t = setTimeout('window.location = "' + href + '"', 250);
+
+            ga('send', {
+              'hitType': 'event',
+              'eventCategory': category,
+              'eventAction': action,
+              'hitCallback': function () {
+                clearTimeout(t);
+                window.location = href;
+              }
+            });
+          } 
+
+          // track analytics goals
+          $('.ga-indiegogo').click(function (e) {
+            trackLink(e, 'indiegogo', 'campaign');
+          });
+          $('.ga-alpha').click(function (e) {
+            trackLink(e, 'jumbotron', 'alpha');
+          });
+          $('.ga-demo').click(function (e) {
+            trackLink(e, 'jumbotron', 'demo');
           });
         });
       = yield_content :scripts
