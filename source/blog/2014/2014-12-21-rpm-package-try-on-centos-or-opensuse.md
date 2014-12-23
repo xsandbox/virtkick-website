@@ -11,7 +11,10 @@ Here it is - a fresh package for CentOS 7 and openSUSE 13.2. Wanna try it out?
 <!--more-->
 
 ```
+# for CentOS
 yum install https://www.virtkick.io/download/latest.rpm
+# for openSUSE
+zypper install https://www.virtkick.io/download/latest.rpm
 ```
 
 Then go to **http://your-server:3000/**. Happy hacking!
