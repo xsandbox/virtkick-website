@@ -1,0 +1,31 @@
+- bottom = position == 'bottom'
+.alien-banner-window
+  - if bottom
+    .alien.bottom
+      img src='/img/alien-white.png'
+  - else
+    .alien.top
+      img src='/img/alien-pink.png'
+  .info
+    .container
+      .col-md-6.crowdfunding-results
+        .rocket
+        .content 
+          h4 We've just got funded on Indiegogo!
+          p.collected 
+            | We've collected total of 
+            span.highlight XX,000$
+            | .
+          p.collected Thanks you for all the support!
+          p.late-for-campaign 
+            | Late for campaign? 
+            a href='/fund' Click here to donate.
+      .col-md-6.newsletter
+        form.form-inline action='https://virtkick.us8.list-manage.com/subscribe/post?u=b74a227fdbddc9f590a62114e&amp;id=08823d8a7b' method='post' role='form'
+          h4
+            span.fa.fa-bullhorn &nbsp;
+            | Sign up for updates and be notified of releases.
+          p.result data-success='Thank you! Please check your e-mail to confirm.'
+          .form-group
+            input.form-control#newsletter-email name='EMAIL' placeholder=('E-mail address') type='text'
+            input.btn.btn-primary name='subscribe' type='submit' value='Subscribe'
