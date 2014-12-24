@@ -1,3 +1,5 @@
+require 'slim/smart'
+
 configure :development do
   activate :livereload
 end
