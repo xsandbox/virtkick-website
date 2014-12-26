@@ -29,6 +29,7 @@ module VariousHelper
       metadata[:pledged] = 1337
       metadata[:pledged_percent] = 23
     end
+    metadata[:pledged_formatted] = number_to_currency metadata[:pledged], precision: 0
     metadata[:pledged_percent_capped] = kickstarter_bar_width metadata[:pledged_percent]
     metadata
   end

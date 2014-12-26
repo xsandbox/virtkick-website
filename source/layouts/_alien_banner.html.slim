@@ -12,12 +12,12 @@
       .col-md-6.crowdfunding-results
         .rocket
         .content 
-          h4 We've just got funded on Indiegogo!
+          h4 We are funded!
           p.collected 
-            | We've collected total of 
-            span.highlight #{igg[:pledged]}$
-            | .
-          p.collected Thanks you for all the support!
+            > We collected
+            span.highlight = igg[:pledged_formatted]
+            > on Indiegogo.
+          p.collected Thanks you for your support!
           p.late-for-campaign 
             | Late for campaign? 
             a href='/fund' Click here to donate.
