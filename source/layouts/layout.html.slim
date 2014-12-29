@@ -18,7 +18,6 @@ html
       = stylesheet_link_tag "/css/#{current_page.path.sub('.html', '')}"
     = javascript_include_tag '/js/snippets.js'
   body
-    = partial 'layouts/_pop_newsletter'
     #page
       = yield
       footer
@@ -73,49 +72,7 @@ html
               $form.unbind('submit').submit();
             }
           });
-
-          var showPopup = function (id, cookie, stick, onPopupClose) {
-            CoverPop.start({
-              coverId:             id,
-              expires:             30,
-              closeClassNoDefault: 'CoverPop-close',
-              closeClassDefault:   'CoverPop-close-go',
-              cookieName:          cookie,
-              onPopUpOpen:         function () {
-                $('#' + id).addClass('show');
-                if (stick) {
-                  var top = $('html').outerHeight()-$('footer').outerHeight();
-                  $('#' + id).addClass('sticked').css('top', top + "px");
-                }
-                $('#' + id + ' .popup-wrapper').addClass('brown');
-                $('#' + id + ' .popup-content').addClass('shown');
-              },
-              onPopUpClose:        function () {
-                $('#' + id).removeClass('sticked show').css('top', '0px');
-                if (typeof onPopupClose === 'function') {
-                  onPopupClose();
-                }
-              },
-              forceHash:           'popup',
-              delayHash:           'go'
-            });
-          };
-
-          var closePopup = function (elem) {
-            $(elem).closest('.popup-wrapper').removeClass('brown');
-            $(elem).closest('.popup-content').removeClass('shown'); 
-            setTimeout(function () {
-              CoverPop.close();
-            }, 850);
-          };
-
-          // show newsletter popup on scrolling near (500px) to the bottom of the page
-          $(window).scroll(function () {
-             if ($(window).scrollTop() >= $(document).height() - $(window).height() - 500) {
-              showPopup('newsletter-popup-cover', '_igg_newsletter_scroll', true);
-             }
-          });
-
+          
           // send info to GA with some timeout in case of problems
           var trackLink = function (e, category, action) {
             e.preventDefault();
