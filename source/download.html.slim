@@ -1,0 +1,146 @@
+---
+distros: 
+- name: Debian
+  logo: /img/distros/debian.png
+  installation: package
+  commands: 
+  - yum install https://www.virtkick.io/download/latest.rpm
+- name: openSUSE
+  logo: /img/distros/opensuse.png
+  installation: package
+  commands: 
+  - zipper install https://www.virtkick.io/download/latest.rpm
+- name: Ubuntu
+  logo: /img/distros/ubuntu.png
+  installation: none
+- name: CentOS
+  logo: /img/distros/centos.png
+  installation: none
+- name: Arch Linux
+  logo: /img/distros/arch-linux.png
+  installation: none
+- name: tar.gz
+  logo: /img/distros/tar-gz.png
+  installation: source
+- name: DigitalOcean
+  logo: /img/distros/digitalocean.png
+  installation: do
+---
+#page-download
+  .page-top.white
+    = partial 'layouts/nav', locals: {logo: 'color'}
+    h1 
+      > Download
+      
+  .container.distro-container
+    .row
+      .col-md-12
+        p.pink 
+          > Choose your environment:
+    .row
+      .col-md-12.distro-chooser
+        - current_page.data.distros.each do |distro|
+          div class="distro #{distro.name.downcase.delete(' ').delete('.')}" data-distro="#{distro.name.downcase.delete(' ').delete('.')}"
+            .distro-square
+              .distro-inner 
+                img src=distro.logo
+            p.distro-name
+              #{distro.name}
+    - current_page.data.distros.each do |distro|
+      div class="row installation hidden #{distro.name.downcase.delete(' ').delete('.')}-installation"
+        .col-md-12
+          h3 #{distro.name} installation
+          - if distro.installation == 'package'
+            p 
+              > To install VirtKick simply open terminal and write:
+            .commands
+              - distro.commands.each do |command|
+                .command-wrapper
+                  .command
+                    #{command}
+            /!
+              p
+                > Or alternatively you can download and install tar.gz package from 
+                a href="https://www.virtkick.io/download/latest.tar.gz" here
+                > .
+          - elsif distro.installation == 'none'
+            p 
+              > At the moment we don't have native #{distro.name} package ready to install using single command but we are working hard to make it possible. 
+            /!
+              p
+                > However, you can download VirtKick and install is manualy from tar.gz archive:
+              .commands
+                .command-wrapper
+                  .command
+                    > wget https://www.virtkick.io/download/latest.tar.gz
+            p 
+              > In the meantime you can subscribe to our newsletter and be notified at the very early moment #{distro.name} package is released.
+            .newsletter
+              form.form-inline action='https://virtkick.us8.list-manage.com/subscribe/post?u=b74a227fdbddc9f590a62114e&amp;id=08823d8a7b' method='post' role='form'
+                h3
+                  .fa.fa-bullhorn
+                  > Get notified of #{distro.name} package release
+                p.result data-success='Thank you! Please check your e-mail to confirm.'
+                .form-group
+                  input#newsletter-email.form-control.input name='EMAIL' placeholder=('E-mail address') type='text'
+                  input.btn.btn-primary.btn name='subscribe' type='submit' value='Subscribe'
+          - elsif distro.installation == 'source'
+            p 
+              > At the moment we don't have #{distro.name} package ready to download. However, we are working hard to create it so you can subscribe to our newsletter and be notified at the very early moment #{distro.name} package is released.
+            .newsletter
+              form.form-inline action='https://virtkick.us8.list-manage.com/subscribe/post?u=b74a227fdbddc9f590a62114e&amp;id=08823d8a7b' method='post' role='form'
+                h3
+                  .fa.fa-bullhorn
+                  > Get notified of #{distro.name} package release
+                p.result data-success='Thank you! Please check your e-mail to confirm.'
+                .form-group
+                  input#newsletter-email.form-control.input name='EMAIL' placeholder=('E-mail address') type='text'
+                  input.btn.btn-primary.btn name='subscribe' type='submit' value='Subscribe'
+          - elsif distro.installation == 'do'
+            p 
+              > To install VirtKick on DigitalOcean please follow the instructions on 
+              a href="https://deploy.virtkick.io" https://deploy.virtkick.io
+              > .
+
+  .dev-build-wrapper 
+    .container.dev-build-container 
+      .row
+        .col-md-12
+          h2 
+            > Development builds
+          p 
+            > This method of installing VirtKick is intended for development only. You will be needing to clone a git repo manually and run our command-line starter to begin.
+          p 
+            > For a detailed instructions please go to 
+            a href="https://github.com/virtkick/virtkick-starter" https://github.com/virtkick/virtkick-starter
+            > .
+- content_for(:scripts) do
+  javascript:
+    // create namespace
+    if (!vk) vk = {};
+
+    vk.download = (function () {
+      var currentDistro = undefined;
+
+      var hideDistro = function (distro) {
+        if (distro) {
+          $('.' + distro).removeClass('active');
+          $('.' + distro + '-installation').addClass('hidden');
+        }
+      };
+      return {
+        showDistro: function (distro) {
+          if (currentDistro !== distro) {
+            hideDistro(currentDistro);
+            $('.' + distro).addClass('active');
+            $('.' + distro + '-installation').removeClass('hidden');
+            currentDistro = distro;
+          }
+        }
+      }
+    })();
+    
+    $('.distro-chooser .distro').click(function () {
+      var distro = $(this).data('distro');
+      vk.download.showDistro(distro);
+    });
