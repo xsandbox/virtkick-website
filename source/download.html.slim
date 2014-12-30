@@ -1,7 +1,13 @@
 ---
 distros: 
+- name: Ubuntu
+  logo: /img/distros/ubuntu.png
+  installation: none
 - name: Debian
   logo: /img/distros/debian.png
+  installation: none
+- name: CentOS
+  logo: /img/distros/centos.png
   installation: package
   commands: 
   - yum install https://www.virtkick.io/download/latest.rpm
@@ -10,12 +16,6 @@ distros:
   installation: package
   commands: 
   - zipper install https://www.virtkick.io/download/latest.rpm
-- name: Ubuntu
-  logo: /img/distros/ubuntu.png
-  installation: none
-- name: CentOS
-  logo: /img/distros/centos.png
-  installation: none
 - name: Arch Linux
   logo: /img/distros/arch-linux.png
   installation: none
