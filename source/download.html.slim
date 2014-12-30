@@ -29,7 +29,7 @@ distros:
 #page-download
   .page-top.white
     = partial 'layouts/nav', locals: {logo: 'color'}
-    h1 
+    h1
       > Download
       
   .container.distro-container
@@ -56,8 +56,11 @@ distros:
             .commands
               - distro.commands.each do |command|
                 .command-wrapper
-                  .command
-                    #{command}
+                  .command-cell
+                    .command
+                      #{command}
+                  .btn.btn-primary.copy.hidden
+                    .fa.fa-copy
             /!
               p
                 > Or alternatively you can download and install tar.gz package from 
@@ -116,7 +119,10 @@ distros:
             > .
 - content_for(:scripts) do
   javascript:
-    $('.distro-chooser .distro').click(function () {
-      var distro = $(this).data('distro');
-      vk.download.showDistro(distro);
+    $(function () {
+      // bind showing distro behavious
+      $('.distro-chooser .distro').click(function () {
+        var distro = $(this).data('distro');
+        vk.download.showDistro(distro);   
+      }); 
     });

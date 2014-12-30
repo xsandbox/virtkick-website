@@ -110,13 +110,27 @@ $colors: (
         margin-bottom: 20px;
 
         .command-wrapper {
-          .command {
-            display: inline-block;
+          margin-top: 10px;
+          display: table;
+          width: 100%;
+
+          .command-cell {
+            display: table-cell;
             width: 100%;
-            border-radius: 4px;
-            padding: 12px 20px;
-            font-family: $font-family-monospace;
-            background-color: $pink-bg-light;
+            padding: 0px 10px 0px 0;
+            
+            .command {
+              border-radius: 4px;
+              padding: 15px 25px;
+              font-family: $font-family-monospace;
+              background-color: $pink-bg-light;
+              color: #6e5465;
+            }
+          }
+
+          .btn {
+            font-size: 19px;
+            padding: 12px 16px;
           }
         }
       }
