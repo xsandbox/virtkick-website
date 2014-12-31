@@ -1,0 +1,190 @@
+@import 'bootstrap-customize';
+@import '_mixins';
+
+$colors: (
+  ubuntu: #ed5824,
+  debian: #e62152,
+  opensuse: #6f9b44,
+  centos: #eea624,
+  archlinux: #1193d4, 
+  targz: #9c639a, 
+  digitalocean: #3578c1 
+);
+
+#page-download {
+  color: #8f6f86;
+
+  h1, h2, h3, h4, h5, h6 {
+    text-align: center;
+  }
+
+  h1 {
+    margin-top: 40px;
+    margin-bottom: 55px;
+  }
+
+  .distro-container {
+    max-width: 960px;
+
+    .pink {
+      color: $medium-light;
+    }
+
+    .distro-chooser {
+      margin-top: 25px;
+      
+      .distro {
+        position: relative;
+        display: inline-block;
+        text-align: center;
+        margin-right: 25px;
+        margin-top: 5px;
+
+        @each $distro, $color in $colors {
+          &.#{$distro} {
+            &.active .distro-square  { background-color: $color; }
+            &:hover .distro-square { background-color: $color; }
+            &.active .distro-name, &:hover .distro-name {
+              color: $color;
+            }
+          }
+        }
+
+        &.digitalocean {
+          .distro-square .distro-inner img {
+            height: 30px;
+            margin-top: -15px;
+            margin-left: -27px;
+          }
+        }
+
+          
+        .distro-square {
+          cursor: pointer;
+          position: relative;
+          width: 90px;
+          height: 90px;
+          background-color: $pink-bg-light;
+          border-radius: 4px;
+          padding: 10px;
+
+          @include transition(background-color 0.25s);
+
+          .distro-inner {
+            position: relative;
+            width: 70px;
+            height: 70px;
+            background-color: white;
+            border-radius: 4px;
+
+            img {
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              margin-top: -23px;
+              margin-left: -23px;
+              height: 46px;
+            }
+          }
+        }
+
+        .distro-name {
+          margin-top: 10px;
+          white-space: nowrap;
+          @include transition(color 0.25s);
+        }
+      }
+    }
+
+    .installation {
+      margin-top: 40px;
+
+      h3 {
+        margin-bottom: 40px;
+        text-align: left;
+      }
+
+      .commands {
+        width: 100%;
+        margin-top: 20px;
+        margin-bottom: 20px;
+
+        .command-wrapper {
+          margin-top: 10px;
+          display: table;
+          width: 100%;
+
+          .command-cell {
+            display: table-cell;
+            width: 100%;
+            padding: 0px 10px 0px 0;
+            
+            .command {
+              border-radius: 4px;
+              padding: 15px 25px;
+              font-family: $font-family-monospace;
+              background-color: $pink-bg-light;
+              color: #6e5465;
+            }
+          }
+
+          .btn {
+            font-size: 19px;
+            padding: 12px 16px;
+          }
+        }
+      }
+
+      .newsletter {
+        margin-top: 30px;
+        border-radius: 4px;
+        padding: 10px;
+        padding-bottom: 40px;
+        background-color: $pink-bg-light;
+        text-align: center;
+
+        h3 {
+          margin-top: 30px;
+          text-align: center;
+
+          .fa {
+            vertical-align: middle;
+            font-size: 1.6em;
+            margin-right: 20px;
+          }
+        }
+
+        .form-control {
+          width: 400px;
+          padding: 25px 20px;
+        }
+
+        .btn {
+          margin-left: 15px;
+          padding: 12px 25px;
+        }
+      }
+    } 
+  }
+
+  .dev-build-wrapper {
+    background-color: $pink-bg-lighter;
+    margin-top: 100px;
+    padding-top: 70px;
+    padding-bottom: 3 0px;
+
+    .dev-build-container {
+      max-width: 960px;
+
+      h2 {
+        margin-bottom: 70px;
+      }
+
+
+    }
+  }
+}
+
+#page-download + footer {
+  background-color: $pink-bg-lighter;
+}

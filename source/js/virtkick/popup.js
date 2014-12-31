@@ -1,8 +1,11 @@
-var vk = (function () {
+// create namespace
+if (!vk) var vk = {};
+
+vk.popup = (function () {
   return {
     // sample usage:
-    // showPopup('newsletter-popup-cover', '_igg_newsletter_scroll', true);
-    showPopup: function (id, cookie, stick, onPopupClose) {
+    // vk.popup.show('newsletter-popup-cover', '_igg_newsletter_scroll', true);
+    show: function (id, cookie, stick, onPopupClose) {
       CoverPop.start({
         coverId:             id,
         expires:             30,
@@ -29,7 +32,7 @@ var vk = (function () {
       });
     },
 
-    closePopup: function (elem) {
+    close: function (elem) {
       $(elem).closest('.popup-wrapper').removeClass('brown');
       $(elem).closest('.popup-content').removeClass('shown'); 
       setTimeout(function () {
