@@ -120,11 +120,15 @@ $colors: (
             padding: 0px 10px 0px 0;
             
             .command {
+              border: 0;
               border-radius: 4px;
-              padding: 15px 25px;
               font-family: $font-family-monospace;
               background-color: $pink-bg-light;
               color: #6e5465;
+
+              &.desktop-command {
+                padding: 15px 25px;
+              }
             }
           }
 
@@ -156,7 +160,8 @@ $colors: (
 
         .form-control {
           width: 400px;
-          padding: 25px 20px;
+          height: 46px;
+          line-height: 20px;
         }
 
         .btn {
@@ -174,6 +179,7 @@ $colors: (
     padding-bottom: 3 0px;
 
     .dev-build-container {
+      margin: auto;
       max-width: 960px;
 
       h2 {
