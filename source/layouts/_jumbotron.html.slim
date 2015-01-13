@@ -1,11 +1,11 @@
 .header
   .row
     .become-a-sponsor.col-md-3.hidden-xs.hidden-sm
-      .logo
+      .logo.techstars
         .box
-          a href='/become-a-sponsor.html'
-            | Become<br/> a Gold Sponsor
-        p Gold Sponsor
+          a href='http://www.techstars.com/'
+            img src='/img/techstars.png'
+        p Mentorship
     .content.col-md-6
       h1 = defined?(h1) ? h1 : 'Take Cloud Back'
       h2 = defined?(h2) ? h2 : 'Manage virtual machines or Docker containers'
@@ -25,3 +25,10 @@
           a href='/become-a-sponsor.html'
             | Become<br/> a Gold Sponsor
         p Gold Sponsor
+  .row.visible-xs.visible-sm.techstars-mobile
+    h3
+      .techstars-logo
+        a href='http://www.techstars.com/'
+          img src='/img/techstars.png'
+      span 
+        | Mentorship
