@@ -220,6 +220,39 @@ h2.section {
           color: white;
         }
       }
+
+      &.techstars .box {
+        padding-top: 45px;
+        
+        a {
+          img {
+            margin: 0 auto;
+            width: 143px;
+            height: 95px;
+          }
+        }
+      }
+    }
+  }
+
+  .techstars-mobile {
+    margin-top: 30px;
+    margin-bottom: -60px;
+
+    h3 {
+      .techstars-logo {
+        margin-bottom: 15px;
+        display: block;
+
+        img {
+          width: 140px;
+        }
+      }
+
+      span {
+        font-size: 0.9em;
+        color: #ec4863 !important;
+      }
     }
   }
 
