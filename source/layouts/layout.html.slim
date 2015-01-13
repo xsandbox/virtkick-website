@@ -28,15 +28,13 @@ html
             span.second  for updates
           form.form-inline action='https://virtkick.us8.list-manage.com/subscribe/post?u=b74a227fdbddc9f590a62114e&amp;id=08823d8a7b' method='post' role='form'
             .form-group
-              input#newsletter-email.form-control.input name='EMAIL' placeholder='E-MAIL ADDRESS' type='text'
+              input#newsletter-email.form-control.input name='EMAIL' placeholder='E-mail address' type='text'
             | &nbsp;
             .form-group
-              input.btn.btn-primary name='subscribe' type='submit' value='SUBSCRIBE'
+              input.btn.btn-primary name='subscribe' type='submit' value='Subscribe'
             p.result data-success='Thank you! Please check your e-mail to confirm.'
               | We will let you know when VirtKick is available!
-        .menu.hidden-xs.hidden-sm
-          ul.nav
-            = partial 'layouts/nav_items', locals: {header: false}
+        = partial 'layouts/footer_nav'
         .copyright.col-md-12
           a href='https://www.virtkick.io/'  VirtKick
           |  &copy; 2014 StratusHost Damian Nowak
