@@ -126,6 +126,22 @@ h2.section {
     .navbar li a, .navbar li a:hover { 
       color: $violet-menu;
     }
+
+    .space-junk {
+      opacity: 0.3;
+      position: absolute;
+      left: 20%;
+      width: 60%;
+      height: 85%;
+      background: url('/img/sputnik.png') no-repeat right bottom;
+      background: url('/img/sputnik.png') no-repeat right bottom;
+      background: url('/img/sputnik.png') no-repeat right bottom;
+
+      @media (max-width: $screen-md-max) { 
+        left: 5%;
+        width: 90%;
+      }
+    }
   }
 
   &.cosmic {

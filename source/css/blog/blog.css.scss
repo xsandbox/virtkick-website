@@ -1,3 +1,6 @@
+@import 'bootstrap-customize';
+@import '_mixins';
+
 #page-blog {
   .kickstarter-window {
     margin-top: 30px;
@@ -7,47 +10,108 @@
     margin-bottom: 30px;
   }
 
-  .blog {
+  .page-top {
+    text-align: center;
+    padding-bottom: 60px;
 
-    p {
-      margin: 0 0 24px !important;
-    }
-
-
-    h1.title {
-      font-size: 32px;
-      .date {
-        font-size: 18px;
-        margin-left: 15px;
-        position: relative;
-        top: -2px;
-      }
-    }
-
-    h1.title {
-      margin-top: 50px;
-    }
-
-    p.links {
-      margin-top: 50px;
+    h1 {
+      margin-top: 40px;
+      margin-bottom: 10px;
     }
 
     h2 {
+      margin-top: 10px;
+      font-size: 1.2em;
+      color: $violet-light;
+    }
+  }
+
+  .blog {
+    .post-header {
+      padding-top: 25px;
+      padding-bottom: 30px;
+      
+      h1.title {
+        text-align: center;
+        margin-bottom: 15px;
+      }
+
+      p {
+        margin: 0 0 24px !important;
+
+        &.article-author {
+          text-align: center;
+          color: $violet-light;
+
+          .author-name {
+            color: $medium-light;
+          }
+        }
+
+        &.links {
+          margin-top: 50px;
+        }
+      }
+    }
+
+    h1 {
+      font-size: 30px;
+      text-align: center;
       margin-top: 50px;
+      margin-bottom: 30px;
+    }
+
+    h2 {
+      text-align: center;
+      font-size: 25px;
+      margin-top: 50px;
+      margin-bottom: 30px;
+    }
+
+    h3 {
+      text-align: center;
+      font-size: 20px;
+      margin-top: 30px;
+      margin-bottom: 20px;
+    }
+
+    pre {
+      background-color: #f7ebed;
+      border: 0px solid transparent;
+      margin: 25px 0px;
+
+      .highlight {
+        background-color: #f7ebed;
+        font-size: 16px;
+      }
+    }
+
+    .back {
+      margin-top: 50px;
+      text-align: right;
     }
 
     .author {
-      margin-top: 60px;
       margin-bottom: 20px;
+      color: $violet-light;
 
-      img {
+      img.avatar {
+        border-radius: 4px;
         float: left;
-        width: 56px;
-        margin-right: 8px;
+        width: 80px;
+        margin-right: 18px;
       }
-      
-      .name {
-        font-weight: bold;
+
+      .info { 
+        font-size: 0.95em;
+        padding-top: 13px;
+        .name {
+         font-size: 1.2em;
+          color: $medium-light;
+          a {
+            padding-left: 7px;
+          }
+        }
       }
     }
   }

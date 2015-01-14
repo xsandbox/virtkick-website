@@ -1,13 +1,22 @@
 = wrap_layout :blog do
-  h1.title
-    = link_to current_article.title, current_article
-    span.date
-      = current_article.date.strftime '%B %Y'
-
+  .post-header
+    h1.title
+      = link_to current_article.title, current_article
+    p.article-author
+      > Written by 
+      span.author-name
+        > #{current_article.data.author} 
+      > on #{current_article.date.strftime '%B %Y'}
   = yield
 
+  p.back
+    a href="/blog/"
+      > Back to the list »
   .author
     = gravatar_for current_article.data.email
-    span.name = current_article.data.author
-    br
-    span.title = current_article.data.role
+    .info
+      .name 
+        #{current_article.data.author}
+        a href="mailto: #{current_article.data.email}"
+          span.fa.fa-envelope
+      span.title = current_article.data.role
