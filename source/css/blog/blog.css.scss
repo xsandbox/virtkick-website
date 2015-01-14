@@ -58,7 +58,7 @@
       }
     }
 
-    &.short  {
+    &.short {
       margin-bottom: 10px;
       padding-top: 50px;
       padding-bottom: 40px; 
@@ -76,6 +76,14 @@
       .read-more {
         margin-top: 20px;
         text-align: right;
+      }
+    }
+
+    &.archive {
+      h1 {
+        font-size: 35px;
+        margin-top: 90px;
+        color: $violet-light;
       }
     }
 

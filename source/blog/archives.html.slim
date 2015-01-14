@@ -4,13 +4,26 @@ layout: blog
 
 - @noindex = true
 
-h1 All posts
+.container
+  .row
+    .blog.archive.col-md-8.col-md-offset-2  
+      h1 
+        > Blog archive (#{page_articles.size} posts)
 
 #page-archives
   - page_articles.each_with_index do |article, i|
-    h1.title
-      = link_to article.title, article
-      span.date
-        = article.date.strftime('%B %Y')
-
-    = article.summary(250)
+    div class="#{i % 2 == 1 ? 'odd' : 'even'}"
+      .container
+        .row
+          .blog.short.col-md-8.col-md-offset-2  
+            .post-header
+              h1.title
+                = link_to article.title, article
+              p.article-author
+                > Written by 
+                span.author-name
+                  > #{article.data.author} 
+                > on #{article.date.strftime '%B %Y'}
+            = article.summary 250
+            p.read-more
+              = link_to "Read more...", article
