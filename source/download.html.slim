@@ -44,7 +44,7 @@ distros:
             .distro-square
               .distro-inner 
                 img src=distro.logo
-            p.distro-name
+            p.distro-name.hidden-xs
               #{distro.name}
     - current_page.data.distros.each do |distro|
       div class="row installation hidden #{distro.name.downcase.delete(' ').delete('.')}-installation"
@@ -52,14 +52,15 @@ distros:
           h3 #{distro.name} installation
           - if distro.installation == 'package'
             p 
-              > To install VirtKick simply open terminal and write:
+              > To install VirtKick simply open a terminal and execute:
             .commands
               - distro.commands.each do |command|
                 .command-wrapper
                   .command-cell
-                    .command
+                    .command.desktop-command.hidden
                       #{command}
-                  .btn.btn-primary.copy.hidden
+                    input.command.mobile-command.form-control.hidden value="#{command}" data-command="#{command}"
+                  .btn.btn-primary.copy
                     .fa.fa-copy
             /!
               p
@@ -105,10 +106,10 @@ distros:
               a href="https://deploy.virtkick.io" https://deploy.virtkick.io
               > .
 
-  .dev-build-wrapper 
-    .container.dev-build-container 
-      .row
-        .col-md-12
+  .container-fluid.dev-build-wrapper
+    .row
+      .col-md-12
+        .dev-build-container
           h2 
             > Development builds
           p 
@@ -125,4 +126,17 @@ distros:
         var distro = $(this).data('distro');
         vk.download.showDistro(distro);   
       }); 
+
+      // add copy buttons behaviour
+      $('.copy').click(function () {
+        var wrapper = $(this).closest('.command-wrapper');
+
+        // select command
+        wrapper.find('.command').selectText();
+
+        // show tooltips only on desktop
+        if (!vk.mobile.check()) {
+          vk.download.showCopyTooltip(wrapper);
+        }
+      });
     });
