@@ -52,7 +52,7 @@ distros:
           h3 #{distro.name} installation
           - if distro.installation == 'package'
             p 
-              > To install VirtKick simply open terminal and write:
+              > To install VirtKick simply open a terminal and execute:
             .commands
               - distro.commands.each do |command|
                 .command-wrapper
