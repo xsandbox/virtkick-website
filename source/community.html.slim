@@ -83,55 +83,54 @@ donors:
     .container
       h2 Our <span class="focus">Sponsors</span>
 
-    .gold
-      .color
-      .container
-        .sponsors.row
+      .gold
+        .color
+        .row
           .title.col-md-12
             h3 Gold <span class="focus">Sponsors</span>
-            .col-md-2
-            - (1..2).each do
-              .sponsor.col-md-4
-                .controls
-                  i.fa.fa-circle
-                  i.fa.fa-circle
-                  i.fa.fa-circle
-                .content
-                  a href='/become-a-sponsor.html'
-                    | Become<br/> a Gold Sponsor
+        .row
+          .col-md-2
+          - (1..2).each do
+            .sponsor.col-md-4
+              .controls
+                i.fa.fa-circle
+                i.fa.fa-circle
+                i.fa.fa-circle
+              .content
+                a href='/become-a-sponsor.html'
+                  | Become<br/> a Gold Sponsor
 
-    .silver
-      .color
-      .container
-        .sponsors.row
+      .silver
+        .color
+        .row
           .title.col-md-12
             h3 Silver <span class="focus">Sponsors</span>
-            - (1..4).each do
-              .sponsor.col-md-3
-                .controls
-                  i.fa.fa-circle
-                  i.fa.fa-circle
-                  i.fa.fa-circle
-                .content
-                  a href='/become-a-sponsor.html'
-                    | Become<br/> a Silver Sponsor
+        .row
+          - (1..4).each do
+            .sponsor.col-md-3
+              .controls
+                i.fa.fa-circle
+                i.fa.fa-circle
+                i.fa.fa-circle
+              .content
+                a href='/become-a-sponsor.html'
+                  | Become<br/> a Silver Sponsor
 
-    .bronze
-      .color
-      .container
-        .sponsors.row
+      .bronze
+        .color
+        .row
           .title.col-md-12
             h3 Bronze <span class="focus">Sponsors</span>
-            - (1..6).each do
-              .sponsor.col-md-2
-                .controls
-                  i.fa.fa-circle
-                  i.fa.fa-circle
-                  i.fa.fa-circle
-                .content
-                  a href='/become-a-sponsor.html'
-                    | Become<br/> a Bronze Sponsor
-    | &nbsp;
+        .row 
+          - (1..6).each do
+            .sponsor.col-md-2
+              .controls
+                i.fa.fa-circle
+                i.fa.fa-circle
+                i.fa.fa-circle
+              .content
+                a href='/become-a-sponsor.html'
+                  | Become<br/> a Bronze Sponsor
 
   .donors.container
     h2

@@ -81,75 +81,150 @@ $become-a-sponsor-top: 40px;
     margin-top: 0px;
 
     h2 {
-      margin-top: 0px;
+      margin-top: 30px;
       margin-bottom: 75px;
     }
 
+    h3 {
+      text-align: left;
+      font-size: 27px;
+      margin-bottom: 40px;
+    }
+
+    .sponsor {
+      .content {
+        background-color: #f7f7f7;
+      }
+    }
+
+    .color {
+      position: absolute;
+      width: 15px;
+      border-radius: 4px;
+      top: 0;
+      left: 0;
+      float: left;
+      margin-left: -70px;
+    }
+
     .gold {
+      margin-bottom: 70px;
+      padding-bottom: 40px;
+      position: relative;
+
+      h3 {
+        margin-top: 40px;
+        color: $golden;
+      }
+
       .color {
         @media(min-width: $screen-lg) {
-          position: absolute;
-          background-color: #FFE959;
-          width: 45px;
-          height: 340px;
-          float: left
+          background-color: $golden;
+          height: 100%;
         }
       }
 
-      h3 {
-        color: #CDA734;
-      }
-      .content {
-        height: 200px;
-        padding-top: 75px;
+      .sponsor {
+        .controls {
+          background-color: #f7f7f7;
+          padding-top: 20px;
+          padding-right: 20px;
+
+          .fa-circle {
+            padding-left: 3px;
+            font-size: 18px;
+            opacity: 0.7;
+          }
+        }
+        
+        .content {
+          height: 180px;
+          padding-top: 45px;
+          font-size: 1.1em;
+        }
       }
     }
 
     .silver {
-      margin-top: 20px;
-      margin-bottom: 20px;
+      margin-bottom: 70px;
+      padding-bottom: 40px;
+      position: relative;
+
+      h3 {
+        margin-top: 40px;
+        color: $silver;
+      }
 
       .color {
         @media(min-width: $screen-lg) {
-          position: absolute;
-          background-color: #D1E9EB;
-          width: 45px;
-          height: 270px;
-          float: left
+          background-color: $silver;
+          height: 100%;
         }
       }
 
-      h3 {
-        color: #698986;
+      .sponsor {
+        .controls {
+          background-color: #f7f7f7;
+          padding-top: 15px;
+          padding-right: 15px;
+
+          .fa-circle {
+            padding-left: 2px;
+            font-size: 16px;
+            opacity: 0.7;
+          }
+        }
+        
+        .content {
+          height: 150px;
+          padding-top: 35px;
+          font-size: 1.0em;
+        }
       }
     }
 
     .bronze {
-      font-size: 14px;
+      margin-bottom: 70px;
+      padding-bottom: 40px;
+      position: relative;
+
+      h3 {
+        margin-top: 40px;
+        color: $bronze;
+      }
+
       .color {
         @media(min-width: $screen-lg) {
-          position: absolute;
-          background-color: #A77556;
-          width: 45px;
-          height: 240px;
-          float: left
+          background-color: $bronze;
+          height: 100%;
         }
       }
 
-      h3 {
-        color: #8C5538;
-      }
+      .sponsor {
+        .controls {
+          background-color: #f7f7f7;
+          padding-top: 10px;
+          padding-right: 10px;
 
-      .content {
-        height: 100px;
-        padding-top: 25px;
+          .fa-circle {
+            padding-left: 1px;
+            font-size: 14px;
+            opacity: 0.7;
+          }
+        }
+        
+        .content {
+          height: 120px;
+          padding-top: 25px;
+          font-size: 0.9em;
+        }
       }
     }
   }
 
   .donors {
     h2 {
-      margin-top: 75px;
+      margin-top: 35px;
       margin-bottom: 75px;
     }
 
