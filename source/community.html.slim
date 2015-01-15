@@ -25,7 +25,7 @@ contributors:
   text: Wojtek is the graphics designer. All VirtKick artwork are crafted by him.
     He makes sure the UI is simple, usable and beautiful.
 - name: Mirek Wozniak
-  email: 7e4023159f2394482b3f42a53ac41609
+  email: wozmir@virtkick.com
   md5: true
   nickname: wozmir
   github: https://github.com/wozmir
@@ -42,32 +42,33 @@ donors:
       h1 Community
 
       .container
-        .col-md-6
-          .logo-container
-            .logo
-              a href='https://webchat.freenode.net/?channels=virtkick'
-                img src='/img/irc.png'
-          h2 IRC
-          p
-            a href='https://webchat.freenode.net/?channels=virtkick' #virtkick on Freenode
-        .col-md-6
-          .logo-container
-            .logo
-              a href='https://github.com/virtkick/virtkick/issues'
-                img src='/img/bugs.png'
-          h2 Bugs
-          p
-            a href='https://github.com/virtkick/virtkick/issues' @virtkick on GitHub
+        .row
+          .col-md-6.separator
+            .logo-container
+              .logo
+                a href='https://webchat.freenode.net/?channels=virtkick'
+                  img src='/img/irc.png'
+            h2 IRC
+            p
+              a href='https://webchat.freenode.net/?channels=virtkick' #virtkick on Freenode
+          .col-md-6
+            .logo-container
+              .logo
+                a href='https://github.com/virtkick/virtkick/issues'
+                  img src='/img/bugs.png'
+            h2 Bugs
+            p
+              a href='https://github.com/virtkick/virtkick/issues' @virtkick on GitHub
 
   .container
-    .contributors.row.col-md-12
+    .contributors.row
       h2 Project <span class="focus">Developers</span>
 
       - current_page.data.contributors.each do |contributor|
         article.col-md-6
           .logo-container
             .logo
-              = gravatar_for contributor.email
+              = gravatar_for contributor.email, :size => 120
           h3
             = contributor.name
             | &nbsp;&nbsp;
@@ -82,71 +83,71 @@ donors:
     .container
       h2 Our <span class="focus">Sponsors</span>
 
-    .gold
-      .color
-      .container
-        .sponsors.row
+      .gold
+        .color
+        .row
           .title.col-md-12
             h3 Gold <span class="focus">Sponsors</span>
-            .col-md-2
-            - (1..2).each do
-              .sponsor.col-md-4
-                .controls
-                  i.fa.fa-circle
-                  i.fa.fa-circle
-                  i.fa.fa-circle
-                .content
-                  a href='/become-a-sponsor.html'
-                    | Become<br/> a Gold Sponsor
+        .row
+          .col-md-2
+          - (1..2).each do
+            .sponsor.col-md-4
+              .controls
+                i.fa.fa-circle
+                i.fa.fa-circle
+                i.fa.fa-circle
+              .content
+                a href='/become-a-sponsor.html'
+                  | Become<br/> a Gold Sponsor
 
-    .silver
-      .color
-      .container
-        .sponsors.row
+      .silver
+        .color
+        .row
           .title.col-md-12
             h3 Silver <span class="focus">Sponsors</span>
-            - (1..4).each do
-              .sponsor.col-md-3
-                .controls
-                  i.fa.fa-circle
-                  i.fa.fa-circle
-                  i.fa.fa-circle
-                .content
-                  a href='/become-a-sponsor.html'
-                    | Become<br/> a Silver Sponsor
+        .row
+          - (1..4).each do
+            .sponsor.col-md-3
+              .controls
+                i.fa.fa-circle
+                i.fa.fa-circle
+                i.fa.fa-circle
+              .content
+                a href='/become-a-sponsor.html'
+                  | Become<br/> a Silver Sponsor
 
-    .bronze
-      .color
-      .container
-        .sponsors.row
+      .bronze
+        .color
+        .row
           .title.col-md-12
             h3 Bronze <span class="focus">Sponsors</span>
-            - (1..6).each do
-              .sponsor.col-md-2
-                .controls
-                  i.fa.fa-circle
-                  i.fa.fa-circle
-                  i.fa.fa-circle
-                .content
-                  a href='/become-a-sponsor.html'
-                    | Become<br/> a Bronze Sponsor
-    | &nbsp;
+        .row 
+          - (1..6).each do
+            .sponsor.col-md-2
+              .controls
+                i.fa.fa-circle
+                i.fa.fa-circle
+                i.fa.fa-circle
+              .content
+                a href='/become-a-sponsor.html'
+                  | Become<br/> a Bronze Sponsor
 
-  .container
+  .donors.container
     h2
       | Our <span class="focus">Donors</span>
 
-    ul
-      - current_page.data.donors.each do |donor|
-        li = donor
-      li
-        | anonymous
+    .row
+      .col-md-offset-3.col-md-6
+        ul.rocket 
+          - current_page.data.donors.each do |donor|
+            li = donor
+          li
+            | anonymous
 
-    p.badges
-      = link_to 'https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=AGF4FPG7JZ7NY&lc=US' do
-        img src='/img/paypal-donate.png'
-      = link_to 'https://gratipay.com/virtkick' do
-        img src='https://img.shields.io/gratipay/virtkick.svg?style=flat-square'
+        p.badges
+          = link_to 'https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=AGF4FPG7JZ7NY&lc=US' do
+            img src='/img/paypal-donate.png'
+          = link_to 'https://gratipay.com/virtkick' do
+            img src='https://img.shields.io/gratipay/virtkick.svg?style=flat-square'
 
-    p Have some bare metal servers to share? Please <a href="mailto:nowaker@virtkick.io">let us know</a>.
-
+        p Have some bare metal servers to share? Please <a href="mailto:nowaker@virtkick.io">let us know</a>.
