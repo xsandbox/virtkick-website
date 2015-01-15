@@ -10,12 +10,16 @@ $become-a-sponsor-top: 40px;
   }
 
   .community {
-    padding-bottom: 40px;
+    padding-bottom: 60px;
     text-align: center;
     
     h1 {
-      padding-top: 20px;
-      margin-top: 0;
+      margin-top: 40px;
+      margin-bottom: 55px;
+    }
+
+    .separator {
+      border-right: 1px solid #efe6ec;
     }
 
     .logo-container {
@@ -40,22 +44,47 @@ $become-a-sponsor-top: 40px;
 
   .contributors {
     h2 {
-      margin-top: 50px;
-      margin-bottom: 50px;
+      margin-top: 75px;
+      margin-bottom: 75px;
     }
 
     article {
       text-align: center;
-      margin-bottom: 40px;
+      margin-bottom: 60px;
+      padding-left: 100px;
+      padding-right: 100px;
+
+      @media (max-width: $screen-xs-max) {
+        padding-left: 40px;
+        padding-right: 40px;
+      }
 
       h3 {
         margin-top: 30px;
         margin-bottom: 20px;
+
+        .fa {
+          font-size: 19px;
+          vertical-align: middle;
+          padding: 2px;
+          color: $violet-text;
+        }
+      }
+
+      .logo-container .logo .avatar {
+        border-radius: 5px;
       }
     }
   }
 
   .sponsors {
+    margin-top: 0px;
+
+    h2 {
+      margin-top: 0px;
+      margin-bottom: 75px;
+    }
+
     .gold {
       .color {
         @media(min-width: $screen-lg) {
@@ -118,14 +147,25 @@ $become-a-sponsor-top: 40px;
     }
   }
 
+  .donors {
+    h2 {
+      margin-top: 75px;
+      margin-bottom: 75px;
+    }
+
+    ul {
+      margin-bottom: 40px;
+    }
+
+    p {
+      text-align: center;
+    }
+  }
+
   .badges {
     img {
       margin-left: 5px;
       margin-right: 5px;
     }
   }
-}
-
-#page-community + footer {
-  background-color: white;
 }
