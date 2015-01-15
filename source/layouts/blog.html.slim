@@ -3,9 +3,11 @@
 
 = wrap_layout :layout do
   #page-blog
-    .page-top.white
+    .page-top.cream
+      .space-junk.hidden-xs.hidden-sm
       = partial 'layouts/nav', locals: {logo: 'color'}
-    .container
-      .row
-        .blog.col-md-8.col-md-offset-2
-          = yield
+      h1 
+        | VirtKick Blog
+      h2 
+        | Latest news & updates in VirtKick virtualization world
+    = yield
