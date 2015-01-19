@@ -2,31 +2,36 @@
 title: Become a VirtKick Sponsor
 ---
 #page-become-a-sponsor
-  .page-top.white
+  .page-top.cream
     = partial 'layouts/nav', locals: {logo: 'color'}
+    .container
+      h1 
+        | Become a Sponsor
+      img.moneybox.hidden-xs src='/img/moneybox.png'
+      .intro
+        h3
+          | We need financial support for further development. Thank you so much for your interest in becoming a sponsor!
+        p 
+          | These are our big sponsorship packages. 
+          | If you have smaller budget, please consider a contribution <a href="/fund">here</a>.
+        p
+          a href='mailto:team@virtkick.io?subject=VirtKick%20sponsoring' Contact us
+          |  if you have any questions. We'll get back to your shortly.
+
   .container
-    h1 Become a Sponsor
-
-    p We need financial support for further development.
-      Thank you so much for your interest in becoming a sponsor!
-
-    p These are our big sponsorship packages.
-      If you have smaller budget, consider a contribution on <a href="#{VariousHelper::INDIEGOGO_URL}">Indiegogo</a>.
-
-    p
-      a href='mailto:team@virtkick.io?subject=VirtKick%20sponsoring' Contact us
-      |  if you have any questions. We'll get back to your shortly.
-
     .row
-      .col-md-4
-        h2.gold Gold Sponsor $7900
+      .col-md-4.gold
+        h2 
+          span 
+            > Gold 
+          > Sponsor $7900
 
         p
           |  A clickable company logo in the <b>top area</b> of the homepage up to January 2017.
           |  Plus a Permanent Bronze Sponsor.
         p Limit: 2 sponsors only.
 
-        ul
+        ul.rocket
           li
             | logo on top of&nbsp;
             a href='/' the homepage
@@ -50,12 +55,15 @@ title: Become a VirtKick Sponsor
             |  about your company
 
         p
-          a.btn.btn-lg.btn-primary href='https://www.indiegogo.com/projects/virtkick-take-cloud-back/contributions/new?perk_amt=7900&perk_id=2226940' Claim now
+          a.btn.btn-lg.btn-primary href='mailto:team@virtkick.io?subject=VirtKick%20sponsoring%20-%20Gold' Claim now
           a.btn href='mailto:team@virtkick.io?subject=VirtKick%20sponsoring%20-%20Gold' Ask a question
 
 
-      .col-md-4
-        h2.silver Silver Sponsor $2900
+      .col-md-4.silver
+        h2
+          span 
+            > Silver 
+          >  Sponsor $2900
 
         p
           |  A clickable company logo in the <b>middle area</b> of the homepage up to January 2017.
@@ -65,17 +73,21 @@ title: Become a VirtKick Sponsor
         p You'll get rewards similar to Gold Sponsors - your logos will just be smaller, and below the Gold Sponsors.
 
         p
-          a.btn.btn-lg.btn-primary href='https://www.indiegogo.com/projects/virtkick-take-cloud-back/contributions/new?perk_amt=2900&perk_id=2226933' Claim now
+          a.btn.btn-lg.btn-primary href='mailto:team@virtkick.io?subject=VirtKick%20sponsoring%20-%20Silver' Claim now
           a.btn href='mailto:team@virtkick.io?subject=VirtKick%20sponsoring%20-%20Silver' Ask a question
 
 
-      .col-md-4
-        h2.bronze Bronze Sponsor $1375
+      .col-md-4.bronze
+        h2 
+          span 
+            > Bronze 
+          >  Sponsor $1375
+
         p
           |  We will display the logo of your company forever in a few places.
           |  <b>Stays forever</b> once added.
 
-        ul
+        ul.rocket
           li
             a href='/community.html' Community
             |  page
@@ -88,5 +100,5 @@ title: Become a VirtKick Sponsor
             | user documentation
 
         p
-          a.btn.btn-lg.btn-primary href='https://www.indiegogo.com/projects/virtkick-take-cloud-back/contributions/new?perk_amt=1375&perk_id=2226931' Claim now
+          a.btn.btn-lg.btn-primary href='mailto:team@virtkick.io?subject=VirtKick%20sponsoring%20-%20Silver' Claim now
           a.btn href='mailto:team@virtkick.io?subject=VirtKick%20sponsoring%20-%20Silver' Ask a question
