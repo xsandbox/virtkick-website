@@ -29,38 +29,39 @@ perks:
   also: 75
   paypal: D4X5YGH2NKYXY
   claimed: 7
+  featured: true
 ---
+- content_for :css
+  = stylesheet_link_tag '/css/fund.css'
 / Users will be redirected from PayPal to here with a hash: #success-[amount] or #cancel-[amount] (e.g. #success-15).
 #page-fund
   .page-top.white
     = partial 'layouts/nav', locals: {logo: 'color'}
-  .container
-    h1 Donate to VirtKick
+    .container
+      h1 Donate to VirtKick
 
-    p
-      > Did you miss a chance to show your support during our crowdfunding campaign?
-        No problem - you can still donate and claim some of the perks.
-        All proceeds are used to aid our open source project - to pay for the infrastructure and our talented team. :-)
-      a href='mailto:team@virtkick.io?subject=Post-crowdfunding%20donation%20to%20VirtKick' Contact us
-      > if you have any questions.
-
+  .container.perks-container
     .row
-      - for perk in current_page.data.perks
-        div class='col-md-3 perk-#{perk.amount}'
-          h2 = perk.name
-
+      .col-md-offset-1.col-md-10
+        .info
           p
-            a.btn.btn-lg.btn-primary href='https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=#{perk.paypal}&lc=US'
-              | Claim now
-            | &nbsp;&nbsp;
-            span.claimed
-              span.number = perk.claimed
-              span.text  claimed
-
+            > Did you miss a chance to show your support during our crowdfunding campaign?
+              No problem - you can still donate and claim some of the perks.
+              All proceeds are used to aid our open source project - to pay for the infrastructure and our talented team. :-)
           p
-            = perk.text
-            - if perk.also
-              |  You'll also receive a $#{perk.amount} reward.
+            a href='mailto:team@virtkick.io?subject=Post-crowdfunding%20donation%20to%20VirtKick' Contact us
+            > if you have any questions.
+            
+        .row.perks
+          div class="col-md-6 perk-#{current_page.data.perks[3].amount}"
+            = partial 'fund/perk', locals: {perk: current_page.data.perks[3]}
+          div class="col-md-6 perk-#{current_page.data.perks[0].amount}"
+            = partial 'fund/perk', locals: {perk: current_page.data.perks[0]}
+        .row.perks
+          div class="col-md-6 perk-#{current_page.data.perks[1].amount}"
+            = partial 'fund/perk', locals: {perk: current_page.data.perks[1]}
+          div class="col-md-6 perk-#{current_page.data.perks[2].amount}"
+            = partial 'fund/perk', locals: {perk: current_page.data.perks[2]}
 
   .thanks.hidden
     | Thanks for your support! We'll deliver your perk shortly.

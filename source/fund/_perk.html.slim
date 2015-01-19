@@ -1,0 +1,13 @@
+div class="perk #{perk.featured ? 'featured' : 'no' }"
+  h2 = perk.name
+  p
+    = perk.text
+    - if perk.also
+      |  You'll also receive a $#{perk.also} reward.
+  p.claim-now
+    a.btn.btn-primary href='https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=#{perk.paypal}&lc=US'
+      | Claim now
+    | &nbsp;&nbsp;
+    span.claimed
+      span.number = perk.claimed
+      span.text  claimed
