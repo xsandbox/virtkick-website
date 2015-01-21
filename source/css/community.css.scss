@@ -108,7 +108,9 @@ $become-a-sponsor-top: 40px;
     }
 
     .gold {
-      margin-bottom: 70px;
+      @media(min-width: $screen-lg) {
+        margin-bottom: 70px;
+      }
       padding-bottom: 40px;
       position: relative;
 
@@ -146,7 +148,9 @@ $become-a-sponsor-top: 40px;
     }
 
     .silver {
-      margin-bottom: 70px;
+      @media(min-width: $screen-lg) {
+        margin-bottom: 70px;
+      }
       padding-bottom: 40px;
       position: relative;
 
@@ -184,7 +188,9 @@ $become-a-sponsor-top: 40px;
     }
 
     .bronze {
-      margin-bottom: 70px;
+      @media(min-width: $screen-lg) {
+        margin-bottom: 70px;
+      }
       padding-bottom: 40px;
       position: relative;
 

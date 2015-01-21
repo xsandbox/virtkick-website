@@ -37,8 +37,11 @@ $colors: (
         position: relative;
         display: inline-block;
         text-align: center;
-        margin-right: 25px;
         margin-top: 5px;
+        margin-right: 10px;
+        @media(min-width: $screen-sm) {
+          margin-right: 25px;
+        }
 
         @each $distro, $color in $colors {
           &.#{$distro} {
@@ -52,38 +55,54 @@ $colors: (
 
         &.digitalocean {
           .distro-square .distro-inner img {
-            height: 30px;
-            margin-top: -15px;
-            margin-left: -27px;
+            height: 20px;
+            margin-top: -10px;
+            margin-left: -18px;
           }
         }
 
-          
         .distro-square {
           cursor: pointer;
           position: relative;
-          width: 90px;
-          height: 90px;
           background-color: $pink-bg-light;
           border-radius: 4px;
-          padding: 10px;
+          padding: 8px;
+          width: 70px;
+          height: 70px;
+
+          @media(min-width: $screen-sm) {
+            padding: 10px;
+            width: 90px;
+            height: 90px;
+          }
 
           @include transition(background-color 0.25s);
 
           .distro-inner {
             position: relative;
-            width: 70px;
-            height: 70px;
             background-color: white;
             border-radius: 4px;
+            width: 54px;
+            height: 54px;
+
+            @media(min-width: $screen-sm) {
+              width: 70px;
+              height: 70px;
+            }
 
             img {
               position: absolute;
               top: 50%;
               left: 50%;
-              margin-top: -23px;
-              margin-left: -23px;
-              height: 46px;
+              margin-top: -15px;
+              margin-left: -15px;
+              height: 30px;
+
+              @media(min-width: $screen-sm) {
+                margin-top: -23px;
+                margin-left: -23px;
+                height: 46px;
+              }
             }
           }
         }
@@ -97,7 +116,10 @@ $colors: (
     }
 
     .installation {
-      margin-top: 40px;
+      margin-top: 10px;
+      @media(min-width: $screen-sm) {
+        margin-top: 40px;
+      }
 
       h3 {
         margin-bottom: 40px;
@@ -147,9 +169,12 @@ $colors: (
         background-color: $pink-bg-light;
         text-align: center;
 
-        h3 {
+        h4 {
+          font-size: 23px;
           margin-top: 30px;
+          margin-bottom: 40px;
           text-align: center;
+          letter-spacing: -0.5px;
 
           .fa {
             vertical-align: middle;
@@ -159,12 +184,16 @@ $colors: (
         }
 
         .form-control {
-          width: 400px;
+          @media(min-width: $screen-md) {
+            min-width: 400px;
+          }
+          margin-top: 10px;
           height: 46px;
           line-height: 20px;
         }
 
         .btn {
+          margin-top: 10px;
           margin-left: 15px;
           padding: 12px 25px;
         }

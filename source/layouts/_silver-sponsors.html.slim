@@ -3,8 +3,8 @@
     .sponsors.row
       .title.col-md-12
         h3 Silver <span class="focus">Sponsors</span>
-      - (1..4).each do
-        .sponsor.col-md-3
+      - (1..4).each do |i|
+        div class="sponsor col-md-3 #{i != 1 ? 'hidden-xs hidden-sm' : ''}"
           .controls
             i.fa.fa-circle
             i.fa.fa-circle

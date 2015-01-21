@@ -365,20 +365,33 @@ ul.rocket {
 
     .crowdfunding-results {
       position: relative;
+      text-align: center;
 
       .rocket {
-        position: absolute;
-        width: 74px;
-        height: 194px;
+        vertical-align: top;
+        display: inline-block;
         background-image: url('/img/starting-rocket.png');
         background-repeat: no-repeat;
+        background-size: 100% 100%;
+        width: 55px;
+        height: 145px;
+        @media(min-width: $screen-lg) {
+          width: 74px;
+          height: 194px;
+        }
       }
 
       .content {
-        padding-left: 90px;
-        padding-right: 16px;
         text-align: center;
-
+        vertical-align: top;
+        display: inline-block;
+        margin-left: 20px;
+        margin-right: 20px;
+        @media(min-width: $screen-sm) {
+          margin-left: 50px;
+          margin-right: 50px;
+        }
+        
         .highlight {
           color: $medium-light;
         }
@@ -422,10 +435,6 @@ ul.rocket {
 
         @media (max-width: $screen-sm-max) {
           margin-top: 40px;
-
-          span.fa {
-            margin-left: 74px; 
-          }
         }
       }
 
@@ -589,7 +598,7 @@ ul.rocket {
             margin-right: 5px;
           }
           
-          input#newsletter-email {
+          input.newsletter-email {
             width: 250px;
           }
           
@@ -597,26 +606,6 @@ ul.rocket {
             background-color: $igg-pink;
             padding: 8px 20px;
           }
-        }
-      }
-    }
-  }
-}
-
-@media (max-width: $screen-sm-min) {
-  #newsletter-cover {
-    width: 100%;
-
-    .newsletter-wrapper {
-      width: 100%;
-      bottom: 0;
-      right: 0;
-      border-radius: 0px !important;
-
-      .newsletter .form-group {
-        display: inline-block;
-        input {
-          display: inline-block;
         }
       }
     }
@@ -669,7 +658,7 @@ footer {
     margin-right: -50px;
   }
 
-  .newsletter {
+  .updates {
     margin-bottom: 0px;
     padding-bottom: 30px;
     @include newsletter(40px, 12px);
@@ -691,7 +680,7 @@ footer {
       color: white;
       @include placeholder-color(lighten($burgund-text, 5%));
 
-      #newsletter-email {
+      .newsletter-email {
         color: white;
         background-color: $burgund-light;
         height: 50px;
@@ -704,6 +693,7 @@ footer {
         padding-right: 40px;
         height: 50px;
         font-size: 16px;
+        margin-top: 10px;
       }
     }
 
@@ -711,11 +701,15 @@ footer {
       color: $burgund-text;
       font-size: 0.9em;
     }
+
+    .available-info {
+      margin-top: 12px;
+      font-size: 0.9em;
+    }
   }
 
   .footer-nav {
     padding-top: 20px;
-    padding-bottom: 20px;
     font-size: 14px;
     background-color: $burgund-dark;
     color: $burgund-text;
@@ -761,7 +755,7 @@ footer {
     font-size: 14px;
     background-color: $burgund-dark;
     color: lighten($burgund-text, 25%);
-    padding: 5px 0px 35px 0px;
+    padding: 35px 10px 35px 10px;
 
     a:hover {
       color: $medium-light;
@@ -822,6 +816,12 @@ footer {
 
     .focus {
       color: #74586A;
+    }
+  }
+
+  &.gold {
+    h3 {
+      color: darken($golden, 10%);
     }
   }
 
