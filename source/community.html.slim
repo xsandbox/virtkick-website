@@ -89,8 +89,8 @@ donors:
             h3 Gold <span class="focus">Sponsors</span>
         .row
           .col-md-2
-          - (1..2).each do
-            .sponsor.col-md-4
+          - (1..2).each do |index|
+            .sponsor.col-md-4 *(index != 1 ? {:class => ['hidden-xs']} : {})
               .controls
                 i.fa.fa-circle
                 i.fa.fa-circle
@@ -105,8 +105,8 @@ donors:
           .title.col-md-12
             h3 Silver <span class="focus">Sponsors</span>
         .row
-          - (1..4).each do
-            .sponsor.col-md-3
+          - (1..4).each do |index|
+            .sponsor.col-md-3 *(index != 1 ? {:class => ['hidden-xs']} : {})
               .controls
                 i.fa.fa-circle
                 i.fa.fa-circle
@@ -121,8 +121,8 @@ donors:
           .title.col-md-12
             h3 Bronze <span class="focus">Sponsors</span>
         .row 
-          - (1..6).each do
-            .sponsor.col-md-2
+          - (1..6).each do |index|
+            .sponsor.col-md-2 *(index != 1 ? {:class => ['hidden-xs']} : {})
               .controls
                 i.fa.fa-circle
                 i.fa.fa-circle

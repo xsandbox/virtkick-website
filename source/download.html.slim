@@ -79,27 +79,11 @@ distros:
                     > wget https://www.virtkick.io/download/latest.tar.gz
             p 
               > In the meantime you can subscribe to our newsletter and be notified at the very early moment #{distro.name} package is released.
-            .newsletter
-              form.form-inline action='https://virtkick.us8.list-manage.com/subscribe/post?u=b74a227fdbddc9f590a62114e&amp;id=08823d8a7b' method='post' role='form'
-                h3
-                  .fa.fa-bullhorn
-                  > Get notified of #{distro.name} package release
-                p.result data-success='Thank you! Please check your e-mail to confirm.'
-                .form-group
-                  input#newsletter-email.form-control.input name='EMAIL' placeholder=('E-mail address') type='text'
-                  input.btn.btn-primary.btn name='subscribe' type='submit' value='Subscribe'
+            = partial 'layouts/newsletter', locals: {header: 'Get notified of ' + distro.name + ' package release', bullhorn: true}
           - elsif distro.installation == 'source'
             p 
               > At the moment we don't have #{distro.name} package ready to download. However, we are working hard to create it so you can subscribe to our newsletter and be notified at the very early moment #{distro.name} package is released.
-            .newsletter
-              form.form-inline action='https://virtkick.us8.list-manage.com/subscribe/post?u=b74a227fdbddc9f590a62114e&amp;id=08823d8a7b' method='post' role='form'
-                h3
-                  .fa.fa-bullhorn
-                  > Get notified of #{distro.name} package release
-                p.result data-success='Thank you! Please check your e-mail to confirm.'
-                .form-group
-                  input#newsletter-email.form-control.input name='EMAIL' placeholder=('E-mail address') type='text'
-                  input.btn.btn-primary.btn name='subscribe' type='submit' value='Subscribe'
+            = partial 'layouts/newsletter', locals: {header: 'Get notified of ' + distro.name + ' package release', bullhorn: true}
           - elsif distro.installation == 'do'
             p 
               > To install VirtKick on DigitalOcean please follow the instructions on 
