@@ -90,7 +90,8 @@ donors:
         .row
           .col-md-2
           - (1..2).each do |index|
-            .sponsor.col-md-4 *(index != 1 ? {:class => ['hidden-xs']} : {})
+            - classes = 'hidden-xs' if index != 1
+            .sponsor class="col-md-4 #{classes}"
               .controls
                 i.fa.fa-circle
                 i.fa.fa-circle
@@ -106,7 +107,8 @@ donors:
             h3 Silver <span class="focus">Sponsors</span>
         .row
           - (1..4).each do |index|
-            .sponsor.col-md-3 *(index != 1 ? {:class => ['hidden-xs']} : {})
+            - classes = 'hidden-xs' if index != 1
+            .sponsor class="col-md-3 #{classes}"
               .controls
                 i.fa.fa-circle
                 i.fa.fa-circle
@@ -122,7 +124,8 @@ donors:
             h3 Bronze <span class="focus">Sponsors</span>
         .row 
           - (1..6).each do |index|
-            .sponsor.col-md-2 *(index != 1 ? {:class => ['hidden-xs']} : {})
+            - classes = 'hidden-xs' if index != 1
+            .sponsor class="col-md-2 #{classes}"
               .controls
                 i.fa.fa-circle
                 i.fa.fa-circle
