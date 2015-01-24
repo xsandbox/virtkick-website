@@ -1,15 +1,14 @@
 ---
 title: VirtKick at Techstars Cloud 2015!
 author: Mirek Wozniak
-role: The Marketer That Codes
-email: mirek@virtkick.io
+role: I do marketing and bits of coding @VirtKick.
+email: wozmir@virtkick.io
 ---
 
-We're here. Out of 3000 companies that applied for Techstars Cloud 2015 program, [only 10 were selected, including VirtKick](http://www.techstars.com/announcing-techstars-cloud-class-of-2015/). We're really excited and humbled by this selection and we 
+We're here. Out of the 3000 companies that applied for Techstars Cloud 2015 program, [only 10 were selected, including VirtKick](http://www.techstars.com/announcing-techstars-cloud-class-of-2015/). We're really excited to be a part of the program and take part in the intensive 100-day mentorship and training course. 
 
-- awesome techstars
-- how it's like
-- thanks to support of x, y, z
-- what's next? billing system, features
-- would love to hear from our users and vps providers for testing 
-- we'll help you install virtkick
+So, what's up with VirtKick now? It's coming up nicely, with the billing module for VPS providers taking shape. And if you happen to be one, [drop us a line](team@virtkick.io) - we'll gladly help you install VirtKick and guide you through the process if needed!
+
+As for the future, we'll keep you posted - stay tuned to the [VirtKick's Twitter](https://twitter.com/virtkick) and [our GitHub](https://github.com/virtkick/virtkick) for updates. We're also at [#VirtKick IRC](https://webchat.freenode.net/?channels=virtkick) 24/7, come over!
+
+Expect more VirtKick news soon, we're just warming up!
