@@ -1,4 +1,4 @@
-if (window.location.host.indexOf('virtkick.io') != -1) {
+if (window.location.host.indexOf('virtkick.com') != -1) {
   (function (i, s, o, g, r, a, m) {
     i['GoogleAnalyticsObject'] = r;
     i[r] = i[r] || function () {
@@ -11,7 +11,7 @@ if (window.location.host.indexOf('virtkick.io') != -1) {
     m.parentNode.insertBefore(a, m)
   })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
 
-  ga('create', 'UA-53467319-1', 'virtkick.io');
+  ga('create', 'UA-53467319-1', 'virtkick.com');
   ga('require', 'displayfeatures');
   ga('send', 'pageview');
 } else {
