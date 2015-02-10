@@ -45,7 +45,7 @@ I start a machine, check out the console, have a look at the settings and finall
 <iframe width="560" height="315" src="https://www.youtube.com/embed/KsCZMz4K6IY" frameborder="0" allowfullscreen></iframe>
 </div>
 
-That' all you need - go and spin up those VMs!
+That' all you need - go and spin up those VMs: <a class="btn btn-yellow ga-demo" href="https://alpha.virtkick.io/" target="_blank">Try the demo</a>
 
 If you need more technical details, [everything's at GitHub](https://github.com/virtkick/virtkick-starter) and if there's anything more you'd like to know about Virtkick, [drop me a line](mailto:mirek@virtkick.com) or leave a comment below!
 
