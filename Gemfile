@@ -13,6 +13,7 @@ gem 'middleman-imageoptim', '~> 0.1.4'
 gem 'middleman-livereload', '~> 3.3.0'
 gem 'middleman-slim', '~> 0.1'
 gem 'middleman-syntax'
+gem "middleman-disqus"
 gem 'nokogiri'
 gem 'redcarpet'
 gem 'slim', '2.1.0'

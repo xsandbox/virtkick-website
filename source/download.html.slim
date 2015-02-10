@@ -62,6 +62,8 @@ distros:
                     input.command.mobile-command.form-control.hidden value="#{command}" data-command="#{command}"
                   .btn.btn-primary.copy
                     .fa.fa-copy
+            p 
+              > After installation go to <b>http://YourServerIp:3000</b> and enjoy!
             /!
               p
                 > Or alternatively you can download and install tar.gz package from 
@@ -85,10 +87,11 @@ distros:
               > At the moment we don't have #{distro.name} package ready to download. However, we are working hard to create it so you can subscribe to our newsletter and be notified at the very early moment #{distro.name} package is released.
             = partial 'layouts/newsletter', locals: {header: 'Get notified of ' + distro.name + ' package release', bullhorn: true}
           - elsif distro.installation == 'do'
-            p 
-              > To install VirtKick on DigitalOcean please follow the instructions on 
-              a href="https://deploy.virtkick.io" https://deploy.virtkick.io
-              > .
+            p
+              > To install VirtKick on DigitalOcean simply click the button and follow the instructions.
+            a href="https://deploy.virtkick.io"
+              .btn.do-install
+                | Install on DigitalOcean
 
   .container-fluid.dev-build-wrapper
     .row

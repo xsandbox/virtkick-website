@@ -2,6 +2,9 @@ require 'slim/smart'
 
 configure :development do
   activate :livereload
+  activate :disqus do |d|
+    d.shortname = 'virtkickdev'
+  end
 end
 
 set :css_dir, 'css'
@@ -30,7 +33,6 @@ activate :syntax
 set :markdown_engine, :redcarpet
 set :markdown, fenced_code_blocks: true, smartypants: true
 
-
 configure :build do
   unless ENV['SKIP_IMAGEOPTIM']
     activate :imageoptim do |opts|
@@ -40,6 +42,9 @@ configure :build do
   activate :minify_css
   activate :minify_javascript
   activate :asset_hash
+  activate :disqus do |d|
+    d.shortname = 'virtkick'
+  end
 end
 
 # https://github.com/middleman/middleman/issues/1300
