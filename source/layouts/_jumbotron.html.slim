@@ -1,34 +1,10 @@
 .header
-  .row
-    .become-a-sponsor.col-md-3.hidden-xs.hidden-sm
-      .logo.techstars
-        .box
-          a href='http://www.techstars.com/'
-            img src='/img/techstars.png'
-        p Mentorship
-    .content.col-md-6
-      h1 = defined?(h1) ? h1 : 'Take Cloud Back'
-      h2 = defined?(h2) ? h2 : 'Manage virtual machines or Docker containers'
-      h3 = defined?(h3) ? h3 : '100% open source'
-      - if url = current_page.data.video
-        p.video
-        - content_tag :a, href: "https://www.youtube.com/watch?v=#{url}" do
-          | Watch a minute long video.
-      .cta
-        a.btn.btn-primary.ga-alpha href='/download.html' target='_blank' 
-          | Download alpha
-        a.btn.btn-yellow.ga-demo  href='https://alpha.virtkick.io/' target='_blank' 
-          | Try the demo
-    .become-a-sponsor.col-md-3.hidden-xs.hidden-sm
-      .logo
-        .box
-          a href='/become-a-sponsor.html'
-            | Become<br/> a Gold Sponsor
-        p Gold Sponsor
-  .row.visible-xs.visible-sm.techstars-mobile
-    h3
-      .techstars-logo
-        a href='http://www.techstars.com/'
-          img src='/img/techstars.png'
-      span 
-        | Mentorship
+  h1 = defined?(h1) ? h1 : 'Enter the Cloud'
+  h2 = defined?(h2) ? h2 : 'Sell better VPS. Sell VPS better.'
+  - if url = current_page.data.video
+    p.video
+    - content_tag :a, href: "https://www.youtube.com/watch?v=#{url}" do
+      | Watch a minute long video.
+  .cta
+    a.btn.btn-primary.ga-alpha href='https://alpha.virtkick.io/' target='_blank' 
+      | Try the demo

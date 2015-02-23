@@ -1,13 +1,5 @@
 @import 'bootstrap-customize';
 
-@mixin gradient {
-  background: linear-gradient(#53172d, #b9233d);
-
-  &, *:not(input) {
-    color: #ffffff;
-  }
-}
-
 @mixin newsletter($input-height, $text-height) {
   form {
     input {

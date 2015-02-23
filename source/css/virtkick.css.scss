@@ -115,83 +115,30 @@ ul.rocket {
 .page-top {
   position: relative;
 
-  .navbar > .container {
-    background-image: url('/img/trace.png');
-    background-repeat: no-repeat;
-    background-position: top left;
-  }
-
-  .navbar > .container {
-    background-image: none;
-  }
-
-  @media(min-width: $screen-lg-min) {
-    .navbar > .container {
-      background-image: url('/img/trace.png');
-    }
-  }
-
-  &.white {
-    background: white;
-
-    .navbar li a, .navbar li a:hover { 
-      color: $violet-menu;
-    }
-  }
-  
-  &.cream { 
-    background: -webkit-linear-gradient(white, #f9f3f4);
-    background: -o-linear-gradient(white, #f9f3f4);
-    background: linear-gradient(white, #f9f3f4);
-
-    @media(min-width: $screen-lg-min) {
-      .navbar > .container {
-        background-image: url('/img/trace.png');
-      }
-    }
-
-    .navbar li a, .navbar li a:hover { 
-      color: $violet-menu;
-    }
-
-    .space-junk {
-      opacity: 0.3;
-      position: absolute;
-      left: 20%;
-      width: 60%;
-      height: 85%;
-      background: url('/img/sputnik.png') no-repeat right bottom;
-      background: url('/img/sputnik.png') no-repeat right bottom;
-      background: url('/img/sputnik.png') no-repeat right bottom;
-
-      @media (max-width: $screen-md-max) { 
-        left: 5%;
-        width: 90%;
-      }
-    }
-  }
-
   &.cosmic {
-    @include gradient;
-    
-    @media(min-width: $screen-lg-min) {
-      .navbar > .container {
-        background-image: url('/img/trace-with-moon.png');
-      }
+    color: white;
+    background-color: #1A1A1A;
+    background-image: url('/img/cosmic-bg.png');
+
+    h1 {
+      color: white;
+      font-size: 3.3em !important;
+      font-weight: 300;
+    }
+
+    h2 {
+      color: white;
+      font-size: 2.4em !important;
+      font-weight: 100;
     }
   }
 }
 
 .header {
   text-align: center;
-  padding-top: 20px;
+  padding-top: 50px;
   padding-bottom: 65px;
 
-  .row {
-    // Prevent a horizontal scrollbar.
-    margin-left: 0;
-    margin-right: 0;
-  }
 
   .content {
     background-repeat: no-repeat;
@@ -206,26 +153,6 @@ ul.rocket {
     }
   }
 
-  h1 {
-    font-size: 38px !important;
-    margin-top: 20px;
-    margin-bottom: 18px;
-  }
-
-  h2 {
-    font-size: 26px !important;
-    margin-top: 0px;
-    margin-bottom: 10px;
-    color: $intense !important;
-  }
-
-  h3 {
-    font-size: 20px !important;
-    margin-top: 0px;
-    margin-bottom: 40px;
-    color: $intense !important;
-  }
-
   .video {
     width: 100%;
     text-align: center;
@@ -233,69 +160,6 @@ ul.rocket {
 
     a {
       color: $text-cooldown;
-    }
-  }
-
-  .become-a-sponsor {
-    margin-top: 30px;
-    font-size: 13px;
-    text-transform: uppercase;
-
-    .logo {
-      max-width: 300px;
-      margin: 0 auto;
-
-      .box {
-        height: 200px;
-        background-color: rgba(0, 0, 0, 0.1);
-        margin-bottom: 10px;
-        vertical-align: middle;
-        padding-top: 75px;
-        border-radius: 5px;
-        font-size: 15px;
-        font-weight: bold;
-
-        a {
-          opacity: 1;
-        }
-
-        a:hover {
-          color: white;
-        }
-      }
-
-      &.techstars .box {
-        padding-top: 45px;
-        
-        a {
-          img {
-            margin: 0 auto;
-            width: 143px;
-            height: 95px;
-          }
-        }
-      }
-    }
-  }
-
-  .techstars-mobile {
-    margin-top: 30px;
-    margin-bottom: -60px;
-
-    h3 {
-      .techstars-logo {
-        margin-bottom: 15px;
-        display: block;
-
-        img {
-          width: 140px;
-        }
-      }
-
-      span {
-        font-size: 0.9em;
-        color: #ec4863 !important;
-      }
     }
   }
 
@@ -318,141 +182,6 @@ ul.rocket {
 
         &:hover {
           background-color: darken($yellow, 10%);
-        }
-      }
-    }
-  }
-}
-
-.alien-banner-window {
-  width: 100%;
-  position: relative;
-
-  .alien {
-    @media (max-width: $screen-sm-max) {
-      display: none;
-    }
-    
-    position: absolute;
-    z-index: 2;
-    left: 50%;
-    margin-left: -58px;
-    width: 116px;
-    height: 76px;
-    background-color: transparent;
-
-    &.bottom {
-      top: -65px;
-    } 
-
-    &.top {
-      bottom: -12px;
-    }
-    
-    img {
-      display: block;
-      margin: 0 auto;
-    }
-  }
-
-  .info {
-    width: 100%;
-    background-color: $brown-dark;
-    padding-top: 33px;
-    padding-bottom: 33px;
-    color: white;
-    line-height: 20px;
-
-    .crowdfunding-results {
-      position: relative;
-      text-align: center;
-
-      .rocket {
-        vertical-align: top;
-        display: inline-block;
-        background-image: url('/img/starting-rocket.png');
-        background-repeat: no-repeat;
-        background-size: 100% 100%;
-        width: 55px;
-        height: 145px;
-        @media(min-width: $screen-lg) {
-          width: 74px;
-          height: 194px;
-        }
-      }
-
-      .content {
-        text-align: center;
-        vertical-align: top;
-        display: inline-block;
-        margin-left: 20px;
-        margin-right: 20px;
-        @media(min-width: $screen-sm) {
-          margin-left: 50px;
-          margin-right: 50px;
-        }
-        
-        .highlight {
-          color: $medium-light;
-        }
-
-        h4 {
-          color: white;
-          margin-bottom: 20px;
-        }
-
-        p.collected {
-          margin-top: 0px;
-          margin-bottom: 0px;
-        }
-
-        p.late-for-campaign {
-          margin-top: 20px;
-          font-size: 0.9em;
-          color: #814258;
-        }
-      }
-
-      @media (min-width: $screen-md-min) {
-        border-right: 2px solid #4d2833;
-      }
-    }
-
-    .newsletter {
-      text-align: center;
-
-      h4 {
-        color: white;
-        margin-top: 28px;
-        margin-bottom: 20px;
-
-        span.fa {
-          vertical-align: middle;
-          font-size: 29px;
-          padding-right: 5px;
-          color: $medium-light;
-        } 
-
-        @media (max-width: $screen-sm-max) {
-          margin-top: 40px;
-        }
-      }
-
-      .form-group {
-        width: 100%; 
-
-        input.form-control {
-          height: 45px;
-          min-width: 50%;
-        }
-
-        input.btn {
-          padding: 10px 30px;
-          margin-left: 10px;
-          
-          @media (max-width: $screen-sm-min) {
-            margin-top: 10px;
-          }
         }
       }
     }

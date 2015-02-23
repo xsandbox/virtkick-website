@@ -44,11 +44,16 @@ devops:
 #page-index
   .page-top.cosmic
     = partial 'layouts/nav', locals: {logo: 'white'}
-    = partial 'layouts/_jumbotron', locals: {h2: 'Your self-hosted VPS panel, similar to DigitalOcean'}
-  = partial 'layouts/_alien_banner', locals: {position: 'bottom'}
+    = partial 'layouts/_jumbotron'
   .content-container.container
     = partial 'layouts/_jumbotron-mobile'
 
+  .screenshots.row.clear
+    img.hidden-md.hidden-lg src='/img/screenshots/dashboard-all-mobile.png'
+    img.hidden-xs.hidden-sm src='/img/screenshots/dashboard-desktop.png'
+    img.hidden-xs.hidden-sm src='/img/screenshots/dashboard-mobile.png'
+  
+  .container
     .slogan
       h2.section A cloud panel for the <span class="focus">modern</span> web!
       h4 Say <span class="focus">"no"</span> to NSA. Take cloud back to your computer, home network or a dedicated server.
@@ -61,54 +66,3 @@ devops:
               = tag :img, src: "/img/features/#{feature.image}.png"
           h3 = feature.header
           p = feature.text
-
-  .screenshots.row.clear
-    img.hidden-md.hidden-lg src='/img/screenshots/dashboard-all-mobile.png'
-    img.hidden-xs.hidden-sm src='/img/screenshots/dashboard-desktop.png'
-    img.hidden-xs.hidden-sm src='/img/screenshots/dashboard-mobile.png'
-
-  .content-container.container
-    .slogan
-      h2.section Choose your way and <span class="focus">kickstart</span> your cloud.
-
-    .packages.features.row.col-md-12
-      - current_page.data.packages.each do |feature|
-        article.col-md-4
-          .logo-container
-            .logo
-              = tag :img, src: "/img/features/#{feature.image}.png"
-          h3 = feature.header
-          p = feature.text
-
-    .slogan.clear#integrations.hidden
-      h2 Many <span class="focus">virtualization</span> technologies supported.
-
-    .integrations.col-md-12.hidden
-      - current_page.data.integrations.each do |feature|
-        article.col-md-4
-          = tag :img, src: "/img/integration/#{feature.image}.png"
-          h3
-            = feature.header
-            - if feature.r
-              | <sup>®</sup>
-            - elsif feature.tm
-              | ™
-          p = feature.text
-
-    .slogan.clear#integrations.hidden
-      h2.section Techies will <span class="focus">love</span> these features.
-
-    .devops.features.col-md-12.hidden
-      - current_page.data.devops.each do |feature|
-        article.col-md-4
-          = tag :img, src: "/img/integration/#{feature.image}.png"
-          h3
-            = feature.header
-            - if feature.r
-              | <sup>®</sup>
-            - elsif feature.tm
-              | ™
-          p = feature.text
-
-
-  = partial 'layouts/silver-sponsors'

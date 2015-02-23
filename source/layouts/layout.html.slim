@@ -21,15 +21,8 @@ html
     #page
       = yield
       footer
-        img.sputnik src='/img/sputnik-small.png' style='z-index: 2000'
-        .col-md-12.updates style='float: inherit'
-          h3
-            span.first Subscribe
-            span.second  for updates
-          = partial 'layouts/newsletter'
-          p.available-info
-            | We will let you know when VirtKick is available!
         = partial 'layouts/footer_nav'
+        = partial 'layouts/newsletter'
         .copyright.col-md-12
           a href='https://www.virtkick.io/'  VirtKick
           |  &copy; 2014 StratusHost Damian Nowak
