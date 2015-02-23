@@ -45,7 +45,7 @@ devops:
   .page-top.cosmic
     = partial 'layouts/nav', locals: {logo: 'white'}
     = partial 'layouts/_jumbotron'
-  .content-container.container
+  .content-container.container-fluid
     = partial 'layouts/_jumbotron-mobile'
 
   .screenshots.row.clear
@@ -53,7 +53,7 @@ devops:
     img.hidden-xs.hidden-sm src='/img/screenshots/dashboard-desktop.png'
     img.hidden-xs.hidden-sm src='/img/screenshots/dashboard-mobile.png'
   
-  .container
+  .container-fluid
     .slogan
       h2.section A cloud panel for the <span class="focus">modern</span> web!
       h4 Say <span class="focus">"no"</span> to NSA. Take cloud back to your computer, home network or a dedicated server.
