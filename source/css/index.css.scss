@@ -200,12 +200,52 @@
     }
   }
 
-  .newsletter {
-    padding-top: 300px;
-    padding-bottom: 300px;
+  .newsletter-section {
     color: white;
     background-color: $black-dark;
     background-image: url('/img/lines-bg.png');
+    background-position: 0px -140px;
     background-repeat: no-repeat;
+    min-height: 601px;
+
+    .perforation .circle {
+      background-color: darken($black-dark, 1%);
+    }
+
+    h2 {
+      margin-top: 145px;
+    }
+
+    .newsletter {
+      margin: 0 auto;
+      text-align: center;
+
+      .form-inline {
+        margin-top: 60px;
+
+        input.newsletter-email {
+          text-align: center;
+          min-width: 430px;
+          border-radius: 33px;
+          height: 66px;
+          line-height: 66px;
+
+          color: $black-medium;
+        }
+
+        input.btn {
+          border-radius: 33px !important;
+          padding: 20px 50px;
+          margin-left: 15px;
+        }
+      }
+    }
+
+    .stay-connected {
+      margin-top: 40px;
+      font-size: 16px;
+      text-align: center;
+      color: $cream;
+    }
   }
 }

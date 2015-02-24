@@ -21,57 +21,58 @@ html
     #page
       = yield
       footer
-        .container-fluid.wrap-90
+        .container-fluid.wrap-80
+          .logo
+            a href="/"
+              img src="/img/logo/virtkick-logo-pixelart-32.png" class="pix"
+              img src="/img/virtkick-name-white.png" class="virt-name"
           .footer-nav.hidden-xs.hidden-sm
-            .logo
-              a href="/"
-                img src="/img/logo/virtkick-logo-pixelart-32.png" class="pix"
-                img src="/img/virtkick-name-white.png" class="virt-name"
             .link-group 
-              a.main href="/"
+              a.main.pink href="/"
                 | Home
             .link-group 
-              a.main href="/features.html"
+              a.main.pink href="/features.html"
                 | Features
             .link-group
-              a.main href="/people.html"
+              a.main.pink href="/people.html"
                 | People
             .link-group
-              a.main href="/blog/"
+              a.main.pink href="/blog/"
                 | Blog
             .link-group
-              a.main href="/contact.html"
+              a.main.pink href="/contact.html"
                 | Contact
             .link-group
-              a.main href="https://alpha.virtkick.io/" target="_blank"
+              a.main.pink href="https://alpha.virtkick.io/" target="_blank"
                 | Demo
+          .clear
           .social-features
-            .row
-              .col-offset-md-3.col-md-3
-                p Monthly newsletter
-                = partial 'layouts/newsletter'
-              .col-md-3
-                p Social media
-                .social  
-                  a href="https://github.com/virtkick/"
-                    span.fa.fa-github
-                  a href="https://twitter.com/virtkick"
-                    span.fa.fa-twitter
-                  a href="https://www.facebook.com/virtkick"
-                    span.fa.fa-facebook-square
-                  a href="https://plus.google.com/+VirtKick_io/"
-                    span.fa.fa-google-plus-square
-              .col-md-3
+            .column.copyright.hidden
+              a href='https://www.virtkick.com/'  VirtKick
+              |  &copy; 2014 StratusHost Damian Nowak
+              br
+              span.trademarks
+                | Marks and names mentioned herein may be trademarks of their respective companies. 
+                = succeed '.' do
+                  a href='/legal.html' Read more
+            .column.monthly-newsletter
+              p.slabel Monthly newsletter
+              = partial 'layouts/newsletter'
+            .column.social-media
+              p.slabel Social media
+              .social  
+                a.pink href="https://github.com/virtkick/"
+                  span.fa.fa-github
+                a.pink href="https://twitter.com/virtkick"
+                  span.fa.fa-twitter
+                a.pink href="https://www.facebook.com/virtkick"
+                  span.fa.fa-facebook-square
+                a.pink href="https://plus.google.com/+VirtKick_io/"
+                  span.fa.fa-google-plus-square
+            .column.techstars
+              p.slabel A Techstars-backed<br/>company
+              a href='http://www.techstars.com/'
                 img src='/img/techstars.png'
-                p A Techstars-backed company
-          .copyright
-            a href='https://www.virtkick.com/'  VirtKick
-            |  &copy; 2014 StratusHost Damian Nowak
-            br
-            span.trademarks
-              | Marks and names mentioned herein may be trademarks of their respective companies. 
-              = succeed '.' do
-                a href='/legal.html' Read more
 
       script src='/js/virtkick.js'
       javascript:

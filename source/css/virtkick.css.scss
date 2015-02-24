@@ -5,6 +5,7 @@
 .btn {
   border: 0 !important;
   outline: none !important;
+  border-radius: 30px !important;
 
   @include transition(background-color 0.2s);
 
@@ -13,7 +14,7 @@
   }
 
   &.huge {
-    border-radius: 50px;
+    border-radius: 50px !important;
     padding: 28px 70px;
     font-weight: 400;
     font-size: 1.2em;
@@ -33,6 +34,16 @@
 
   &.huge {
     border: 3px solid white !important;
+  }
+}
+
+a.pink {
+  color: white !important;
+  text-decoration: none !important;
+  @include transition(color 0.2s);
+
+  &:hover, &:active {
+    color: $pink !important;
   }
 }
 
@@ -79,6 +90,13 @@ nav {
 
       a {
         padding: 17px 30px !important;
+        color: white !important;
+        text-decoration: none !important;
+        @include transition(color 0.2s);
+
+        &:hover, &:active {
+          color: $pink !important;
+        }
 
         &.button {
           padding: 0 !important;
@@ -89,15 +107,15 @@ nav {
           box-sizing: border-box;
           margin-left: 5px;
           text-align: center;
-          @include transition(all 0.2s);
           line-height: 56px;
           background-color: transparent;
-          color: white;
+          color: white !important;
+          @include transition(all 0.2s);
 
           &:hover, &:active {
             @include transition(all 0.2s);
             background-color: white;
-            color: $black-dark; 
+            color: $black-dark !important;
           }
         }
       }
@@ -236,33 +254,39 @@ ul.rocket {
 }
 
 footer {
-  padding-top: 30px;
+  padding-top: 50px;
   background-color: $black-medium;
+  color: $gray;
 
+  a {
+    color: $gray !important;
+  }
+
+  .logo {
+    float: left;
+    vertical-align: top;
+    display: inline-block;
+    padding-right: 20px;
+
+    .virt-name {
+      padding-left: 2px;
+      padding-top: 15px;
+      width: 81px;
+    }
+  }
+  
   .footer-nav {
-    padding-top: 20px;
+    float: right;
     font-size: 14px;
     color: white;
-
-    .logo {
-      vertical-align: top;
-      display: inline-block;
-      padding-right: 20px;
-
-      .virt-name {
-        padding-left: 2px;
-        padding-top: 15px;
-        width: 81px;
-      }
-    }
 
     .link-group {
       font-size: 15px;
       text-align: left;
       vertical-align: top;
       display: inline-block;
-      padding-left: 20px;
-      padding-right: 20px;
+      padding-left: 30px;
+      padding-right: 30px;
 
       a {
         margin-top: 2px;
@@ -281,18 +305,104 @@ footer {
     }
   }
 
-  .copyright {
-    font-size: 14px;
-    color: lighten(white, 25%);
-    padding: 35px 10px 35px 10px;
+  .social-features {
+    width: 100%;
+    margin-top: 60px;
+    margin-bottom: 60px;
+    text-align: right;
+    font-size: $font-size-small;
 
-    a:hover {
-      color: white;
+    .column {
+      display: inline-block;
+      vertical-align: top;
+      margin-left: 100px;
+
+      p.slabel {
+        text-align: left;
+        color: $cream-muted !important;
+        font-weight: 400;
+      }
     }
 
-    .trademarks {
-      font-size: 12px;
+    .monthly-newsletter {
+      .newsletter {
+        margin-top: 20px;
+
+        input.newsletter-email {
+          text-align: center;
+          min-width: 250px;
+          border-radius: 20px;
+          height: 40px;
+          line-height: 40px;
+          font-size: 13px;
+
+          color: $gray;
+          background-color: $black-light;
+        }
+
+        input.btn {
+          font-size: 13px;
+          border-radius: 33px !important;
+          padding: 8px 20px;
+          margin-left: 7px;
+          background-color: transparent !important;
+          border: 1px solid $cream !important;
+          color: $cream !important;
+
+          &:hover, &:active {
+            background-color: $cream !important;
+            color: $black-medium !important;
+          }
+        }
+      }
+    }
+
+    .social-media {
+      .social a {
+        font-size: 36px;
+        margin-right: 20px;
+        @include transition(color 0.2s);
+
+        &:hover, &:active {
+          color: $pink !important;
+          @include transition(color 0.2s);
+        }
+      }
+    }
+
+    .techstars {
+      vertical-align: bottom;
+
+      .slabel {
+        text-align: right !important;
+        display: inline-block;
+        vertical-align: top;
+        padding-top: 15px;
+        padding-right: 30px;
+      }
+
+      img {
+        vertical-align: top;
+        display: inline-block;
+      }
+    }
+
+    .copyright {
+      text-align: left;
+      font-size: 14px;
+      color: lighten(white, 25%);
       opacity: 0.5;
+      margin-top: 20px;
+
+      a:hover {
+        color: white;
+      }
+
+      .trademarks {
+        font-size: 12px;
+        opacity: 0.5;
+      }
     }
   }
+
 }
