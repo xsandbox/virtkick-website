@@ -14,44 +14,96 @@
     background-image: url('/img/cosmic-bg.png');
 
     h1 {
+      margin-top: 0px;
+      margin-bottom: 0px;
       color: white;
-      font-size: 3.3em !important;
+      font-size: 3.1em !important;
       font-weight: 300;
     }
 
     h2 {
+      margin-top: 20px;
+      margin-bottom: 0px;
       color: white;
-      font-size: 2.4em !important;
+      font-size: 2.1em !important;
       font-weight: 100;
     }
 
     .header {
       text-align: center;
-      padding-top: 180px;
-      padding-bottom: 330px;
+      padding-top: 200px;
+      padding-bottom: 280px;
 
       .cta {
+        margin-top: 40px;
         .btn {
           border-radius: 50px;
           font-weight: bold;
-          padding: 35px 70px;
+          padding: 28px 70px;
           margin: 6px;
+          font-weight: 400;
+          font-size: 1.2em;
+
+          &:hover, &:active {
+            background-color: darken($pink, 5%);
+          }
         }
       }
     }
   }
 
   .screenshots {
+    position: relative;
     background-color: $pink;
     text-align: center;
-    padding-top: 50px;
-    padding-bottom: 50px;
     margin: 0;
+    width: 100%;
+    z-index: 2;
+    -webkit-box-shadow: 0px 0px 150px 0px rgba(0, 0, 0, 0.55);
+    -moz-box-shadow:    0px 0px 150px 0px rgba(0, 0, 0, 0.55);
+    box-shadow:         0px 0px 150px 0px rgba(0, 0, 0, 0.55);
+
+    .perforation .circle {
+      background-color: #C43C53;
+    }
+
+    .wrapper {
+      display: inline-block;
+      margin: 0 auto;
+
+      h1 {
+        text-align: left;
+        margin-top: 110px;
+        margin-bottom: 0px;
+        font-size: 2.3em;
+        font-weight: 300;
+      }
+
+      h3 {
+        text-align: left;
+        margin-top: 20px;
+        margin-bottom: 0px;
+        font-size: 1.2em;
+        font-weight: 300;
+      }
+
+      .mac-window {
+        margin-top: 90px;
+        width: 100%;
+        max-width: 1000px;
+
+        .content img {
+          max-width: 100%;
+        }
+      }
+    }
   }
 
   .features {
+    position: relative;
     color: white;
     background-color: $black-medium;
+    z-index: 1;
 
     article {
       text-align: center;
