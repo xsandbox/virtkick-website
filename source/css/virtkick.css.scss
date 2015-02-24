@@ -11,6 +11,29 @@
   &:hover, &:active {
     @include transition(background-color 0.2s);
   }
+
+  &.huge {
+    border-radius: 50px;
+    padding: 28px 70px;
+    font-weight: 400;
+    font-size: 1.2em;
+  }
+}
+
+.btn-primary {
+  &:hover, &:active {
+    background-color: darken($pink, 5%);
+  }
+}
+
+.btn-white-border {
+  background-color: transparent;
+  border: 2px solid white !important;
+  color: white !important;
+
+  &.huge {
+    border: 3px solid white !important;
+  }
 }
 
 nav {

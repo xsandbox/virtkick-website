@@ -37,16 +37,7 @@
       .cta {
         margin-top: 40px;
         .btn {
-          border-radius: 50px;
-          font-weight: bold;
-          padding: 28px 70px;
           margin: 6px;
-          font-weight: 400;
-          font-size: 1.2em;
-
-          &:hover, &:active {
-            background-color: darken($pink, 5%);
-          }
         }
       }
     }
@@ -59,9 +50,18 @@
     margin: 0;
     width: 100%;
     z-index: 2;
+    padding-bottom: 140px;
     -webkit-box-shadow: 0px 0px 150px 0px rgba(0, 0, 0, 0.55);
     -moz-box-shadow:    0px 0px 150px 0px rgba(0, 0, 0, 0.55);
     box-shadow:         0px 0px 150px 0px rgba(0, 0, 0, 0.55);
+    background: $pink; 
+    background: -moz-radial-gradient(center, ellipse cover,  $pink 0%, $pink-grad-dark 100%); 
+    background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,$pink), color-stop(100%,$pink-grad-dark)); 
+    background: -webkit-radial-gradient(center, ellipse cover,  $pink 0%,$pink-grad-dark 100%);
+    background: -o-radial-gradient(center, ellipse cover,  $pink 0%,$pink-grad-dark 100%); 
+    background: -ms-radial-gradient(center, ellipse cover,  $pink 0%,$pink-grad-dark 100%); 
+    background: radial-gradient(ellipse at center,  $pink 0%,$pink-grad-dark 100%); 
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$pink', endColorstr='$pink-grad-dark',GradientType=1 ); 
 
     .perforation .circle {
       background-color: #C43C53;
@@ -94,6 +94,29 @@
 
         .content img {
           max-width: 100%;
+        }
+      }
+
+      .cta {
+        margin-top: 80px;
+        
+        .btn {
+          margin: 6px;
+
+          &:hover, &:active {
+            @include transition(all 0.2s);
+            background-color: white;
+            color: $pink !important; 
+          }
+        }
+
+        .trial {
+          display: inline-block;
+          vertical-align: bottom;
+          color: #FA96A7;
+          font-size: $font-size-small;
+          width: 10px;
+          white-space: nowrap;
         }
       }
     }
