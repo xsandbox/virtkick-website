@@ -113,8 +113,22 @@ nav {
   }
 }
 
+.wrap-80 {
+  width: 80%;
+
+  @media (max-width: $screen-md-min) {
+    width: 100%;
+  }
+}
+
+.highlight {
+  color: $pink;
+}
+
 .perforation {
-  margin-top: 13px;
+  text-align: center;
+  margin: 13px auto 0px auto;
+
   .circle {
     width: 12px;
     height: 12px;

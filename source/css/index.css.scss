@@ -43,80 +43,88 @@
     }
   }
 
-  .screenshots {
-    position: relative;
-    background-color: $pink;
-    text-align: center;
-    margin: 0;
-    width: 100%;
-    z-index: 2;
-    padding-bottom: 140px;
-    -webkit-box-shadow: 0px 0px 150px 0px rgba(0, 0, 0, 0.55);
-    -moz-box-shadow:    0px 0px 150px 0px rgba(0, 0, 0, 0.55);
-    box-shadow:         0px 0px 150px 0px rgba(0, 0, 0, 0.55);
-    background: $pink; 
-    background: -moz-radial-gradient(center, ellipse cover,  $pink 0%, $pink-grad-dark 100%); 
-    background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,$pink), color-stop(100%,$pink-grad-dark)); 
-    background: -webkit-radial-gradient(center, ellipse cover,  $pink 0%,$pink-grad-dark 100%);
-    background: -o-radial-gradient(center, ellipse cover,  $pink 0%,$pink-grad-dark 100%); 
-    background: -ms-radial-gradient(center, ellipse cover,  $pink 0%,$pink-grad-dark 100%); 
-    background: radial-gradient(ellipse at center,  $pink 0%,$pink-grad-dark 100%); 
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$pink', endColorstr='$pink-grad-dark',GradientType=1 ); 
+  .screenshots-wrapper {
+    padding-left: 50px;
+    background: $pink; /* Old browsers */
+    background: -moz-linear-gradient(top,  $black-dark 0%, $black-medium 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$black-dark), color-stop(100%,$black-medium)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  $black-dark 0%,$black-medium 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  $black-dark 0%,$black-medium 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  $black-dark 0%,$black-medium 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  $black-dark 0%,$black-medium 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$black-dark', endColorstr='$black-medium',GradientType=0 ); /* IE6-9 */
 
-    .perforation .circle {
-      background-color: #C43C53;
-    }
+    .screenshots {
+      position: relative;
+      background-color: $pink;
+      text-align: center;
+      width: 100%;
+      margin: 0;
+      z-index: 2;
+      padding-bottom: 140px;
+      background: $pink; 
+      background: -moz-radial-gradient(center, ellipse cover,  $pink 0%, $pink-grad-dark 100%); 
+      background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,$pink), color-stop(100%,$pink-grad-dark)); 
+      background: -webkit-radial-gradient(center, ellipse cover,  $pink 0%,$pink-grad-dark 100%);
+      background: -o-radial-gradient(center, ellipse cover,  $pink 0%,$pink-grad-dark 100%); 
+      background: -ms-radial-gradient(center, ellipse cover,  $pink 0%,$pink-grad-dark 100%); 
+      background: radial-gradient(ellipse at center,  $pink 0%,$pink-grad-dark 100%); 
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$pink', endColorstr='$pink-grad-dark',GradientType=1 ); 
 
-    .wrapper {
-      display: inline-block;
-      margin: 0 auto;
-
-      h1 {
-        text-align: left;
-        margin-top: 110px;
-        margin-bottom: 0px;
-        font-size: 2.3em;
-        font-weight: 300;
+      .perforation .circle {
+        background-color: #C43C53;
       }
 
-      h3 {
-        text-align: left;
-        margin-top: 20px;
-        margin-bottom: 0px;
-        font-size: 1.2em;
-        font-weight: 300;
-      }
+      .wrapper {
+        display: inline-block;
+        margin: 0 auto;
 
-      .mac-window {
-        margin-top: 90px;
-        width: 100%;
-        max-width: 1000px;
-
-        .content img {
-          max-width: 100%;
+        h1 {
+          text-align: left;
+          margin-top: 110px;
+          margin-bottom: 0px;
+          font-weight: 300;
         }
-      }
 
-      .cta {
-        margin-top: 80px;
-        
-        .btn {
-          margin: 6px;
+        h3 {
+          text-align: left;
+          margin-top: 20px;
+          margin-bottom: 0px;
+          font-size: 1.2em;
+          font-weight: 300;
+        }
 
-          &:hover, &:active {
-            @include transition(all 0.2s);
-            background-color: white;
-            color: $pink !important; 
+        .mac-window {
+          margin-top: 90px;
+          width: 100%;
+          max-width: 1000px;
+
+          .content img {
+            max-width: 100%;
           }
         }
 
-        .trial {
-          display: inline-block;
-          vertical-align: bottom;
-          color: #FA96A7;
-          font-size: $font-size-small;
-          width: 10px;
-          white-space: nowrap;
+        .cta {
+          margin-top: 80px;
+          
+          .btn {
+            margin: 6px;
+
+            &:hover, &:active {
+              @include transition(all 0.2s);
+              background-color: white;
+              color: $pink !important; 
+            }
+          }
+
+          .trial {
+            display: inline-block;
+            vertical-align: bottom;
+            color: #FA96A7;
+            font-size: $font-size-small;
+            width: 10px;
+            white-space: nowrap;
+          }
         }
       }
     }
@@ -127,31 +135,67 @@
     color: white;
     background-color: $black-medium;
     z-index: 1;
+    padding-bottom: 150px;
 
-    article {
-      text-align: center;
+    .perforation .circle {
+      background-color: #1A1A1A;
+    }
 
-      .logo-container {
-        margin-left: auto;
-        margin-right: auto;
-        margin-bottom: 30px;
-        width: 167px;
+    h1 {
+      margin-top: 110px;
+    }
 
-        .logo {
-          width: 167px;
-          height: auto;
-          margin: 0 auto;
-          vertical-align: middle;
-          display: table-cell;
-          border-radius: 5px;
+    .feature-circles {
+      margin-top: 120px;
+
+      article {
+        text-align: center;
+
+        .logo-container {
+          position: relative;
+          margin-left: auto;
+          margin-right: auto;
+          margin-bottom: 30px;
+          width: 320px;
+          height: 320px;
+          border-radius: 160px;
+          background-color: $black-dark;
+          padding: 30px;
+          box-sizing: border-box;
+
+          .logo {
+            width: 165px;
+            height: 210px;
+            position: absolute;
+
+            &.one-click-packages {
+              left: 73px;
+              bottom: 45px;
+            }
+
+            &.docker-images {
+              left: 73px;
+              bottom: 5px;
+            }
+
+            &.appliances {
+              left: 77px;
+              bottom: 45px;
+            }
+          }
         }
-      }
 
-      p {
-        margin-left: auto;
-        margin-right: auto;
-        margin-top: 25px;
-        width: 60%;
+        h4 {
+          margin-top: 110px;
+        }
+
+        p {
+          color: $cream-muted;
+          margin-left: auto;
+          margin-right: auto;
+          margin-top: 30px;
+          width: 60%;
+        }
       }
     }
   }
