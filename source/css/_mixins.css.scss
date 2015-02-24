@@ -24,7 +24,7 @@
 
   .result {
     margin-top: 15px;
-    color: $text-cooldown;
+    color: white;
   }
 }
 
@@ -78,16 +78,4 @@
     0% { opacity: 1; }
     50% { opacity: 0; }
     100% { opacity: 0; }
-}
-
-@include keyframes(brown-bg) {
-    0% { background-color: transparent; }
-    50% { background-color: transparent; }
-    100% { background-color: $brown-dark; }
-}
-
-@include keyframes(transparent-bg) {
-    0% { background-color: $brown-dark; }
-    50% { background-color: $brown-dark; }
-    100% { background-color: transparent; }
 }

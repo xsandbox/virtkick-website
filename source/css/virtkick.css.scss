@@ -6,84 +6,64 @@ nav {
   padding-top: 30px;
   margin-bottom: 30px;
 
-  #menu {
-    padding-top: 3px;
-  } 
-
-  @media (max-width: $grid-float-breakpoint-max) {
+  .container-fluid { 
     #menu {
-      font-size: 10px !important;
-      margin-top: 15px !important;
-    }
-  }
-
-  .navbar-toggle {
-    margin-top: 30px;
-    border-color: $medium-light !important;
-    
-    .icon-bar {
-      background-color: $medium-light !important;
-    }
-
-    &:hover, &:focus {
-      border-color: white !important;
-      background-color: white !important;
-
-      .icon-bar {
-        background-color: $medium-light !important;
-      }
-    }
-  }
-
-  .navbar-brand {
-    padding: 3px 0 0 29px;
-    margin: 0;
-
-    .virt-name {
-      padding-left: 3px;
-      padding-top: 22px;
-    }
-  }
-
-  li {
-    a {
-      font-size: 15px;
-      padding-top: 10px !important;
-      padding-bottom: 10px !important;
-      margin: 15px 2px 15px 2px !important;
-    }
-
-    @media (max-width: $grid-float-breakpoint-max) {
-      a {
-        margin: 3px 10px 3px 10px !important;
-      }
-    }
-
-    &.active a {
-      border-radius: 4px;
-      background-color: $medium-light !important;
-      color: white !important;
+      padding-top: 3px;
     } 
-  }
 
-  li.twitter {
-    width: 120px;
-    text-align: center;
+    .navbar-toggle {
+      margin-top: 30px;
+      border-color: white !important;
+      @include transition(all 0.25s);
+      
+      .icon-bar {
+        @include transition(background-color 0.25s);
+        background-color: white !important;
+      }
 
-    iframe {
-      margin-top: 20px;
+      &:hover, &:focus {
+        border-color: $pink !important;
+        background-color: transparent !important;
+
+        .icon-bar {
+          background-color: $pink !important;
+        }
+      }
+    }
+
+    .navbar-brand {
+      padding: 0px 0 0 29px;
+      margin: 0;
+
+      .virt-name {
+        padding-left: 3px;
+        padding-top: 22px;
+      }
+    }
+
+    li {
+      padding-top: 10px;
+
+      a {
+        padding: 15px 30px !important;
+
+        &.button {
+          margin-left: 5px;
+          padding: 15px 50px !important;
+          border: 2px solid white;
+          border-radius: 50px;
+        }
+      }
     }
   }
 }
 
-h1.section {
-  margin-top: 80px;
-  margin-bottom: 60px;
-}
+.wrap-90 {
+  width: 90%;
 
-h2.section {
-  margin-top: 80px;
-  margin-bottom: 60px;
+  @media (max-width: $screen-md-min) {
+    width: 100%;
+  }
 }
 
 ul.rocket {
@@ -100,348 +80,50 @@ ul.rocket {
 }
 
 .tooltip {
-    @include transition(width 1.25s);
+  @include transition(width 1.25s);
+  
   .tooltip-arrow {
-    border-top-color: $medium !important;
+    border-top-color: white !important;
   }
 
   .tooltip-inner {
     border-radius: 4px;
-    background-color: $medium;
+    background-color: white;
     font-size: 1.1em;
     padding: 20px;
   }
 }
 
-.page-top {
-  position: relative;
+#old-browser {
+  text-align: center;
+  z-index: 1001;
 
-  &.cosmic {
+  div {
+    display: inline-block;
+    width: 450px;
+    padding: 20px;
     color: white;
-    background-color: #1A1A1A;
-    background-image: url('/img/cosmic-bg.png');
-
-    h1 {
-      color: white;
-      font-size: 3.3em !important;
-      font-weight: 300;
-    }
-
-    h2 {
-      color: white;
-      font-size: 2.4em !important;
-      font-weight: 100;
-    }
+    background-color: black;
+    margin: 0 auto;
   }
 }
 
-.header {
-  text-align: center;
-  padding-top: 180px;
-  padding-bottom: 330px;
-
-
-  .content {
-    background-repeat: no-repeat;
-    background-position: 6% 68%, right center;
-
-    @media(min-width: $screen-lg) {
-      background-image: url('/img/paperplane.png'), url('/img/sputnik-small.png');
-    }
-    @media(min-width: 1660px) {
-      background-position: 12% 78%, right center;
-      background-image: url('/img/paperplane.png'), url('/img/sputnik.png') !important;
-    }
-  }
-
-  .video {
-    width: 100%;
-    text-align: center;
-    float: left;
-
-    a {
-      color: $text-cooldown;
-    }
-  }
-
-  .cta {
-    .btn {
-      border-radius: 6px;
-      font-weight: bold;
-      padding: 15px 40px;
-      margin: 6px;
-
-      &.btn-primary {
-        &:hover {
-          background-color: darken($medium-light, 5%);
-        }
-      }
-
-      &.btn-yellow {
-        padding-left: 50px;
-        padding-right: 50px;
-
-        &:hover {
-          background-color: darken($yellow, 10%);
-        }
-      }
-    }
-  }
+.clear {
+  clear: both;
 }
 
 .CoverPop-open .popup-cover.shown {
   display: block;
 }
 
-.popup-cover {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 2001;
-  pointer-events:none;
-  background-color: transparent;
-  backface-visibility: hidden;
-
-  &.sticked {
-    position: absolute;
-
-    .close {
-      display: none;
-    }
-  }
-
-  &#indiegogo-popup-cover .popup-wrapper {
-    padding-top: 35px;
-    height: 160px;
-  }
-
-  .popup-wrapper {
-    text-align: left;
-    position: absolute;
-    pointer-events: auto;
-    text-align: center;
-    width: 480px;
-    height: 190px;
-    bottom: 20px;
-    padding: 20px 20px;
-    margin: 10% auto 0;
-    border-radius: 4px;
-    @include animation(transparent-bg, 0.65s, ease-in);
-    background-color: transparent;
-
-    &.left {
-      left: 20px;
-    }
-
-    &.right {
-      right: 20px;
-    }
-
-    .ufo {
-      position: absolute;
-      z-index: 2;
-      top: -84px;
-      left: 175px;
-      @include animation(fade-out, 0.6s, ease-in);
-      opacity: 0;
-
-      img {
-        width: 117px;
-        height: 142px;
-      }
-    }
-
-    .sputnik {
-      position: absolute;
-      z-index: 2;
-      top: -80px;
-      left: 215px;
-      @include animation(fade-out, 0.6s, ease-in);
-      opacity: 0;
-
-      img {
-        width: 125px;
-        height: 103px;
-      }
-    }
-
-    &.brown {
-      @include animation(brown-bg, 0.65s, ease-in);
-      background-color: $brown-dark;
-      
-      .ufo, .sputnik {
-        @include animation(fade-in, 0.6s, ease-in);
-        opacity: 1;
-      }
-    }
-
-    .popup-content {
-      opacity: 0;
-      @include animation(fade-out, 0.65s, ease-in);
-
-      &.shown {
-        opacity: 1;
-        @include animation(fade-in, 0.85s, ease-in);
-      }
-
-      .popup-header {
-        position: relative;
-        z-index: 3;
-        color: white;
-        font-size: 18px;
-        font-weight: bold;
-        padding-bottom: 10px;
-        border-bottom: 2px solid lighten($brown-dark, 5%);
-
-        .fa {
-          color: $medium-light;
-          margin-right: 10px;
-        }
-
-        .close {
-          margin-top: -8px;
-          font-size: 40px !important;
-          opacity: 1 !important;
-          text-shadow: none !important;
-          color: $medium-light;
-        }
-
-        .title {
-          margin-bottom: 0px;
-        }
-      }
-
-      .popup {
-        color: white;
-        padding-top: 10px;
-
-        .form-group {
-          .form-control {
-            display: inline-block;
-          }
-
-          input {
-            margin-left: 5px;
-            margin-right: 5px;
-          }
-          
-          input.newsletter-email {
-            width: 250px;
-          }
-          
-          input.btn {
-            background-color: $igg-pink;
-            padding: 8px 20px;
-          }
-        }
-      }
-    }
-  }
-}
-
-.features {
-  margin-top: 30px;
-  margin-bottom: 100px;
-
-  article {
-    text-align: center;
-
-    .logo-container {
-      margin-left: auto;
-      margin-right: auto;
-      margin-bottom: 30px;
-      width: 167px;
-
-      .logo {
-        width: 167px;
-        height: auto;
-        margin: 0 auto;
-        vertical-align: middle;
-        display: table-cell;
-        border-radius: 5px;
-      }
-    }
-
-    p {
-      margin-left: auto;
-      margin-right: auto;
-      margin-top: 25px;
-      width: 80%;
-    }
-  }
-}
-
-.sponsors-container {
-  background-color: #F7F7F7;
-}
-
 footer {
-  text-align: center;
-  color: $burgund-text;
-
-  .sputnik {
-    position: relative;
-    top: 72px;
-    margin-right: -50px;
-  }
-
-  .updates {
-    margin-bottom: 0px;
-    padding-bottom: 30px;
-    @include newsletter(40px, 12px);
-    background-color: $burgund-medium;
-
-    h3 {
-      padding-top: 70px;
-      padding-bottom: 10px;
-
-      .first {
-        color: white;
-      }
-      .second {
-        color: $medium-light;
-      }
-    }
-
-    .form-group {
-      color: white;
-      @include placeholder-color(lighten($burgund-text, 5%));
-
-      .newsletter-email {
-        color: white;
-        background-color: $burgund-light;
-        height: 50px;
-        font-size: 16px;
-        text-transform: none;
-      }
-
-      .btn {
-        padding-left: 40px;
-        padding-right: 40px;
-        height: 50px;
-        font-size: 16px;
-      }
-    }
-
-    .result {
-      color: $burgund-text;
-      font-size: 0.9em;
-    }
-
-    .available-info {
-      margin-top: 12px;
-      font-size: 0.9em;
-    }
-  }
+  padding-top: 30px;
+  background-color: $black-medium;
 
   .footer-nav {
     padding-top: 20px;
     font-size: 14px;
-    background-color: $burgund-dark;
-    color: $burgund-text;
+    color: white;
 
     .logo {
       vertical-align: top;
@@ -466,7 +148,7 @@ footer {
       a {
         margin-top: 2px;
         display: block;
-        color: $burgund-text;
+        color: white;
 
         .fa {
           padding-right: 7px;
@@ -482,96 +164,16 @@ footer {
 
   .copyright {
     font-size: 14px;
-    background-color: $burgund-dark;
-    color: lighten($burgund-text, 25%);
+    color: lighten(white, 25%);
     padding: 35px 10px 35px 10px;
 
     a:hover {
-      color: $medium-light;
+      color: white;
     }
 
     .trademarks {
       font-size: 12px;
       opacity: 0.5;
-    }
-  }
-}
-
-#old-browser {
-  text-align: center;
-  z-index: 1001;
-
-  div {
-    display: inline-block;
-    width: 450px;
-    padding: 20px;
-    background-color: #ff8c1a;
-    margin: 0 auto;
-  }
-}
-
-.controls {
-  text-align: right;
-  padding-top: 7px;
-  padding-right: 15px;
-
-  i {
-    color: #FFD285;
-    padding-right: 2px;
-  }
-  i + i {
-    color: #ED3956;
-  }
-  i + i + i {
-    color: #A73E5C;
-  }
-}
-
-.focus {
-  color: #673655;
-}
-
-.clear {
-  clear: both;
-}
-
-.sponsors {
-  margin-top: 40px;
-
-  h3 {
-    margin-top: 30px;
-    margin-bottom: 70px;
-    color: #698986;
-
-    .focus {
-      color: #74586A;
-    }
-  }
-
-  &.gold {
-    h3 {
-      color: darken($golden, 10%);
-    }
-  }
-
-  .sponsor {
-    margin-bottom: 20px;
-    .controls {
-      border-top-left-radius: 4px;
-      border-top-right-radius: 4px;
-      background-color: #F5606B;
-      font-size: 10px;
-      padding-bottom: 4px;
-    }
-
-    .content {
-      border-bottom-left-radius: 4px;
-      border-bottom-right-radius: 4px;
-      background-color: #ffffff;
-      text-align: center;
-      width: 100%;
-      padding-top: 40px;
-      padding-bottom: 50px;
     }
   }
 }

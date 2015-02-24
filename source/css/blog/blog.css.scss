@@ -22,12 +22,12 @@
     h2 {
       margin-top: 10px;
       font-size: 1.2em;
-      color: $violet-light;
+      color: white;
     }
   }
 
   .odd {
-    background-color: #fCf8f9;
+    background-color: $black-dark;
   }
 
   .blog {
@@ -45,10 +45,10 @@
 
         &.article-author {
           text-align: center;
-          color: $violet-light;
+          color: white;
 
           .author-name {
-            color: $medium-light;
+            color: white;
           }
         }
 
@@ -83,7 +83,7 @@
       h1 {
         font-size: 35px;
         margin-top: 90px;
-        color: $violet-light;
+        color: white;
       }
     }
 
@@ -126,7 +126,7 @@
 
     .author {
       margin-bottom: 20px;
-      color: $violet-light;
+      color: white;
 
       img.avatar {
         border-radius: 4px;
@@ -140,7 +140,7 @@
         padding-top: 13px;
         .name {
          font-size: 1.2em;
-          color: $medium-light;
+          color: white;
           a {
             padding-left: 7px;
           }

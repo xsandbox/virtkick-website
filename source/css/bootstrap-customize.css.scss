@@ -1,45 +1,32 @@
-$bg: #ffffff;
-$dark: #581935;
-$medium: #C7233F;
-$medium-light: #D44D5D;
-$light: #FFD285;
-$intense: #ec4863;
-$violet-menu: #60545e;
-$violet-light: #ba94af;
-$brown-dark: #3b1e28;
-$igg-pink: #e8345d;
-$yellow: #ffab29;
-$violet-text: #5c365a;
-$pink-bg-light: #f7ebed;
-$pink-bg-lighter: #fcf7f8;
-$burgund-light: #4a2632;
-$burgund-medium: #3b1e28;
-$burgund-dark: #301921;
-$burgund-text: #94868C;
-$golden: #ffab29;
-$silver: #73b5c7;
-$bronze: #b37a5f;
+$pink: #EC4863;
+$pink-light: #EF5272;
+$black-dark: #1A1A1A;
+$black-medium: #1F1F1F;
+$gray: #D2D2D2;
+$cream: #DCD9D0;
+$cream-muted: #BFBCB5;
+$red: #E96161;
+$yellow: #E9B261;
+$green: #82BB69;
 
 // Bootstrap overrides, lookup the names at http://getbootstrap.com/customize/
-$brand-primary: $medium-light;
-$body-bg: $bg;
+$brand-primary: $pink;
+$body-bg: $black-medium;
 $grid-columns: 12;
 $grid-float-breakpoint: 1024px;
-$headings-color: $medium-light;
-$input-border-focus: $medium-light;
-$progress-bg: #4f2843;
-$progress-bar-bg: #ffab29;
-$tooltip-bg: $medium;
+$headings-color: white;
+$input-border-focus: white;
+$tooltip-bg: white;
 $tooltip-arrow-width: 8px;
 
-$text-color:            $violet-menu !default;
+$text-color:            white !default;
 
 $font-family-sans-serif: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif !default;
 $font-family-serif:       Georgia, 'Times New Roman', Times, serif !default;
 $font-family-monospace:   Menlo, Monaco, Consolas, 'Courier New', monospace !default;
 $font-family-base:        $font-family-sans-serif !default;
 
-$font-size-base:          16px !default;
+$font-size-base:          17px !default;
 $font-size-large:         ceil(($font-size-base * 1.25)) !default; // ~20px
 $font-size-small:         ceil(($font-size-base * 0.85)) !default; // ~14px
 
@@ -50,29 +37,30 @@ $font-size-h4:            ceil(($font-size-base * 1.25)) !default; // ~20px
 $font-size-h5:            $font-size-base !default; // 16px
 $font-size-h6:            ceil(($font-size-base * 0.85)) !default; // ~14px
 
-$line-height-base:        1.58 !default; 
+$line-height-base:        1.58 !default;
 $line-height-computed:    floor(($font-size-base * $line-height-base)) !default; // ~20px
 
 $headings-font-weight:    400 !default;
 $headings-line-height:    1.1 !default;
 
+p {
+  font-weight: 300;
+}
+
 h1 {
-  font-weight: 400;
-  letter-spacing: -1.4px;
+  font-weight: 300;
 }
 
 h2 {
-  font-weight: 400;
-  letter-spacing: -0.8px;
+  font-weight: 300;
 }
 
 h3 {
-  font-weight: 400;
-  letter-spacing: -0.5px;
+  font-weight: 300;
 }
 
 h5, h6 {
-  font-weight: bold !important;
+  font-weight: 700 !important;
 }
 
 .btn {
@@ -80,19 +68,19 @@ h5, h6 {
   outline: none !important;
 }
 
-.btn-yellow {
-  color: $violet-text !important;
-  background-color: $yellow;
-  border-color: $yellow;
+.btn-white {
+  color: white !important;
+  background-color: black;
+  border-color: white;
 }
 
 .form-control {
   border: 0 !important;
 }
 
-$navbar-default-border: lighten($dark, 5%);
+$navbar-default-border: white;
 $navbar-default-bg: transparent;
-$navbar-default-color: $bg;
+$navbar-default-color: white;
 $navbar-default-link-color: $navbar-default-color;
 $navbar-default-link-active-bg: transparent;
 $navbar-default-link-active-color: white;
@@ -109,5 +97,3 @@ $nav-link-hover-bg: transparent;
 }
 
 @import "bootstrap";
-
-$text-cooldown: #F5A3B2;

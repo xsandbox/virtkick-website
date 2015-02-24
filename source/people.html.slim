@@ -1,0 +1,59 @@
+---
+title: VirtKick Community
+contributors:
+- name: Damian Nowak
+  email: nowaker@virtkick.io
+  nickname: Nowaker
+  github: https://github.com/Nowaker
+  text: Nowaker is the mastermind of VirtKick and leads the project.
+    He's responsible for the webapp and the backend.
+- name: Damian Kaczmarek
+  email: rush@virtkick.io
+  nickname: Rush
+  github: https://github.com/Rush
+  text: Rush complements the team with his C++ and node.js superpowers.
+    He hacks low level things like C bindings, TLS and websockets.
+- name: Mateusz Kwiatkowski
+  email: kwiat@virtkick.io
+  nickname: kwiat
+  text: Kwiat is the devops and takes care of the infrastructure.
+    He's the only one to know how networks really work.
+- name: Wojtek Jodel
+  email: m13@virtkick.io
+  nickname: m13
+  github: https://github.com/malps13
+  text: Wojtek is the graphics designer. All VirtKick artwork are crafted by him.
+    He makes sure the UI is simple, usable and beautiful.
+- name: Mirek Wozniak
+  email: wozmir@virtkick.io
+  nickname: wozmir
+  github: https://github.com/wozmir
+  text: Wozmir is the only non-tech guy in this circle.
+    He turns our gibberish talk into English so others can understand.
+---
+#page-community
+  = partial 'layouts/nav', locals: {logo: 'color'}
+
+  .container-fluid.wrap-90
+    .row
+      .col-md-12
+        h1 You win, we win.
+        p Virtkick makes cloud easy for your clients with the lightweight and user-friendly approach. Whether you're a small data centre, a game hosting company or a huge enterprise, Virtkick is easy to plug-in and make the most of your hardware without extra costs. 
+        p We're a Techstars-backed company with strong background in networking and hosting management. Here's a bit more about us:
+
+  .container-fluid.wrap-90
+    .contributors.row
+      - current_page.data.contributors.each do |contributor|
+        article.col-md-6
+          .logo-container
+            .logo
+              = gravatar_for contributor.email, :size => 120
+          h3
+            = contributor.name
+            | &nbsp;&nbsp;
+            - unless contributor.md5
+              = link_to '<i class="fa fa-envelope"></i>', "mailto:#{contributor.email}", class: 'email'
+              | &nbsp;
+            = link_to '<i class="fa fa-github"></i>', contributor.github if contributor.github
+          p = contributor.text
+

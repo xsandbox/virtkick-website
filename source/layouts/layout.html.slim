@@ -21,16 +21,57 @@ html
     #page
       = yield
       footer
-        = partial 'layouts/footer_nav'
-        = partial 'layouts/newsletter'
-        .copyright.col-md-12
-          a href='https://www.virtkick.io/'  VirtKick
-          |  &copy; 2014 StratusHost Damian Nowak
-          br
-          span.trademarks
-            | Marks and names mentioned herein may be trademarks of their respective companies.
-            = succeed '.' do
-              a href='/legal.html'  Read more
+        .container-fluid.wrap-90
+          .footer-nav.hidden-xs.hidden-sm
+            .logo
+              a href="/"
+                img src="/img/logo/virtkick-logo-pixelart-32.png" class="pix"
+                img src="/img/virtkick-name-white.png" class="virt-name"
+            .link-group 
+              a.main href="/"
+                | Home
+            .link-group 
+              a.main href="/features.html"
+                | Features
+            .link-group
+              a.main href="/people.html"
+                | People
+            .link-group
+              a.main href="/blog/"
+                | Blog
+            .link-group
+              a.main href="/contact.html"
+                | Contact
+            .link-group
+              a.main href="https://alpha.virtkick.io/" target="_blank"
+                | Demo
+          .social-features
+            .row
+              .col-offset-md-3.col-md-3
+                p Monthly newsletter
+                = partial 'layouts/newsletter'
+              .col-md-3
+                p Social media
+                .social  
+                  a href="https://github.com/virtkick/"
+                    span.fa.fa-github
+                  a href="https://twitter.com/virtkick"
+                    span.fa.fa-twitter
+                  a href="https://www.facebook.com/virtkick"
+                    span.fa.fa-facebook-square
+                  a href="https://plus.google.com/+VirtKick_io/"
+                    span.fa.fa-google-plus-square
+              .col-md-3
+                img src='/img/techstars.png'
+                p A Techstars-backed company
+          .copyright
+            a href='https://www.virtkick.com/'  VirtKick
+            |  &copy; 2014 StratusHost Damian Nowak
+            br
+            span.trademarks
+              | Marks and names mentioned herein may be trademarks of their respective companies. 
+              = succeed '.' do
+                a href='/legal.html' Read more
 
       script src='/js/virtkick.js'
       javascript:

@@ -1,0 +1,46 @@
+---
+main:
+- header: App-like customer interface
+  image: interface
+  text: Starting VMs in Virtkick is like taking a photo. Five clicks and you've got what you need.
+- header: Tidy admin panel
+  image: interface
+  text: Run your servers without tech expertise. Just plug and play.
+- header: Hands-free billing and invoicing
+  image: interface
+  text: Billing is built-in, invoices generate automatically. Just keep the machines running!
+features:
+  - Payments
+  - Monitoring
+  - Provisioning
+  - Responsive version
+  - Support
+  - Add-on marketplace
+  - Fraud prevention
+  - Appliances
+---
+#page-features
+  = partial 'layouts/nav', locals: {logo: 'color'}
+  
+  .container-fluid.wrap-90.main-features
+    .row
+      .col-md-12
+        h1 Virtkick's got it all. And it's still simple.
+        h2 Essential features wrapped up in beautiful user interface.
+    .row
+      - current_page.data.main.each do |feature|
+        .col-md-4
+          .logo-container
+            .logo
+              = tag :img, src: "/img/#{feature.image}.png"
+          h4 = feature.header
+          p = feature.text
+  
+  .container-fluid.wrap-90.features
+    .row
+      .col-md-12
+        h2 Detailed list of features
+    .row
+      - current_page.data.features.each do |feature|
+        .col-md-4
+          p = feature
