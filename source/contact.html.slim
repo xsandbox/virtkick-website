@@ -1,10 +1,10 @@
 #page-contact
-  = partial 'layouts/nav', locals: {logo: 'color'}
-  .container-fluid.wrap-90
-    .row
-      .col-md-12
-        h1 Contact
-        p Let's make the most of your machines!
-        p 
-          | Drop us a line: 
-          a href='mailto:team@virtkick.com' team@virtkick.com
+  .gradient
+    = partial 'layouts/nav', locals: {logo: 'color'}
+    .container-fluid.wrap-90.antenna-wrapper
+      .row
+        .col-md-12
+          h1 
+            | Drop us a line: 
+            a.highlight href='mailto:team@virtkick.com' team@virtkick.com
+          h3 Let's make the most of your machines!
