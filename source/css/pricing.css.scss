@@ -18,4 +18,69 @@
   .gradient {
     @include black-gradient();
   }
+
+  .newsletter-section {
+    color: white;
+    background-color: $black-dark;
+    padding-top: 100px;
+    padding-bottom: 100px;
+
+    h1 {
+      font-size: 1.8em;
+      margin-top: 0;
+    }
+
+    .newsletter {
+      margin: 0 auto;
+      text-align: center;
+
+      .form-inline {
+        margin-top: 60px;
+
+        input.newsletter-email {
+          text-align: center;
+          min-width: 430px;
+          border-radius: 33px;
+          height: 66px;
+          line-height: 66px;
+
+          color: $black-medium;
+        }
+
+        input.btn {
+          border-radius: 33px !important;
+          padding: 20px 50px;
+          margin-left: 15px;
+        }
+      }
+    }
+  }
+
+  .wizard {
+    padding-top: 80px;
+    padding-bottom: 100px;
+
+    @media (min-width: 768px) {
+      .step {
+        padding-left: 50px;
+        padding-right: 50px;
+        text-align: center;
+
+        .icon-wrapper {
+          padding: 30px;
+          display: inline-block;
+          border: 2px solid $pink;
+          border-radius: 60px;
+          margin-bottom: 30px;
+
+          .fa {
+            color: $pink;
+            font-size: 3em;
+            display: block;
+            margin: 0 auto;
+          }
+        }
+      }
+    }
+  }
 }
