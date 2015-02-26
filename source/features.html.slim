@@ -4,43 +4,89 @@ main:
   image: interface
   text: Starting VMs in Virtkick is like taking a photo. Five clicks and you've got what you need.
 - header: Tidy admin panel
-  image: interface
+  image: plug-and-play
   text: Run your servers without tech expertise. Just plug and play.
 - header: Hands-free billing and invoicing
-  image: interface
+  image: payments
   text: Billing is built-in, invoices generate automatically. Just keep the machines running!
 features:
-  - Payments
-  - Monitoring
-  - Provisioning
-  - Responsive version
-  - Support
-  - Add-on marketplace
-  - Fraud prevention
-  - Appliances
+  - name: Payments
+    icon: payments
+  - name: Responsive version
+    icon: responsive
+  - name: DNS
+    icon: dns
+  - name: Monitoring
+    icon: monitoring
+  - name: Support integration
+    icon: support
+  - name: Fraud prevention
+    icon: dns
+  - name: Provisioning
+    icon: dns
+  - name: Add-on marketplace
+    icon: dns
+  - name: Appliances
+    icon: appliances
 ---
 #page-features
-  = partial 'layouts/nav', locals: {logo: 'color'}
+  .gradient
+    = partial 'layouts/nav', locals: {logo: 'color'}
+    
+    .container.main-features-header
+      .row
+        .col-md-12
+          h1 Virtkick's got it all. And it's still simple.
+          h3 Essential features wrapped up in beautiful user interface.
+    .container.main-features
+      .row.list
+        .col-md-6.left
+          .pic
+            = tag :img, src: "/img/#{current_page.data.main[0].image}.png"
+        .col-md-6.right
+          .desc
+            h4 = current_page.data.main[0].header
+            p = current_page.data.main[0].text
+      .row.list
+        .col-md-6.left
+          .desc
+            h4 = current_page.data.main[1].header
+            p = current_page.data.main[1].text
+        .col-md-6.right
+          .pic
+            = tag :img, src: "/img/#{current_page.data.main[1].image}.png"
+      .row.list
+        .col-md-6.left
+          .pic
+            = tag :img, src: "/img/#{current_page.data.main[2].image}.png"
+        .col-md-6.right
+          .desc
+            h4 = current_page.data.main[2].header
+            p = current_page.data.main[2].text
   
-  .container-fluid.wrap-90.main-features
-    .row
-      .col-md-12
-        h1 Virtkick's got it all. And it's still simple.
-        h2 Essential features wrapped up in beautiful user interface.
-    .row
-      - current_page.data.main.each do |feature|
-        .col-md-4
-          .logo-container
-            .logo
-              = tag :img, src: "/img/#{feature.image}.png"
-          h4 = feature.header
-          p = feature.text
+  .features-wrapper
+    .container-fluid.wrap-70.features
+      .row
+        .col-md-12
+          h1 Detailed list of features
+      .row.list
+        - current_page.data.features.each do |feature|
+          .col-md-4.feature
+            img src="/img/features/feature-#{feature.icon}.png"
+            p = feature.name
+
+  .try-it-now-wrapper
+    .container-fluid.try-it-now
+      .perforation
+        .circle
+        .circle
+        .circle
+      .row
+        .col-md-12
+          .wrapper
+            h1 Sounds good? Give Virtkick a try.
+            .cta
+              a.btn.huge.btn-white-border.ga-alpha href='https://alpha.virtkick.io/' target='_blank' Try the Demo
+              span.trial.hidden No need for credit card, trial is on the house!
+    .clear
   
-  .container-fluid.wrap-90.features
-    .row
-      .col-md-12
-        h2 Detailed list of features
-    .row
-      - current_page.data.features.each do |feature|
-        .col-md-4
-          p = feature
