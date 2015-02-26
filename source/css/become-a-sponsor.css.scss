@@ -15,7 +15,7 @@
       font-size: 20px;
       margin-top: 65px;
       margin-bottom: 30px;
-      color: lighten($violet-text, 5%);
+      color: lighten(white, 5%);
     }
 
     .intro {
@@ -50,46 +50,46 @@
 
   .gold {
     h2 {
-      color: $violet-text;
+      color: white;
 
       span {
-        color: darken($golden, 10%);
+        color: darken(white, 10%);
       }
     }
 
     .btn.btn-primary {
       color: white;
-      background-color: darken($golden, 10%);
+      background-color: darken(white, 10%);
     }
   }
 
   .silver {
     h2 {
-      color: $violet-text;
+      color: white;
 
       span {
-        color: darken($silver, 10%);
+        color: darken(white, 10%);
       }
     }
 
     .btn.btn-primary {
       color: white;
-      background-color: darken($silver, 10%);
+      background-color: darken(white, 10%);
     }
   }
 
   .bronze {
     h2 {
-      color: $violet-text;
+      color: white;
 
       span {
-        color: $bronze;
+        color: white;
       }
     }
 
     .btn.btn-primary {
       color: white;
-      background-color: darken($bronze, 10%);
+      background-color: darken(white, 10%);
     }
   }
 }

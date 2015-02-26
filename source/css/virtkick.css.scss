@@ -88,6 +88,10 @@ nav {
     li {
       padding-top: 10px;
 
+      &.active a {
+        border-bottom: 2px solid white;
+      }
+
       a {
         padding: 17px 30px !important;
         color: white !important;
@@ -225,7 +229,6 @@ ul.rocket {
   margin: 0px;
   
   li {
-    background-image: url('/img/li-rocket.png');
     background-repeat: no-repeat;
     background-position: 0px center;
     padding-left: 28px;
