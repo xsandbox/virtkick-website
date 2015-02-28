@@ -2,13 +2,19 @@
 main:
 - header: App-like customer interface
   image: interface
-  text: Starting VMs in Virtkick is like taking a photo. Five clicks and you've got what you need.
+  text: 
+  - Starting VMs in Virtkick is like taking a photo. 
+  - Five clicks and you've got what you need.
 - header: Tidy admin panel
   image: plug-and-play
-  text: Run your servers without tech expertise. Just plug and play.
+  text: 
+  - Run your servers without tech expertise. 
+  - Just plug and play.
 - header: Hands-free billing and invoicing
   image: payments
-  text: Billing is built-in, invoices generate automatically. Just keep the machines running!
+  text: 
+  - Billing is built-in, invoices generate automatically.
+  - Just keep the machines running!
 features:
   - name: Payments
     icon: payments
@@ -46,12 +52,14 @@ features:
         .col-md-6.right
           .desc
             h4 = current_page.data.main[0].header
-            p = current_page.data.main[0].text
+            - current_page.data.main[0].text.each do |text|
+              p = text
       .row.list
         .col-md-6.left
           .desc
             h4 = current_page.data.main[1].header
-            p = current_page.data.main[1].text
+            - current_page.data.main[1].text.each do |text|
+              p = text
         .col-md-6.right
           .pic
             = tag :img, src: "/img/#{current_page.data.main[1].image}.png"
@@ -62,7 +70,8 @@ features:
         .col-md-6.right
           .desc
             h4 = current_page.data.main[2].header
-            p = current_page.data.main[2].text
+            - current_page.data.main[2].text.each do |text|
+              p = text
   
   .features-wrapper
     .container-fluid.wrap-70.features
@@ -77,7 +86,7 @@ features:
 
   .try-it-now-wrapper
     .container-fluid.try-it-now
-      .perforation
+      .perforation.hidden
         .circle
         .circle
         .circle
@@ -86,7 +95,7 @@ features:
           .wrapper
             h1 Sounds good? Give Virtkick a try.
             .cta
-              a.btn.huge.btn-white-border.ga-alpha href='https://alpha.virtkick.io/' target='_blank' Try the Demo
+              a.btn.huge.btn-white-border.ga-demo href='https://demo.virtkick.com/' target='_blank' Try the Demo
               span.trial.hidden No need for credit card, trial is on the house!
     .clear
   

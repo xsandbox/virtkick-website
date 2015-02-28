@@ -5,30 +5,40 @@ contributors:
   email: nowaker@virtkick.io
   nickname: Nowaker
   github: https://github.com/Nowaker
-  text: "Virtkick's mastermind, Minecraft & Bluegrass music fan. Likes cats and motorcycles."
+  text: 
+  - Virtkick's mastermind, Minecraft & Bluegrass music fan.
+  - Likes cats and motorcycles.
 - name: Damian Kaczmarek
   position: CTO
   email: rush@virtkick.io
   nickname: Rush
   github: https://github.com/Rush
-  text: "Passionate sailor, Ironman and all-round coder. Rush makes sure our computers beep."
+  text: 
+  - Passionate sailor, Ironman and all-round coder. 
+  - Rush makes sure our computers beep.
 - name: Mirek Wozniak
   position: CMO
   email: wozmir@virtkick.io
   nickname: wozmir
   github: https://github.com/wozmir
-  text: "Mirek connects the nerds with the non-nerds. A musician wannabe, history buff and gamer."
+  text: 
+  - Mirek connects the nerds with the non-nerds. 
+  - A musician wannabe, history buff and gamer.
 - name: Wojtek Jodel
   position: Design
   email: m13@virtkick.io
   nickname: m13
   github: https://github.com/malps13
-  text: "Globtrotter, bassist and court designer. We never know where he's currently at to be honest. "
+  text: 
+  - Globtrotter, bassist and court designer.
+  - We never know where he's currently at, to be honest.
 - name: Mateusz Kwiatkowski
   position: DevOps
   email: kwiat@virtkick.io
   nickname: kwiat
-  text: "Kwiat is the devops and takes care of the infrastructure. He's the only one to know how networks really work."
+  text: 
+  - Kwiat is the devops and takes care of the infrastructure. 
+  - He's the only one to know how networks really work.
 donors: 
 - name: Jack Davies
 - name: James Arici
@@ -61,7 +71,8 @@ donors:
                 = link_to '<i class="fa fa-github"></i>', contributor.github if contributor.github
               h4.title = contributor.position
             .desc
-              p = contributor.text
+              - contributor.text.each do |text|
+                p = text
   
   .black-dark
     .container.narrow.open-source
