@@ -82,57 +82,20 @@ donors:
     .container
       h2 Our <span class="focus">Sponsors</span>
 
-      .gold
-        .color
-        .row
-          .title.col-md-12
-            h3 Gold <span class="focus">Sponsors</span>
-        .row
-          .col-md-2
-          - (1..2).each do |index|
-            - classes = 'hidden-xs' if index != 1
-            .sponsor class="col-md-4 #{classes}"
-              .controls
-                i.fa.fa-circle
-                i.fa.fa-circle
-                i.fa.fa-circle
-              .content
-                a href='/become-a-sponsor.html'
-                  | Become<br/> a Gold Sponsor
-
       .silver
         .color
         .row
           .title.col-md-12
-            h3 Silver <span class="focus">Sponsors</span>
+            h3 Software <span class="focus">Sponsors</span>
         .row
-          - (1..4).each do |index|
-            - classes = 'hidden-xs' if index != 1
-            .sponsor class="col-md-3 #{classes}"
-              .controls
-                i.fa.fa-circle
-                i.fa.fa-circle
-                i.fa.fa-circle
-              .content
-                a href='/become-a-sponsor.html'
-                  | Become<br/> a Silver Sponsor
-
-      .bronze
-        .color
-        .row
-          .title.col-md-12
-            h3 Bronze <span class="focus">Sponsors</span>
-        .row 
-          - (1..6).each do |index|
-            - classes = 'hidden-xs' if index != 1
-            .sponsor class="col-md-2 #{classes}"
-              .controls
-                i.fa.fa-circle
-                i.fa.fa-circle
-                i.fa.fa-circle
-              .content
-                a href='/become-a-sponsor.html'
-                  | Become<br/> a Bronze Sponsor
+          .sponsor class='col-md-3'
+            .controls
+              i.fa.fa-circle
+              i.fa.fa-circle
+              i.fa.fa-circle
+            .content
+              a href='/become-a-sponsor.html'
+                img src='https://www.jetbrains.com/ruby/docs/logo_rubymine.png'
 
   .donors.container
     h2
