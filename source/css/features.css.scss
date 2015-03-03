@@ -24,8 +24,8 @@
     padding-bottom: 120px;
 
     .list {
-      padding-top: 50px;
-      padding-bottom: 50px;
+      padding-top: 80px;
+      padding-bottom: 80px;
 
       .desc {
         display: inline-block;
@@ -46,20 +46,12 @@
 
       .left {
         text-align: right;
-        padding-right: 55px;
-
-        .desc {
-          padding-right: 35px;
-        }
+        padding-right: 90px;
       }
 
       .right {
         text-align: left;
-        padding-left: 70px;
-
-        .desc {
-          padding-left: 20px;
-        }
+        padding-left: 90px;
       }
     }
   }
