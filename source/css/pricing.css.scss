@@ -39,7 +39,9 @@
 
         input.newsletter-email {
           text-align: center;
-          min-width: 430px;
+          @media(min-width: $screen-sm) {
+            min-width: 430px;
+          }
           border-radius: 33px;
           height: 66px;
           line-height: 66px;

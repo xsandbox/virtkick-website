@@ -13,16 +13,16 @@
     background-image: url('/img/cosmic-bg.png');
 
     h1 {
-      margin-top: 0px;
-      margin-bottom: 0px;
+      margin-top: 0em;
+      margin-bottom: 0em;
       color: white;
       font-size: 3.1em !important;
       font-weight: 300;
     }
 
     h2 {
-      margin-top: 20px;
-      margin-bottom: 0px;
+      margin-top: 0.57em;
+      margin-bottom: 0em;
       color: white;
       font-size: 2.1em !important;
       font-weight: 100;
@@ -30,11 +30,17 @@
 
     .header {
       text-align: center;
-      padding-top: 200px;
-      padding-bottom: 280px;
+      padding-left: 1em;
+      padding-right: 1em;
+      padding-top: 1em;
+      padding-bottom: 4em;
+      @media (min-width: $grid-float-breakpoint) {
+        padding-top: 12em;
+        padding-bottom: 12em;
+      }
 
       .cta {
-        margin-top: 40px;
+        margin-top: 2.5em;
         .btn {
           margin: 6px;
         }
@@ -43,7 +49,7 @@
   }
 
   .screenshots-wrapper {
-    ppadding-left: 50px;
+    //padding-left: 50px;
     background: $pink; /* Old browsers */
     background: -moz-linear-gradient(top,  $black-dark 0%, $black-medium 100%); /* FF3.6+ */
     background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$black-dark), color-stop(100%,$black-medium)); /* Chrome,Safari4+ */
@@ -60,7 +66,10 @@
       width: 100%;
       margin: 0;
       z-index: 2;
-      padding-bottom: 140px;
+      padding-bottom: 4em;
+      @media (min-width: $grid-float-breakpoint) {
+        padding-bottom: 8em;
+      }
       background: $pink; 
       background: -moz-radial-gradient(center, ellipse cover,  $pink 0%, $pink-grad-dark 100%); 
       background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,$pink), color-stop(100%,$pink-grad-dark)); 
@@ -80,21 +89,27 @@
 
         h1 {
           text-align: left;
-          margin-top: 110px;
-          margin-bottom: 0px;
+          margin-top: 1.8em;
+          @media (min-width: $grid-float-breakpoint) {
+            margin-top: 2.9em;
+          }
+          margin-bottom: 0em;
           font-weight: 300;
         }
 
         h3 {
           text-align: left;
-          margin-top: 20px;
-          margin-bottom: 0px;
+          margin-top: 1em;
+          margin-bottom: 0em;
           font-size: 1.2em;
           font-weight: 300;
         }
 
         .mac-window {
-          margin-top: 90px;
+          margin-top: 3em;
+          @media (min-width: $grid-float-breakpoint) {
+            margin-top: 5.25em;
+          }
           width: 100%;
           max-width: 1000px;
 
@@ -104,7 +119,10 @@
         }
 
         .cta {
-          margin-top: 80px;
+          margin-top: 2em;
+          @media (min-width: $grid-float-breakpoint) {
+            margin-top: 4.75em;
+          }
           
           .btn {
             margin: 6px;
@@ -134,18 +152,27 @@
     color: white;
     background-color: $black-medium;
     z-index: 1;
-    padding-bottom: 150px;
+    padding-bottom: 3em;
+    @media (min-width: $grid-float-breakpoint) {
+      padding-bottom: 9em;
+    }
 
     .perforation .circle {
       background-color: #1A1A1A;
     }
 
     h1 {
-      margin-top: 110px;
+      margin-top: 2em;
+      @media (min-width: $grid-float-breakpoint) {
+        margin-top: 2.8em;
+      }
     }
 
     .feature-circles {
-      margin-top: 120px;
+      margin-top: 3em;
+      @media (min-width: $grid-float-breakpoint) {
+        margin-top: 7em;
+      }
 
       article {
         text-align: center;
@@ -154,17 +181,25 @@
           position: relative;
           margin-left: auto;
           margin-right: auto;
-          margin-bottom: 30px;
+          margin-bottom: 1.8em;
+          padding: 1.8em;
+          @media (min-width: $grid-float-breakpoint) {
+            margin-bottom: 1.8em;
+            padding: 1.8em;
+          }
+          max-width: 100%;
+          max-height: 100%;
           width: 320px;
           height: 320px;
           border-radius: 160px;
           background-color: $black-dark;
-          padding: 30px;
           box-sizing: border-box;
 
           .logo {
             width: 165px;
             height: 210px;
+            max-width: 100%;
+            max-height: 100%;
             position: absolute;
 
             &.one-click-packages {
@@ -185,15 +220,25 @@
         }
 
         h4 {
-          margin-top: 110px;
+          margin-top: 2em;
+          @media (min-width: $screen-lg) {
+            margin-top: 5em;
+          }
         }
 
         p {
           color: $cream-muted;
           margin-left: auto;
           margin-right: auto;
-          margin-top: 30px;
-          width: 60%;
+          margin-top: 1em;
+          margin-bottom: 3em;
+          width: 100%;
+          @media (min-width: $grid-float-breakpoint) {
+            margin-top: 1.8em;
+          }
+          @media (min-width: $screen-lg) {
+            margin-bottom: 1em;
+          }
         }
       }
     }
@@ -205,14 +250,23 @@
     background-image: url('/img/lines-bg.png');
     background-position: 0px -140px;
     background-repeat: no-repeat;
-    min-height: 601px;
-
+    padding-top: 5em;
+    padding-bottom: 5em;
+    @media (min-width: $screen-lg) {
+      padding-top: 0em;
+      padding-bottom: 0em;
+      min-height: 601px;
+    }
+    
     .perforation .circle {
       background-color: darken($black-dark, 1%);
     }
 
     h2 {
-      margin-top: 145px;
+      margin-top: 0em;
+      @media (min-width: $screen-lg) {
+        margin-top: 5.5em;
+      }
     }
 
     .newsletter {
@@ -220,11 +274,21 @@
       text-align: center;
 
       .form-inline {
-        margin-top: 60px;
+        @media (max-width: $screen-sm) {
+          input {
+            margin-top: 1em;
+          }
+        }
+        margin-top: 0em;
+        @media (min-width: $grid-float-breakpoint) {
+          margin-top: 60px;
+        }
 
         input.newsletter-email {
           text-align: center;
-          min-width: 430px;
+          @media(min-width: $screen-sm) {
+            min-width: 430px;
+          }
           border-radius: 33px;
           height: 66px;
           line-height: 66px;
@@ -242,7 +306,7 @@
 
     .stay-connected {
       margin-top: 40px;
-      font-size: 16px;
+      font-size: 0.95em;
       text-align: center;
       color: $cream;
     }

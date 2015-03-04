@@ -92,16 +92,29 @@ h5, h6 {
   border: 0 !important;
 }
 
-$navbar-default-border: white;
+#navbar-collapsable {
+  border-top: 0 !important;
+}
+
+.navbar-toggle {
+  border: 0 !important;
+  bakground-color: transparent !important;
+}
+
+.navbar-brand {
+  padding-top: 3px !important;
+}
+
+$navbar-default-border: transparent;
 $navbar-default-bg: transparent;
 $navbar-default-color: white;
 $navbar-default-link-color: $navbar-default-color;
 $navbar-default-link-active-bg: transparent;
-$navbar-default-link-active-color: white;
+$navbar-default-link-active-color: transparent;
 $navbar-default-link-hover-bg: $navbar-default-bg;
 $navbar-default-link-hover-color: $navbar-default-color;
 $navbar-margin-bottom: 0;
-$navbar-default-border: 0;
+$navbar-default-border: 0 !important;
 $navbar-height: 102px;
 
 $nav-link-hover-bg: transparent;

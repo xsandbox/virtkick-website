@@ -41,8 +41,8 @@ Here's a simple screencast showcasing what you will see after going to http://yo
 
 I start a machine, check out the console, have a look at the settings and finally put it back to sleep.
 
-<div style="text-align: center">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/KsCZMz4K6IY" frameborder="0" allowfullscreen></iframe>
+<div class="video-container">
+  <iframe src="https://www.youtube.com/embed/KsCZMz4K6IY" frameborder="0" width="560" height="315"></iframe>
 </div>
 
 That' all you need - go and spin up those VMs: <a class="btn btn-yellow ga-demo" href="https://alpha.virtkick.io/" target="_blank">Try the demo</a>

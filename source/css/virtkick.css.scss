@@ -89,11 +89,22 @@ nav {
       padding-top: 10px;
 
       &.active a {
-        border-bottom: 2px solid white;
+        @media (min-width: $grid-float-breakpoint) {
+          border-bottom: 2px solid white;
+        }
       }
 
       a {
         padding: 17px 30px !important;
+        @media (max-width: $grid-float-breakpoint) {
+          padding-top: 5px !important;
+          padding-bottom: 5px !important;
+        }
+        @media(min-width: $screen-md) and (max-width: $screen-lg) {
+          padding-left: 20px !important;
+          padding-right: 20px !important;
+        }
+
         color: white !important;
         text-decoration: none !important;
         @include transition(color 0.2s);
@@ -165,6 +176,22 @@ nav {
 
 .center {
   text-align: center !important;
+}
+
+.video-container { 
+  position: relative; 
+  padding-bottom: 56.25%; 
+  padding-top: 30px; 
+  height: 0; 
+  overflow: hidden; 
+} 
+
+.video-container iframe, .video-container object, .video-container embed { 
+  position: absolute; 
+  top: 0; 
+  left: 0; 
+  width: 100%; 
+  height: 100%; 
 }
 
 .perforation {
@@ -300,11 +327,10 @@ footer {
   
   .footer-nav {
     float: right;
-    font-size: 14px;
     color: white;
 
     .link-group {
-      font-size: 15px;
+      font-size: 0.88em;
       text-align: left;
       vertical-align: top;
       display: inline-block;
@@ -330,15 +356,16 @@ footer {
 
   .social-features {
     width: 100%;
-    margin-top: 60px;
+    margin-top: 10px;
+    @media(min-width: $screen-md) {
+      margin-top: 60px;
+    }
     margin-bottom: 60px;
-    text-align: right;
     font-size: $font-size-small;
 
     .column {
       display: inline-block;
       vertical-align: top;
-      margin-left: 100px;
 
       p.slabel {
         text-align: left;
@@ -347,24 +374,54 @@ footer {
       }
     }
 
+    .column {
+      margin-top: 20px;
+      margin-left: 40px;
+      &:first-child {
+      }
+    }
+
+    @media(min-width: $screen-lg) {
+      text-align: right;
+
+      .column {
+        margin-left: 100px;
+      }
+
+      .techstars {
+        vertical-align: bottom;
+      }
+    }
+    
     .monthly-newsletter {
       .newsletter {
         margin-top: 20px;
 
+        text-align: right;
+        @media(min-width: $screen-lg) {
+          text-align: left;
+        }
+
         input.newsletter-email {
+          @media(max-width: $screen-lg) {
+            margin-top: 1em;
+          }
           text-align: center;
           min-width: 250px;
           border-radius: 20px;
           height: 40px;
           line-height: 40px;
-          font-size: 13px;
+          font-size: 0.87em;
 
           color: $gray;
           background-color: $black-light;
         }
 
         input.btn {
-          font-size: 13px;
+          @media(max-width: $screen-lg) {
+            margin-top: 1em;
+          }
+          font-size: 0.87em;
           border-radius: 33px !important;
           padding: 8px 20px;
           margin-left: 7px;
@@ -382,7 +439,7 @@ footer {
 
     .social-media {
       .social a {
-        font-size: 36px;
+        font-size: 2.4em;
         margin-right: 20px;
         @include transition(color 0.2s);
 
@@ -394,7 +451,6 @@ footer {
     }
 
     .techstars {
-      vertical-align: bottom;
 
       .slabel {
         text-align: right !important;
@@ -412,7 +468,7 @@ footer {
 
     .copyright {
       text-align: left;
-      font-size: 14px;
+      font-size: 0.9em;
       color: lighten(white, 25%);
       opacity: 0.5;
       margin-top: 20px;
@@ -422,7 +478,7 @@ footer {
       }
 
       .trademarks {
-        font-size: 12px;
+        font-size: 0.8em;
         opacity: 0.5;
       }
     }
