@@ -4,7 +4,7 @@ html
     meta charset='utf-8'
     meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'
     title
-      = current_page.data.title || 'VirtKick - Take Cloud Back'
+      = current_page.data.title || 'Virtkick - Enter the Cloud'
     meta name='description' content='#{current_page.data.description || 'One-Click Cloud. Manage your virtual machines and Docker containers. 100% open source.'}'
     meta name='viewport' content='width=device-width'
     - if @noindex
@@ -21,23 +21,59 @@ html
     #page
       = yield
       footer
-        img.sputnik src='/img/sputnik-small.png' style='z-index: 2000'
-        .col-md-12.updates style='float: inherit'
-          h3
-            span.first Subscribe
-            span.second  for updates
-          = partial 'layouts/newsletter'
-          p.available-info
-            | We will let you know when VirtKick is available!
-        = partial 'layouts/footer_nav'
-        .copyright.col-md-12
-          a href='https://www.virtkick.io/'  VirtKick
-          |  &copy; 2014 StratusHost Damian Nowak
-          br
-          span.trademarks
-            | Marks and names mentioned herein may be trademarks of their respective companies.
-            = succeed '.' do
-              a href='/legal.html'  Read more
+        .container-fluid.wrap-90
+          .logo.hidden-xs.hidden-sm
+            a href="/"
+              img src="/img/logo/virtkick-logo-pixelart-32.png" class="pix"
+              img src="/img/virtkick-name-white.png" class="virt-name"
+          .footer-nav.hidden-xs.hidden-sm
+            .link-group 
+              a.main.pink href="/"
+                | Home
+            .link-group 
+              a.main.pink href="/features.html"
+                | Features
+            .link-group
+              a.main.pink href="/people.html"
+                | People
+            .link-group
+              a.main.pink href="/pricing.html"
+                | Pricing
+            .link-group
+              a.main.pink href="/blog/"
+                | Blog
+            .link-group
+              a.main.pink href="/contact.html"
+                | Contact
+            .link-group
+              a.main.pink href="https://demo.virtkick.com/" target="_blank"
+                | Demo
+          .clear
+          .social-features
+            .column.copyright.hidden
+              a href='https://www.virtkick.com/'  VirtKick
+              |  &copy; 2014 StratusHost Damian Nowak
+              br
+              span.trademarks
+                | Marks and names mentioned herein may be trademarks of their respective companies. 
+                = succeed '.' do
+                  a href='/legal.html' Read more
+            .column.monthly-newsletter
+              p.slabel Subscribe for our monthly newsletter
+              = partial 'layouts/newsletter'
+            .column.social-media
+              p.slabel Let's talk
+              .social  
+                a.pink href="https://github.com/virtkick/"
+                  span.fa.fa-github
+                a.pink href="https://twitter.com/virtkick"
+                  span.fa.fa-twitter
+                a.pink href="https://www.facebook.com/virtkick"
+                  span.fa.fa-facebook-square
+            .column.techstars
+              p.slabel A Techstars-backed<br/>company
+              a href='http://www.techstars.com/'
+                img src='/img/techstars.png'
 
       script src='/js/virtkick.js'
       javascript:

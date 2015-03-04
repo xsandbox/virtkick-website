@@ -1,114 +1,80 @@
 ---
 features:
-- header: '1-Click <span class="focus">Install</span>'
-  image: 1-click-install
-  text: Get started in five minutes. No server administration knowledge is needed.
-- header: 'User <span class="focus">Centric</span>'
-  image: user-centric
-  text: Super usable management panel. Spin up a new virtual machine with 5 clicks.
-- header: 'Open <span class="focus">Source</span>'
-  image: open-source
-  text: Free for everyone, including businesses. Developed with privacy in mind.
-packages:
-- header: One-Click Packages
-  image: linux-packages
-  text: 'Install on most popular systems:<br/>Mac, Ubuntu, CentOS, Arch and more.'
-- header: Docker Images
-  image: docker-images
-  text: Setup VirtKick panel in a container. Connect a remote hypervisor.
-- header: Appliances
-  image: appliances
-  text: Appliances for KVM and VirtualBox. Connect a remote hypervisor.
-integrations:
-- header: Machines
-  image: linux
-  text: Virtualize on your server or Mac<br/>with KVM, OpenVZ or VirtualBox.
-- header: Containers
-  image: docker
-  text: Browse the Docker Hub and create<br/>containers just like usual machines.
-- header: Amazon
-  image: amazon
-  text: Use Amazon Web Services as an alternative<br/>to deploy your machines.
-  r: https://aws.amazon.com/trademark-guidelines/
-devops:
-- header: DNS
-  image: amazon
-  text: Manage DNS records<br/>directly in VirtKick.
-- header: API
-  image: storage
-  text: DigitalOcean-compatible API<br/>and Heroku-styled CLI.
-- header: Provisioning
-  image: chef
-  text: Choose roles and bake your VM<br/>with Ansible, Rex or Chef.
+- header: Simplicity
+  image: simplicity
+  text: 'Create virtual machines in 5 clicks. <br />Start a VPS business in a few clicks more.'
+- header: Beauty
+  image: beauty
+  text: 'Virtkick looks and feels like a mobile app. <br />And works on tablets and phones as well.'
+- header: Flexibility
+  image: flexibility
+  text: 'All your customers need to run their business. <br />All you need to manage your cloud.'
 ---
 #page-index
   .page-top.cosmic
     = partial 'layouts/nav', locals: {logo: 'white'}
-    = partial 'layouts/_jumbotron', locals: {h2: 'Your self-hosted VPS panel, similar to DigitalOcean'}
-  = partial 'layouts/_alien_banner', locals: {position: 'bottom'}
-  .content-container.container
-    = partial 'layouts/_jumbotron-mobile'
+    .header
+      h1 Enter the Cloud
+      h2 Sell better VPS. Sell VPS better.
+      .cta
+        a.btn.huge.btn-primary.ga-demo href='https://demo.virtkick.com/' target='_blank' 
+          | Try the Demo
 
-    .slogan
-      h2.section A cloud panel for the <span class="focus">modern</span> web!
-      h4 Say <span class="focus">"no"</span> to NSA. Take cloud back to your computer, home network or a dedicated server.
-
-    .features.row.col-md-12
+  .screenshots-wrapper
+    .container-fluid.screenshots
+      .perforation.hidden
+        .circle
+        .circle
+        .circle
+      .row
+        .col-md-12
+          .wrapper
+            h1.center Virtkick is the last VM management panel you'll ever need.
+            h3.center Let your customers take care of their Cloud.
+            a.ga-demo href='https://demo.virtkick.com/' target='_blank'
+              .mac-window
+                .bar
+                  .circles
+                    .circle.red
+                    .circle.yellow
+                    .circle.green
+                .content
+                  img src='/img/screenshots/machines-desktop.png'
+            .cta
+              a.btn.huge.btn-white-border.ga-demo href='https://demo.virtkick.com/' target='_blank' Try it now
+              span.trial.hidden No need for credit card, trial is on the house!
+    .clear
+  
+  .container-fluid.wrap-80.features
+    .perforation.hidden
+      .circle
+      .circle
+      .circle
+    .row
+      .col-md-12
+        h1 
+          | Your customers 
+          span.highlight 
+            | will love Virtkick
+          | .
+    .row.feature-circles
       - current_page.data.features.each do |feature|
-        article.col-md-4
+        article.col-lg-4
           .logo-container
-            .logo
-              = tag :img, src: "/img/features/#{feature.image}.png"
-          h3 = feature.header
+            .logo class="#{feature.image}"
+              = tag :img, src: "/img/#{feature.image}.png"
+          h4 = feature.header
           p = feature.text
 
-  .screenshots.row.clear
-    img.hidden-md.hidden-lg src='/img/screenshots/dashboard-all-mobile.png'
-    img.hidden-xs.hidden-sm src='/img/screenshots/dashboard-desktop.png'
-    img.hidden-xs.hidden-sm src='/img/screenshots/dashboard-mobile.png'
-
-  .content-container.container
-    .slogan
-      h2.section Choose your way and <span class="focus">kickstart</span> your cloud.
-
-    .packages.features.row.col-md-12
-      - current_page.data.packages.each do |feature|
-        article.col-md-4
-          .logo-container
-            .logo
-              = tag :img, src: "/img/features/#{feature.image}.png"
-          h3 = feature.header
-          p = feature.text
-
-    .slogan.clear#integrations.hidden
-      h2 Many <span class="focus">virtualization</span> technologies supported.
-
-    .integrations.col-md-12.hidden
-      - current_page.data.integrations.each do |feature|
-        article.col-md-4
-          = tag :img, src: "/img/integration/#{feature.image}.png"
-          h3
-            = feature.header
-            - if feature.r
-              | <sup>®</sup>
-            - elsif feature.tm
-              | ™
-          p = feature.text
-
-    .slogan.clear#integrations.hidden
-      h2.section Techies will <span class="focus">love</span> these features.
-
-    .devops.features.col-md-12.hidden
-      - current_page.data.devops.each do |feature|
-        article.col-md-4
-          = tag :img, src: "/img/integration/#{feature.image}.png"
-          h3
-            = feature.header
-            - if feature.r
-              | <sup>®</sup>
-            - elsif feature.tm
-              | ™
-          p = feature.text
-
-
-  = partial 'layouts/silver-sponsors'
+  .container-fluid.newsletter-section 
+    .perforation.hidden
+      .circle
+      .circle
+      .circle
+    .row
+      .col-md-12
+        h2 Subscribe for the monthly Virtkick newsletter
+        = partial 'layouts/newsletter'
+        p.stay-connected
+          strong Stay connected. 
+          | You will be the first to be informed about our edge features.

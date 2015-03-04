@@ -19,10 +19,10 @@ layout: blog
               > on #{article.date.strftime '%B %Y'}
           = article.summary 250
           p.read-more
-            = link_to "Read more...", article
+            = link_to "Read more", article, class: 'btn'
 - if page_articles.size == current_page.data.per_page
 .container
   .row
     .blog.col-md-8.col-md-offset-2  
-      p.links
+      p.links.all
         a href='/blog/archives.html' See all previous posts.

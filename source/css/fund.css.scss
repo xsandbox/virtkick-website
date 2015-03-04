@@ -31,8 +31,8 @@
         h2 {
           margin-top: 0px;
           margin-bottom: 20px;
-          font-size: 25px;
-          color: $violet-text;
+          font-size: 1.5em;
+          color: white;
         }
 
         a.btn {
@@ -43,13 +43,14 @@
           margin-top: 20px;
 
           .claimed {
-            color: $violet-text;
+            color: white;
             margin-left: 20px;
           }
         }
 
         &.featured {
-          background-color: $pink-bg-light;
+          border-radius: 1em;
+          border: 2px solid white;
         }
       }
     }
