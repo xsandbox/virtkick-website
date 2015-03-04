@@ -55,12 +55,15 @@ features:
             - current_page.data.main[0].text.each do |text|
               p = text
       .row.list
+        .col-md-6.right.hidden-lg.hidden-md
+          .pic
+            = tag :img, src: "/img/#{current_page.data.main[1].image}.png"
         .col-md-6.left
           .desc
             h4 = current_page.data.main[1].header
             - current_page.data.main[1].text.each do |text|
               p = text
-        .col-md-6.right
+        .col-md-6.right.hidden-xs.hidden-sm
           .pic
             = tag :img, src: "/img/#{current_page.data.main[1].image}.png"
       .row.list

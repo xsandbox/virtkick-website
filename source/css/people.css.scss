@@ -5,8 +5,12 @@
   color: $people-text;
 
   h1 {
-    margin-top: 95px;
-    margin-bottom: 55px;
+    margin-top: 1em;
+    margin-bottom: 1.5em;
+    @media (min-width: $grid-float-breakpoint) {
+      margin-top: 95px;
+      margin-bottom: 55px;
+    }
     font-size: 2.1em;
     text-align: center;
   }
@@ -36,20 +40,35 @@
   }
 
   .contributors {
-    padding-top: 70px;
-    padding-bottom: 70px;
+    padding-top: 2em;
+    padding-bottom: 2em;
+    @media (min-width: $grid-float-breakpoint) {
+      padding-top: 70px;
+      padding-bottom: 70px;
+    }
     max-width: 940px;
     width: 100%;
     margin: 0 auto;
 
     .contributor {
-      padding-bottom: 35px;
+      padding-bottom: 4em;
+      text-align: center;
+      @media (min-width: $grid-float-breakpoint) {
+        padding-bottom: 35px;
+        text-align: left;
+      }
       width: 100%;
 
       .logo-container {
         vertical-align: middle;
         display: inline-block;
-
+        @media (max-width: $grid-float-breakpoint) {
+          display: block;
+          margin: 0 auto;
+          text-align: center;
+          margin-bottom: 2em;
+        }
+        
         .logo {
           .avatar {
             border: 1px solid $pink;
@@ -61,17 +80,22 @@
 
       .name {
         vertical-align: middle;
-        padding-left: 60px;
+
+        @media (min-width: $grid-float-breakpoint) {
+          padding-left: 60px;
+          text-align: left;
+        }
         width: 320px;
         display: inline-block;
-        text-align: left;
-
+        
         h3 {
           font-weight: 400;
           font-size: 1.2em;
           margin-top: 0px;
           margin-bottom: 0px;
-          text-align: left;
+          @media (min-width: $grid-float-breakpoint) {
+            text-align: left;
+          }
 
           a {
             margin-left: 5px;
@@ -79,7 +103,9 @@
         }
 
         h4 {
-          text-align: left;
+          @media (min-width: $grid-float-breakpoint) {
+            text-align: left;
+          }
           margin-top: 5px;
           margin-bottom: 0px;
           font-size: 1.2em;
@@ -90,10 +116,21 @@
 
       .desc {
         vertical-align: middle;
-        padding-left: 60px;
+        margin-top: 1em;
+        padding-left: 1em;
+        padding-right: 1em;
+        @media (min-width: $grid-float-breakpoint) {
+          margin-top: 0em;
+          padding-left: 60px;
+          padding-right: 0em;
+        }
         display: inline-block;
         
         p {
+          @media (max-width: $grid-float-breakpoint) {
+            display: inline;
+            margin-right: 3px; 
+          }
           margin-top: 0px;
           margin-bottom: 0px;
         }
@@ -102,10 +139,15 @@
   }
 
   .open-source {
-    padding-bottom: 100px;
+    padding-bottom: 3em;
+    @media (min-width: $grid-float-breakpoint) {
+      padding-bottom: 100px;
+    }
 
     h1 {
-      margin-top: 50px;
+      @media (min-width: $grid-float-breakpoint) {
+        margin-top: 50px;
+      }
       font-size: 2.1em;
       text-align: center;
     }
@@ -113,19 +155,27 @@
     .os-logo {
       display: block;
       margin: 0 auto;
-      margin-top: 100px;
+      margin-top: 1em;
+      @media (min-width: $grid-float-breakpoint) {
+        margin-top: 100px;
+      }
     }
 
     ul {
       list-style-type: none !important;
       padding: 0px;
-      margin: 0px;
-      margin-top: 30px;
-      margin-bottom: 30px;
+      margin-top: 0em;
+      margin-bottom: 0em;
+      @media (min-width: $grid-float-breakpoint) {
+        margin-top: 30px;
+        margin-bottom: 30px;
+      }
       
       li {
         color: darken(white, 15%);
-        padding-left: 80px;
+        @media (min-width: $grid-float-breakpoint) {
+          padding-left: 80px;
+        }
         padding-top: 5px;
       }
     }
