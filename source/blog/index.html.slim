@@ -19,7 +19,7 @@ layout: blog
               span.author-name
                 > #{article.data.author} 
               > on #{article.date.strftime '%B %Y'}
-          = article.summary 250
+          = article.summary 300
           p.read-more
             = link_to "Read more", article, class: 'btn'
 - if page_articles.size == current_page.data.per_page
