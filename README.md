@@ -9,12 +9,6 @@ This is a website of VirtKick, a 1-click cloud management center.
 It's built with [Middleman](http://middlemanapp.com/).
 Visit [https://www.virtkick.io/](https://www.virtkick.io/) to preview.
 
-<p align="center">
-  <a href="https://www.indiegogo.com/projects/virtkick-take-cloud-back">
-    <img src="https://raw.github.com/virtkick/virtkick/master/indiegogo.png" />
-  </a>
-</p>
-
 ## Requirements
 
 - [RVM](https://rvm.io/)
