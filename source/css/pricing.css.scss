@@ -260,7 +260,7 @@
 
               .request-button {
                 width: 66px;
-                margin-left: -60px;
+                margin-left: -130px;
                 @media(max-width: $screen-sm) {
                   display: none;
                 }
@@ -277,7 +277,7 @@
               .thanks {
                 position: absolute;
                 top: -10px;
-                left: 33px;
+                left: -35px;
                 display: block;
                 opacity: 1;
                 width: 500px;
@@ -299,6 +299,8 @@
                 background-color: #FFA6AB;
                 color: #EC4863 !important;
               }
+
+              @include placeholder-color(lighten(#EC4863, 5%));
             }
           }
 
