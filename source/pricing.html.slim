@@ -36,8 +36,21 @@ description: Pay when you earn. Simple.
             | Enjoy the Revenue
           p We charge you for 15% of the revenue you make through Virtkick. We take care of payment gateway fees. Simple.
 
-  .container-fluid.newsletter-section 
-    .row
-      .col-md-12
-        h1 Virtkick is still in the works - we'll let you know when it's done. 
-        = partial 'layouts/newsletter'
+  .beta-wrapper
+    .container-fluid.beta
+      .row
+        .col-md-12
+          h1 Request Private Beta
+          .beta-form
+            form.form-inline action='' method='post' role='form'
+              p.error Please enter valid email.
+              .form-group
+                input.beta-email.form-control name='email' placeholder=('E-mail address') type='text'
+                .btn.btn-black.request-button
+                  span.text
+                    | Request Private Beta
+                  span.icon
+                    .fa.fa-check
+                .thanks
+                  h4 Thank you!
+                  p We will contact you soon and help you set up private beta.

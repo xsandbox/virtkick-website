@@ -130,6 +130,11 @@ html
           $('.ga-demo').click(function (e) {
             trackLink(e, 'jumbotron', 'demo');
           });
+
+          $('.request-button').click(function (e) {
+            e.preventDefault();
+            $(this).closest('.beta-form').toggleClass('success');
+          });
         });
       = yield_content :scripts
 
