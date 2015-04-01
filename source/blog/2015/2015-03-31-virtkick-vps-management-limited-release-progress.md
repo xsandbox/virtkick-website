@@ -30,7 +30,7 @@ And some nice words from an US customer:
 Want to awesomize your business with Virtkick? We just need a few technical details and some information about your business -  just [shoot me an email](mailto:mirek@virtkick.com) and we'll work together on deploying Virtkick for your business.
 
 
-Thanks for reading [follow our Twitter](http://twitter.com/virtkick) and stay tuned. 
+Thanks for reading [follow our Twitter](http://twitter.com/virtkick) and stay tuned for more info.
 
 With the registration system in place soon, the Virtkick-powered Spring 2015 will be legendary! 
 
