@@ -27,12 +27,12 @@ And some nice words from an US customer:
 
 *"Console integration is really cool - that's really lightweight."*
 
-Want to awesomize your business with Virtkick? We just need a few technical details and some information about your business -  just fill out the [Limited Release Signup Form](https://docs.google.com/forms/d/1VxWperhIawA-aN_ZMZO5KG4Q4bSMvvePouNrWQUOjG8/viewform) and we'll work together on deploying Virtkick for your business.
+Want to awesomize your business with Virtkick? We just need a few technical details and some information about your business -  just [shoot me an email](mailto:mirek@virtkick.com) and we'll work together on deploying Virtkick for your business.
 
 
-Thanks for reading and stay tuned - if there's anything you'd like to talk about, just [shoot me an email](mailto:mirek@virtkick.com). In the meantime, [follow our Twitter](http://twitter.com/virtkick) and stay tuned. 
+Thanks for reading [follow our Twitter](http://twitter.com/virtkick) and stay tuned. 
 
-With the registration system in place, the Virtkick-powered Spring 2015 will be legendary! 
+With the registration system in place soon, the Virtkick-powered Spring 2015 will be legendary! 
 
 
 
