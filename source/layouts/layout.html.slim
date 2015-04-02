@@ -70,6 +70,10 @@ html
                   span.fa.fa-twitter
                 a.pink href="https://www.facebook.com/virtkick"
                   span.fa.fa-facebook-square
+            .column.presskit
+              a href="https://press.virtkick.io"
+                span.fa.fa-file-image-o
+                span.text Presskit
             .column.techstars
               p.slabel A Techstars-backed<br/>company
               a href='http://www.techstars.com/'
@@ -114,8 +118,8 @@ html
                 $('.request-button').unbind('click');
                 wrapperElement.removeClass('error').addClass('success');
                 ga('send', 'event', 'beta-request', 'subscribe');
-                $('.request-button').removeClass('disabled');
               }
+              $('.request-button').removeClass('disabled');
             },
             errorCallback: function($form) {
               // Disconnect.me extension blocks any JSONP requests.

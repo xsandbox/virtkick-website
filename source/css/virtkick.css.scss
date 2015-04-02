@@ -450,14 +450,37 @@ footer {
       }
     }
 
-    .techstars {
+    .presskit {
+      display: inline-block;
+      vertical-align: top;
+      padding-top: 46px;
+      @media (min-width: 515px) and (max-width: 649px) {
+        padding-top: 20px;
+      }
 
+      a {
+        vertical-align: middle;
+        
+        span.fa {
+          vertical-align: middle;
+          font-size: 2.3em;
+        }
+
+        span.text {
+          vertical-align: middle;
+          padding-left: 10px;  
+        }
+      }
+    }
+
+    .techstars {
       .slabel {
         text-align: right !important;
         display: inline-block;
         vertical-align: top;
         padding-top: 15px;
         padding-right: 30px;
+        margin-bottom: 0px;
       }
 
       img {
