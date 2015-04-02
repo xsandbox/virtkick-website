@@ -70,6 +70,10 @@ html
                   span.fa.fa-twitter
                 a.pink href="https://www.facebook.com/virtkick"
                   span.fa.fa-facebook-square
+            .column.presskit
+              a href="https://press.virtkick.io"
+                span.fa.fa-file-image-o
+                span.text Presskit
             .column.techstars
               p.slabel A Techstars-backed<br/>company
               a href='http://www.techstars.com/'
@@ -102,6 +106,37 @@ html
             }
           });
           
+          $('.beta-form form').ajaxChimp({
+            callback: function(response, element) {
+              errorElement = $('.beta-form .error');
+              wrapperElement = $('.beta-form');
+
+              if (response.result == 'error') {
+                wrapperElement.removeClass('success').addClass('error');
+                errorElement.html(response.msg);
+              } else {
+                $('.request-button').unbind('click');
+                wrapperElement.removeClass('error').addClass('success');
+                ga('send', 'event', 'beta-request', 'subscribe');
+              }
+              $('.request-button').removeClass('disabled');
+            },
+            errorCallback: function($form) {
+              // Disconnect.me extension blocks any JSONP requests.
+              $form.unbind('submit').submit();
+            }
+          });
+          
+          $('.request-button').click(function (e) {
+            e.preventDefault();
+            $('.beta-form form').submit();
+            $(this).addClass('disabled');
+          });
+
+          $('.beta-form input.beta-email').keypress(function () {
+            $('.beta-form').removeClass('error');
+          });
+
           // send info to GA with some timeout in case of problems
           var trackLink = function (e, category, action) {
             e.preventDefault();
@@ -127,6 +162,7 @@ html
           $('.ga-alpha').click(function (e) {
             trackLink(e, 'jumbotron', 'alpha');
           });
+
           $('.ga-demo').click(function (e) {
             trackLink(e, 'jumbotron', 'demo');
           });
