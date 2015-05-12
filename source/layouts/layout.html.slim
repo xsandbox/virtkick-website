@@ -17,6 +17,8 @@ html
     - else
       = stylesheet_link_tag "/css/#{current_page.path.sub('.html', '')}"
     = javascript_include_tag '/js/snippets.js'
+    = javascript_include_tag '//cdn.optimizely.com/js/2855400586.js"
+'
   body
     #page
       = yield
