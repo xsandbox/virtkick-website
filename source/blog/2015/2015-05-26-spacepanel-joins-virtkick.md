@@ -5,8 +5,6 @@ role: I do marketing, sales and bits of coding @Virtkick.
 email: mirek@virtkick.com
 ---
 
-Howdy partners!
-
 Virtkick development is underway, with our team expanded to 8 people - we've been working on the networking part of Virtkick and fine-tuning the user experience. We're so excited that we're getting closer to the Virtkick release - it'll be worth the wait!
 
 Speaking of team, ever heard about SpacePanel? An open-source cloud management panel, just like Virtkick. We got in touch with its creators and found out we share the same vision - we want to create a great cloud management tool for people. 
