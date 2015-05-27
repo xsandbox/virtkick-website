@@ -11,7 +11,7 @@ Speaking of team, ever heard about [SpacePanel](https://spacepanel.io)? An open-
 
 So we decided to join forces and build Virtkick together - and this is how [Joe Pettit joined the Virtkick rocket crew](https://www.virtkick.com/people.html).
 
-Joe is a great man to have on board - not only he's a killer coder but he's also done lots of open source coding and worked at DigitalOcean and Linode so he brings lots of virtualisation knowledge to the crew.  
+Joe is a great man to have on board - not only he's a killer coder but he's also done lots of open source coding and worked at DigitalOcean and Linode so he brings lots of virtualization knowledge to the crew.  
 
 We're going forward, stronger every day - if you'd like to check how Virtkick looks and works like, check out our [demo](https://demo.virtkick.com) and subscribe for the [limited release](https://www.virtkick.com/pricing.html#release)!
 
