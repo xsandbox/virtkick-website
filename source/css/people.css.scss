@@ -163,18 +163,16 @@
 
     h1 {
       @media (min-width: $grid-float-breakpoint) {
-        margin-top: 50px;
+        margin-top: 70px;
       }
       font-size: 2.1em;
       text-align: center;
     }
 
-    .os-logo {
-      display: block;
-      margin: 0 auto;
-      margin-top: 1em;
+    h1.backers {
+      margin-top: 2em;
       @media (min-width: $grid-float-breakpoint) {
-        margin-top: 100px;
+        margin-top: 90px;
       }
     }
 
